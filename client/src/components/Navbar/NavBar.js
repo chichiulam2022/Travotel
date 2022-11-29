@@ -1,7 +1,8 @@
 import React, { useState, useContext } from "react";
 import { Navbar, Nav, Container, Form } from "react-bootstrap";
-import { MdDarkMode } from 'react-icons/md'
-// import { ThemeContext } from "../../contexts/ThemeContext";
+import { MdDarkMode, MdOutlineLightMode } from 'react-icons/md'
+
+import { ThemeContext } from "../../contexts/ThemeContext";
 
 import "./NavBar.css";
 import { useTranslation } from "react-i18next";
@@ -17,7 +18,7 @@ function NavBar() {
     const [lang, setLang] = useState("en");
 
     // translation
-    const { t, i18n } = useTranslation(["navbar"]);
+    const { t, i18n } = useTranslation(["testing"]);
 
     const handleLanguageChange = e => {
         i18n.changeLanguage(e.target.value);
@@ -27,14 +28,21 @@ function NavBar() {
         setLang(e.target.value);
     };
 
-    //dark/light mode toggle
-    // const [isDarkMode, toggleTheme] = useContext(ThemeContext)
+    // dark/light mode toggle
+    const { isDarkMode, toggleTheme } = useContext(ThemeContext)
 
     return (
-        <Navbar expand="lg">
+        <Navbar expand="lg" style={{
+            backgroundColor:
+                isDarkMode ? '#EFEFEF' : 'black'
+        }}>
             <Container>
                 <Navbar.Brand className="logo" href="/">
-                    <h1>Testing </h1>
+                    <h1
+                        style={{ color: isDarkMode ? 'black' : 'white',
+                     fontFamily: ''}}
+                    >
+                        {t("welcome")}</h1>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav">
                     <span className="navbar-toggler-icon"></span>
@@ -48,43 +56,43 @@ function NavBar() {
                             }
                             onClick={() => onUpdateActiveLink("home")}
                         >
-                            {t("home")}
+
                         </Nav.Link>
 
-                        <Form
-                            value={localStorage.getItem("i18nextLng")}
-                            onChange={handleLanguageChange}
-                            className="lang-form"
-                        >
 
+                        <Form className="switchers">
+                            <div value={localStorage.getItem("i18nextLng")}
+                                onChange={handleLanguageChange}>
+                                <Form.Check
+                                    inline
+                                    type="switch"
+                                    id="lang-switch"
+                                    label="English 🇨🇦"
+                                    value="en"
+                                    checked={lang === "en"}
+                                    onChange={handleLangChange}
+                                />
+                                <Form.Check
+                                    inline
+                                    type="switch"
+                                    label="Français 🇨🇦"
+                                    id="lang-switch"
+                                    value="fr"
+                                    checked={lang === "fr"}
+                                    onChange={handleLangChange}
+                                />
+                            </div>
                             <Form.Check
                                 inline
                                 type="switch"
                                 id="custom-switch"
-                                label={<MdDarkMode style={{ color: 'white', fontSize: '20px' }} />}
+                                onChange={toggleTheme}
+                                label={
+                                    isDarkMode
+                                        ? < MdDarkMode style={{ color: 'black', fontSize: '18px' }} />
+                                        : <MdOutlineLightMode style={{ color: 'white', fontSize: '18px' }} />
 
-
-
-                            />
-
-                            <Form.Check
-                                inline
-                                type="switch"
-                                id="custom-switch"
-                                label="English 🇨🇦"
-                                value="en"
-                                checked={lang === "en"}
-                                onChange={handleLangChange}
-                            />
-                            <Form.Check
-                                inline
-                                type="switch"
-                                label="Français 🇨🇦"
-                                id="disabled-custom-switch"
-                                value="fr"
-                                checked={lang === "fr"}
-                                onChange={handleLangChange}
-                            />
+                                } />
                         </Form>
                     </Nav>
                 </Navbar.Collapse>

@@ -2,9 +2,8 @@
 
 
 .logo h1 {
-    font-family: Megrim;
     color: rgb(235, 232, 232);
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin: auto;
 }
 
@@ -14,7 +13,6 @@ nav.navbar {
     top: 0;
     z-index: 9999;
     transition: 0.5s ease-in-out;
-    background-color: rgba(1, 11, 75);
     padding: 12px 0px;
     margin: auto;
 }
@@ -85,7 +83,7 @@ span.navbar-text {
     visibility: visible;
 }
 
-.hide {
+/* .hide {
     visibility: hidden;
     width: 5rem;
     background: linear-gradient(90deg, rgba(26, 109, 255, 1) 0%, rgba(200, 34, 255, 1) 80%, rgba(109, 199, 255, 1) 100%, rgba(230, 171, 255, 1) 100%);
@@ -99,7 +97,7 @@ span.navbar-text {
     font-size: 0.75rem;
     margin-top: 50px;
     transform: translateX(-60px);
-}
+} */
 
 .navbar-text button {
     font-weight: 700;
@@ -177,15 +175,27 @@ nav.navbar .navbar-toggler-icon:after {
     top: 8px;
 }
 
-.lang-form {
-    padding: 9px 10px;
-    margin-left: 2px;
+
+.switchers {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
 }
 
 .form-check-input:checked {
     background-color: #cd0033 !important;
     border-color: #cd0033 !important;
 }
+
+#custom-switch {
+    background-color: #e8ef55;
+    border-color: #e8ef55;
+}
+
+#custom-switch .form-check-input:checked {
+    background-color: white;
+}
+
 
 .form-check-label {
     color: #ff2f63;
