@@ -4,7 +4,6 @@ import { Routes, Route } from "react-router-dom";
 import RoomSlider from "./components/Slider/RoomSlider";
 import NavBar from "./components/Navbar/NavBar";
 
-
 function App() {
   return (
     <Routes>
@@ -13,6 +12,7 @@ function App() {
       <Route path="/slider" element={<RoomSlider />} />
       <Route path="/navbar" element={<NavBar />} />
     </Routes >
+
   )
 }
 

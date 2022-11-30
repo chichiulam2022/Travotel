@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
-
-
 .logo h1 {
     color: rgb(235, 232, 232);
     font-size: 1.5rem;
@@ -13,13 +10,6 @@ nav.navbar {
     top: 0;
     z-index: 9999;
     transition: 0.5s ease-in-out;
-    padding: 12px 0px;
-    margin: auto;
-}
-
-div.container {
-    padding: 0;
-    margin: auto;
 }
 
 nav.navbar.scrolled {
@@ -34,10 +24,11 @@ nav.navbar a.navbar-brand {
 
 nav.navbar .navbar-nav .nav-link.navbar-link,
 .navbar-light .navbar-nav .nav-link {
-    font-weight: bold;
-    color: rgb(26, 254, 5) !important;
-    letter-spacing: 0.7px;
-    padding: 15px 9px;
+    font-weight: 900;
+    color: rgb(254, 84, 5) !important;
+    padding: 15px 15px 10px 10px;
+    margin-left: 12px;
+    margin-right: 12px;
     font-size: 1em;
     transition: all 0.5s;
 }
@@ -46,11 +37,11 @@ nav.navbar .navbar-nav a.nav-link.navbar-link p:hover {
     text-decoration: underline;
 }
 
-nav.navbar .navbar-nav a.nav-link.navbar-link.active {
+/* nav.navbar .navbar-nav a.nav-link.navbar-link.active {
     opacity: 0.4;
     color: rgb(189, 219, 91);
     transition: all 0.5s;
-}
+} */
 
 span.navbar-text {
     display: flex;
@@ -82,22 +73,6 @@ span.navbar-text {
 .social-icon a img:hover+.hide {
     visibility: visible;
 }
-
-/* .hide {
-    visibility: hidden;
-    width: 5rem;
-    background: linear-gradient(90deg, rgba(26, 109, 255, 1) 0%, rgba(200, 34, 255, 1) 80%, rgba(109, 199, 255, 1) 100%, rgba(230, 171, 255, 1) 100%);
-    color: rgb(214, 207, 207);
-    text-align: center;
-    font-weight: 900;
-    border-radius: 6px;
-    padding: 3px 0px;
-    position: absolute;
-    z-index: 1;
-    font-size: 0.75rem;
-    margin-top: 50px;
-    transform: translateX(-60px);
-} */
 
 .navbar-text button {
     font-weight: 700;
@@ -138,11 +113,6 @@ span.navbar-text {
     position: absolute;
 }
 
-nav.navbar .navbar-toggler:active,
-nav.navbar .navbar-toggler:focus {
-    outline: none;
-    box-shadow: none;
-}
 
 nav.navbar .navbar-toggler-icon {
     width: 24px;
@@ -183,13 +153,13 @@ nav.navbar .navbar-toggler-icon:after {
 }
 
 .form-check-input:checked {
-    background-color: #cd0033 !important;
-    border-color: #cd0033 !important;
+    background-color: #ff6f02 !important;
+    border-color: #ff8e37 !important;
 }
 
 #custom-switch {
-    background-color: #e8ef55;
-    border-color: #e8ef55;
+    background-color: #f2ff00;
+    border-color: #f2ff00;
 }
 
 #custom-switch .form-check-input:checked {
@@ -198,7 +168,8 @@ nav.navbar .navbar-toggler-icon:after {
 
 
 .form-check-label {
-    color: #ff2f63;
+    /* color: #ff2f63; */
+    color: rgb(11, 124, 136);
     font-weight: 900;
 }
 
@@ -208,4 +179,12 @@ nav.navbar .navbar-toggler-icon:after {
 
 .navbar-link p {
     margin-bottom: 0;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.navbar-active {
+    opacity: 1;
 }

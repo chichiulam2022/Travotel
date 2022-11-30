@@ -1,14 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap');
+
+html {
+    margin: 0;
+    padding: 0;
+}
 
 * {
-    font-family: 'Varela Round', sans-serif;
+    font-family: 'Montserrat Alternates', sans-serif;
     letter-spacing: 1.1px;
+}
+
+.slider-container {
+    height: 100vh;
+    width: 100vw;
+}
+
+.slider-blurb {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.slider-blurb h4 {
+    margin-top: 100px;
+    border-bottom: 2px solid orange;
+    text-align: center;
 }
 
 .slider {
     width: 80%;
-    margin: 0 auto;
-    margin-top: 50px;
+    margin: 30px auto;
 }
 
 .slick-slide>div {
@@ -19,15 +41,16 @@
     margin: 0 -10px;
 }
 
-.card {
-    border: 0.5px solid rgb(255, 242, 235);
+/* .card {
+    border: 0.5px solid rgb(255, 255, 255);
     background: black;
+    border: none;
     border-radius: 8px;
     overflow: hidden;
     height: 400px;
-    color: rgb(252, 252, 252);
+    color: rgb(18, 18, 18);
     cursor: pointer;
-}
+} */
 
 .card-top h1 {
     font-size: 0.9rem;
@@ -50,16 +73,15 @@
     position: relative;
 }
 
-
 .slick-prev:before,
 .slick-next:before {
     content: '→';
-    /* color: black;
-    background: white; */
     opacity: 1;
 }
 
-/* .card-top h1 {
-    font-size: 1rem;
-    color: black;
-} */
+@media only screen and (max-width: 650px) {
+    .slider-blurb h4 {
+        font-size: 1rem;
+        text-align: center;
+    }
+}
