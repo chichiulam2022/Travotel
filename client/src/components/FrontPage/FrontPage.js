@@ -1,6 +1,6 @@
 import React from 'react'
 import './FrontPage.css'
-import video from '../../assets/video.mp4'
+// import video from '../../assets/video.mp4'
 import { Typewriter } from 'react-simple-typewriter'
 import Typography from "@mui/material/Typography"
 import Homepage from '../../pages/Homepage'
@@ -15,7 +15,7 @@ function FrontPage() {
 
             <div className='filter'></div>
 
-            <video src={video} autoPlay loop muted />
+            {/* <video src={video} autoPlay loop muted /> */}
             <div className='content'>
                 <Typography variant="h2" className="intro-text"
                     sx={{
