@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "seed": "cd server && npm run seed",
+    "build": "cd client && npm run build"
   },
   "repository": {
     "type": "git",
@@ -14,6 +18,9 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/chichiulam2022/hotel_booking/issues"
+  },
+  "devDependencies": {
+    "concurrently": "^5.1.0"
   },
   "homepage": "https://github.com/chichiulam2022/hotel_booking#readme"
 }
