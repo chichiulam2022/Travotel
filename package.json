@@ -1,0 +1,19 @@
+{
+  "name": "hotel_booking",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chichiulam2022/hotel_booking.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chichiulam2022/hotel_booking/issues"
+  },
+  "homepage": "https://github.com/chichiulam2022/hotel_booking#readme"
+}
