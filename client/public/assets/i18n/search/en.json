@@ -1,4 +1,12 @@
 {
     "welcome-title": "Welcome to TRAVÔTEL's Global Hotel Search",
-    "welcome-text1": "TRAVÔTEL's hotel search allows users to search your favourite types of accommodation in major cities in just a few clicks. We help millions of travelers each year compare deals for hotels and accommodations. Thank you for choosing us, have a nice trip."
+    "welcome-text1": "TRAVÔTEL's hotel search allows users to search your favourite types of accommodation in major cities in just a few clicks. We help millions of travelers each year compare deals for hotels and accommodations. Thank you for choosing us, have a nice trip.",
+    "form-text": "Search your next destination we provide. Book your accomation right now for your next trip!",
+    "Montreal": "Montreal",
+    "Mexico City": "Mexico City",
+    "destination": "Available Destinations",
+    "travelers": "Number of Travelers",
+    "check-in": "Check-In",
+    "check-out": "Check-Out",
+    "search": "Search"
 }

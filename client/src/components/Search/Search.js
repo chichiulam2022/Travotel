@@ -27,23 +27,23 @@ function Search() {
                         <div className="input-wrap">
                             <div className='location-container'>
                                 <div className='room-search-form-text'>
-                                    <p>Search your location we provide and book your hotel/accomation right now for your next trip!</p>
+                                    <p>{t('form-text')}</p>
                                 </div>
                                 <div className='room-search-form-options'>
                                     <div>
-                                        <label>Destination</label>
+                                        <label>{t('destination')}</label>
                                         <select>
                                             <option value="1">Toronto</option>
                                             <option value="1">Vancouver</option>
-                                            <option value="1">Montreal</option>
-                                            <option value="1">{t('')}Mexico City</option>
+                                            <option value="1">{t('Montreal')}</option>
+                                            <option value="1">{t('Mexico City')}</option>
                                             <option value="1">São Paulo</option>
                                             <option value="1">Paris</option>
                                             <option value="1">Barbados</option>
                                         </select>
                                     </div>
                                     <div>
-                                        <label>Number of Travelers</label>
+                                        <label>{t('travelers')}</label>
                                         <select>
                                             <option value="1">1</option>
                                             <option value="1">2</option>
@@ -60,15 +60,16 @@ function Search() {
                                 </div>
                             </div>
                             <div className='date-container'>
-                                <label>Check-In</label>
+                                <label>{t('check-in')}</label>
                                 <input type="date" />
                             </div>
                             <div className='date-container'>
-                                <label>Check-Out</label>
+                                <label>{t('check-out')}</label>
                                 <input type="date" />
                             </div>
                         </div>
-                        <button>Search</button>
+                        <button>{t('search')}</button>
+
                     </form>
                 </div>
             </div >
