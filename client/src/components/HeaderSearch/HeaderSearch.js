@@ -9,11 +9,22 @@ import { format } from "date-fns";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-import { frCA, enCA } from 'date-fns/locale'
+// import { frCA, enCA } from 'date-fns/locale'
 
 
 function HeaderSearch() {
     const { t } = useTranslation(["headersearch"]);
+
+    const [scroll, setScroll] = useState(false);
+    const handleScroll = () => {
+        console.log(window.scrollY);
+        if (window.scrollY >= 400) {
+            setScroll(true);
+        } else {
+            setScroll(false);
+        }
+    };
+    window.addEventListener("scroll", handleScroll);
 
     const [destination, setDestination] = useState("");
     const [openDate, setOpenDate] = useState(false);
@@ -47,8 +58,9 @@ function HeaderSearch() {
     };
 
     return (
-        <div className='headerSearchContainer'>
+        <div className={`${scroll ? 'headerSearch-active' : 'hidden'} headerSearchContainer`}>
             <div className="headerSearch">
+
                 <div className="headerSearchItem">
                     <FaBed className='header-icon' />
                     <input
@@ -58,12 +70,13 @@ function HeaderSearch() {
                         onChange={(e) => setDestination(e.target.value)}
                     />
                 </div>
+
                 <div className="headerSearchItem">
                     <FaCalendarAlt className='header-icon' />
                     <span
                         onClick={() => setOpenDate(!openDate)}
                         className="headerSearchText"
-                    >{`${format(date[0].startDate, "MM/dd/yyyy")} to ${format(
+                    >{`${format(date[0].startDate, "MM/dd/yyyy")} - ${format(
                         date[0].endDate,
                         "MM/dd/yyyy"
                     )}`}</span>
@@ -78,6 +91,7 @@ function HeaderSearch() {
                         />
                     )}
                 </div>
+
                 <div className="headerSearchItem">
                     <BsPersonFill className='header-icon' />
                     <span
@@ -159,6 +173,7 @@ function HeaderSearch() {
                         </div>
                     )}
                 </div>
+
                 <div className="headerSearchItem">
                     <button className="headerBtn" onClick={handleSearch}>
                         {t('search')}
