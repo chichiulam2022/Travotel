@@ -1,4 +1,4 @@
-const { Users } = require('../models');
+const { Users, Destination } = require('../models');
 const { AuthenticationError } = require('apollo-server-express');
 // const { isType } = require('graphql');
 const { signToken } = require('../utils/auth');
@@ -17,8 +17,12 @@ const resolvers = {
           throw new AuthenticationError('Not logged in!')
 
         },
+        destination: async () => {
+            return await Destination.find();
+        },
 
     },
+
 }    
 
 module.exports = resolvers;

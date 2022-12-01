@@ -1,6 +1,7 @@
-import mongoose from 'mongoose'
+const { Schema, model } = require('mongoose');
+// import mongoose from 'mongoose'
 
-const HotelSchema = new mongoose.Schema({
+const hotelSchema = new Schema({
     name: {
         type: String,
         required: true
@@ -9,6 +10,11 @@ const HotelSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    destination: {
+        type: Schema.Types.ObjectId,
+        ref: 'Destination',
+        required: true
+      },
     city: {
         type: String,
         required: true
@@ -44,6 +50,8 @@ const HotelSchema = new mongoose.Schema({
         type: Boolean,
         default: false
     }
-})
+});
 
-export default mongoose.model("Hotel", HotelSchema)
+const Hotel = model('Hotel', hotelSchema)
+
+module.exports = hotelSchema
