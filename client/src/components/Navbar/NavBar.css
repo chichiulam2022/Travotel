@@ -21,12 +21,6 @@ nav.navbar {
     padding: 0;
 }
 
-/* nav.navbar.scrolled {
-    padding: 0px 0;
-    background-color: rgb(56, 9, 82);
-    opacity: 0.95;
-} */
-
 .nav-link {
     font-weight: 900;
     color: rgb(254, 84, 5) !important;
@@ -49,60 +43,28 @@ span.navbar-text {
     align-items: center;
 }
 
-/* .navbar-text button {
-    font-weight: 700;
-    color: #fff;
-    border: 1px solid #fff;
-    padding: 18px 34px;
-    font-size: 18px;
-    margin-left: 18px;
-    position: relative;
+nav.navbar .navbar-toggler {
+    border: none;
     background-color: transparent;
-    transition: 0.3s ease-in-out;
-} */
+}
 
-/* .navbar-text button span {
-    z-index: 1;
-} */
+nav.navbar .navbar-toggler:active,
+nav.navbar .navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
 
-/* .navbar-text button::before {
-    content: "";
-    width: 0%;
-    height: 100%;
-    position: absolute;
-    background-color: rgb(255, 255, 255);
-    left: 0;
-    top: 0;
-    z-index: -1;
-    transition: 0.3s ease-in-out;
-} */
-
-/* .navbar-text button:hover {
-    color: #121212;
-} */
-
-/* .navbar-text button:hover::before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-} */
-
-/* nav.navbar .navbar-toggler-icon {
-    width: 24px;
-    height: 17px;
+nav.navbar .navbar-toggler-icon {
     background-image: none;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    height: 17px;
     position: relative;
-    border-bottom: 2px solid #fff;
-    transition: all 300ms linear;
     top: -2px;
-} */
-/* 
-nav.navbar .navbar-toggler-icon:focus {
-    border-bottom: 2px solid #fff;
-} */
+    transition: all .3s linear;
+    width: 24px;
+}
 
-/* nav.navbar .navbar-toggler-icon:after,
+nav.navbar .navbar-toggler-icon:after,
 nav.navbar .navbar-toggler-icon:before {
     width: 24px;
     position: absolute;
@@ -113,11 +75,11 @@ nav.navbar .navbar-toggler-icon:before {
     content: '';
     z-index: 2;
     transition: all 300ms linear;
-} */
+}
 
-/* nav.navbar .navbar-toggler-icon:after {
+nav.navbar .navbar-toggler-icon:after {
     top: 8px;
-} */
+}
 
 .switchers {
     display: flex;
