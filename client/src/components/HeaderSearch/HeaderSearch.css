@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap');
 
 
-html {
+/* html {
     font-family: 'Montserrat Alternates', sans-serif;
-}
+} */
 
 .headerSearchContainer {
     display: flex;
@@ -12,12 +12,11 @@ html {
 
 .headerSearch {
     height: 70px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border: 3px solid #febb02;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    /* padding: 10px 0px; */
     border-radius: 5px;
     position: absolute;
     bottom: -55px;
@@ -39,23 +38,15 @@ html {
 .headerSearchInput {
     border: none;
     outline: none;
-    /* font-family: 'Montserrat Alternates', sans-serif;
-    letter-spacing: 1.1px;
-    font-size: 1rem; */
 }
 
 .headerSearchText {
     color: rgb(200, 200, 200);
     cursor: pointer;
-    font-family: 'Montserrat Alternates', sans-serif;
+    /* font-family: 'Montserrat Alternates', sans-serif; */
     letter-spacing: 1.1px;
     font-size: 0.9rem;
 }
-
-/* input.headerSearchInput {
-    font-family: 'Montserrat Alternates', sans-serif;
-    font-size: 1rem;
-} */
 
 input::placeholder {
     font-size: 0.9rem;
@@ -87,7 +78,6 @@ input::placeholder {
     display: flex;
     justify-content: space-between;
     margin: 10px;
-    /* font-family: 'Montserrat Alternates', sans-serif; */
 }
 
 .optionText,
@@ -125,4 +115,43 @@ input::placeholder {
     letter-spacing: 1.1px;
 }
 
-@media screen {}
+.hidden {
+    opacity: 0;
+}
+
+.headerSearch-active {
+    opacity: 1;
+    transition: all 1s ease;
+}
+
+.headerBtn {
+    border-radius: 10px;
+    padding: 5px 10px 5px 10px;
+    border: none;
+    background-color: rgb(254, 84, 5);
+    color: white;
+    font-size: 0.9rem;
+}
+
+
+@media only screen and (max-width: 900px) {
+
+    input {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+        text-overflow: ellipsis;
+        font-size: 0.4rem;
+    }
+
+    span {
+        font-size: 0.4rem;
+    }
+
+    .header-icon {
+        height: 20px;
+    }
+}

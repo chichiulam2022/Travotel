@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
 
-
 html {
     margin: 0;
     padding: 0;
@@ -46,9 +45,16 @@ video {
     display: block;
     text-align: center;
     color: rgb(255, 111, 0);
+    margin-top: 6px;
     font-family: 'Fredericka the Great', cursive;
 }
 
 span {
     font-family: 'Orbitron'
+}
+
+@media screen and (max-width: 650px) {
+    span {
+        font-size: 1.5rem;
+    }
 }

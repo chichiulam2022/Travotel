@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+input,
+select {
+    font-size: 16px;
+    font-size: max(16px, 1em);
+    background-color: rgb(224, 220, 217);
+    border: 2px solid var(--input-border);
+    border-radius: 4px;
+    width: 100%;
+    transition: 180ms box-shadow ease-in-out;
+}
+
+select {
+    width: 100%;
+    border: 1px solid var(--select-border);
+    border-radius: 0.25em;
+    padding: 0.25em 0.5em;
+    cursor: pointer;
+    line-height: 1.1;
+    background-color: rgba(208, 215, 213, 0.556);
+    font-family: 'Quicksand', sans-serif;
+}
+
+.search {
+    width: 100%;
+    padding-bottom: 4.5rem;
+}
+
+h2,
+h3,
+h4,
+p,
+label,
+input,
+button {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.search .container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 1.1rem;
+}
+
+.search h2 {
+    font-weight: 900;
+    text-decoration: underline orange;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 1.6rem;
+}
+
+.search p {
+    font-size: 1.1rem;
+    font-weight: 400;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    margin: auto;
+    padding-right: 20px;
+    text-align: center;
+}
+
+.search-col-2 {
+    justify-content: center;
+    align-items: center;
+}
+
+.search .box {
+    display: flex;
+    max-width: 310px;
+    align-items: center;
+    margin: auto;
+    text-align: center;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.promo {
+    width: 100%;
+    margin: .4rem 0;
+    margin-bottom: 4rem;
+    border: 1px solid #333;
+    text-align: center;
+}
+
+.input-wrap {
+    margin: 1.5rem 0.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.search .date {
+    display: flex;
+}
+
+
+.search button {
+    margin: 0.8rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.room-search-form {
+    height: 100%;
+    background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgb(138, 3, 216) 100%);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: -10px;
+    border-radius: 15px;
+    width: 100%;
+    /* margin-left: 20px; */
+}
+
+.room-search-form p {
+    text-align: center;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 40px;
+    font-weight: 600;
+    color: rgb(255, 194, 81);
+}
+
+.room-search-form-options {
+    display: grid;
+    gap: 2rem;
+}
+
+.date-container label,
+.location-container label {
+    display: block;
+}
+
+.input-wrap label {
+    margin-bottom: 0;
+}
+
+
+button {
+    width: 40%;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    font-weight: 900;
+    background-color: rgb(254, 84, 5);
+    color: white;
+    transition: all 0.3s ease-out;
+}
+
+button:hover {
+    background-color: white;
+    color: rgb(254, 84, 5);
+    transform: translateY(-4px);
+}
+
+input,
+select {
+    padding: 3px;
+    text-decoration: none;
+}
+
+.location-container label,
+.date-container label {
+    font-size: 0.9rem;
+    font-weight: 900;
+    color: rgb(244, 239, 255);
+}
+
+@media screen and (max-width: 940px) {
+
+    .search .container {
+        grid-template-columns: 1fr;
+    }
+
+    .left p {
+        text-align: center;
+    }
+
+    .search form {
+        width: 100%;
+    }
+
+    .search .date {
+        flex-direction: column;
+    }
+}

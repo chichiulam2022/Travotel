@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
+
+* {
+    font-family: 'Aldrich', sans-serif;
+    letter-spacing: 1.2px;
+    line-height: 1.4;
+}
+
 .logo h1 {
     color: rgb(235, 232, 232);
     font-size: 1.5rem;
@@ -10,122 +18,50 @@ nav.navbar {
     top: 0;
     z-index: 9999;
     transition: 0.5s ease-in-out;
+    padding: 0;
 }
 
-nav.navbar.scrolled {
-    padding: 0px 0;
-    background-color: rgb(56, 9, 82);
-    opacity: 0.95;
-}
-
-nav.navbar a.navbar-brand {
-    width: 10%;
-}
-
-nav.navbar .navbar-nav .nav-link.navbar-link,
-.navbar-light .navbar-nav .nav-link {
+.nav-link {
     font-weight: 900;
     color: rgb(254, 84, 5) !important;
     padding: 15px 15px 10px 10px;
     margin-left: 12px;
     margin-right: 12px;
     font-size: 1em;
-    transition: all 0.5s;
+}
+
+.nav-link:hover {
+    text-decoration: underline orange 2px solid;
 }
 
 nav.navbar .navbar-nav a.nav-link.navbar-link p:hover {
     text-decoration: underline;
 }
 
-/* nav.navbar .navbar-nav a.nav-link.navbar-link.active {
-    opacity: 0.4;
-    color: rgb(189, 219, 91);
-    transition: all 0.5s;
-} */
-
 span.navbar-text {
     display: flex;
     align-items: center;
 }
 
-.social-icon {
-    display: inline-block;
-    width: 200px;
-    text-align: center;
-}
-
-
-.social-icon a:hover::before {
-    color: white;
-}
-
-.social-icon a img {
-    width: 23%;
-    z-index: 1;
-    transition: 0.3s ease-in-out;
-    padding-left: 4px;
-}
-
-.social-icon a img:hover {
-    transform: scale(1.2);
-}
-
-.social-icon a img:hover+.hide {
-    visibility: visible;
-}
-
-.navbar-text button {
-    font-weight: 700;
-    color: #fff;
-    border: 1px solid #fff;
-    padding: 18px 34px;
-    font-size: 18px;
-    margin-left: 18px;
-    position: relative;
+nav.navbar .navbar-toggler {
+    border: none;
     background-color: transparent;
-    transition: 0.3s ease-in-out;
 }
 
-.navbar-text button span {
-    z-index: 1;
+nav.navbar .navbar-toggler:active,
+nav.navbar .navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
 }
-
-.navbar-text button::before {
-    content: "";
-    width: 0%;
-    height: 100%;
-    position: absolute;
-    background-color: rgb(255, 255, 255);
-    left: 0;
-    top: 0;
-    z-index: -1;
-    transition: 0.3s ease-in-out;
-}
-
-.navbar-text button:hover {
-    color: #121212;
-}
-
-.navbar-text button:hover::before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-}
-
 
 nav.navbar .navbar-toggler-icon {
-    width: 24px;
-    height: 17px;
     background-image: none;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    height: 17px;
     position: relative;
-    border-bottom: 2px solid #fff;
-    transition: all 300ms linear;
     top: -2px;
-}
-
-nav.navbar .navbar-toggler-icon:focus {
-    border-bottom: 2px solid #fff;
+    transition: all .3s linear;
+    width: 24px;
 }
 
 nav.navbar .navbar-toggler-icon:after,
@@ -145,7 +81,6 @@ nav.navbar .navbar-toggler-icon:after {
     top: 8px;
 }
 
-
 .switchers {
     display: flex;
     align-items: center;
@@ -158,23 +93,17 @@ nav.navbar .navbar-toggler-icon:after {
 }
 
 #custom-switch {
-    background-color: #f2ff00;
-    border-color: #f2ff00;
+    background-color: #f3fe1b;
+    border-color: #f3fe1b;
 }
 
 #custom-switch .form-check-input:checked {
     background-color: white;
 }
 
-
 .form-check-label {
-    /* color: #ff2f63; */
-    color: rgb(11, 124, 136);
+    color: rgb(7, 207, 229);
     font-weight: 900;
-}
-
-.form-switch {
-    padding-top: 6px;
 }
 
 .navbar-link p {
@@ -187,4 +116,11 @@ nav.navbar .navbar-toggler-icon:after {
 
 .navbar-active {
     opacity: 1;
+}
+
+.flag {
+    height: 12px;
+    margin-left: 0;
+    margin-right: 20px;
+    margin-bottom: 3px;
 }
