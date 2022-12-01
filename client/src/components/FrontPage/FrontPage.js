@@ -1,6 +1,6 @@
 import React from 'react'
 import './FrontPage.css'
-// import video from '../../assets/video.mp4'
+import video from '../../assets/video.mp4'
 import { Typewriter } from 'react-simple-typewriter'
 import { useTranslation } from "react-i18next";
 
