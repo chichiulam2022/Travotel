@@ -1,5 +1,34 @@
+a {
+  text-decoration: none;
+  color: orange;
+}
+
+h4,
+h5,
+h6,
+p,
+a {
+  font-family: 'Quicksand', sans-serif;
+}
+
+h4 {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+p {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+
 .room-card {
-  height: 60%;
+  height: 100vh;
 }
 
 .m-3 {
@@ -37,8 +66,7 @@ button {
   display: flex;
   justify-content: center;
   width: 80%;
-  background-color: #8BC6EC;
-  background-image: linear-gradient(358.7deg, rgba(42, 136, 157, 1) 1.7%, rgba(122, 197, 214, 1) 51.1%, rgba(211, 232, 242, 1) 95.5%);
+  background-color: rgb(245, 242, 247);
 }
 
 .on {
@@ -47,7 +75,6 @@ button {
 
 .off {
   color: #ccc;
-  margin: 0;
 }
 
 .wifi,
@@ -59,18 +86,15 @@ button {
   font-size: smaller;
 }
 
-/* .star {
-  font-size: 10px;
-} */
-
 .reviews,
 .currency {
   font-size: small;
 }
 
+/* 
 .total-price {
   font-size: larger
-}
+} */
 
 .img-container {
   display: flex;
@@ -125,9 +149,12 @@ button {
 .star-rating {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
-.star {
-  font-size: 20px;
+.star-rating button {
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+  width: 35px;
 }

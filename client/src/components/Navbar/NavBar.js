@@ -38,13 +38,11 @@ function NavBar() {
             style={{
                 backgroundColor: isDarkMode ? "rgb(72, 61, 139)" : "black",
             }}
-            // className={scroll ? "navbar-active" : "hidden"}
             className={scroll ? "navbar-active" : "hidden"}
         >
             <Container>
 
-                <Navbar.Brand className="logo" href="/room">
-
+                <Navbar.Brand className="logo" href="/">
                     <img
                         src={logo}
                         alt="logo"
@@ -57,8 +55,8 @@ function NavBar() {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto" >
                         <Nav.Link>{t("about-us")}</Nav.Link>
-
                         <Nav.Link>{t("login")}</Nav.Link>
+                        <Nav.Link>{t("register")}</Nav.Link>
 
                         <Form className="switchers">
                             <div
