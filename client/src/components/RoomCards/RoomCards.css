@@ -1,0 +1,40 @@
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.on {
+  color: rgb(223, 152, 126);
+}
+
+.off {
+  color: #ccc;
+}
+
+.wifi,
+.pool,
+.breakfast,
+.parking,
+.pet-friendly,
+.gym {
+  font-size: smaller;
+}
+
+.star {
+  font-size: larger;
+}
+
+.reviews,
+.currency {
+  font-size: small;
+}
+
+.total-price {
+  font-size: larger
+}
+
+.container {
+  padding-left: 5%;
+}
