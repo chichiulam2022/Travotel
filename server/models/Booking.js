@@ -1,7 +1,6 @@
-const { Schema, model } = require('mongoose');
-const dateFormat = require('../utils/dateFormat');
+const mongoose = require('mongoose');
 
-const  = mongoose;
+const { Schema } = mongoose;
 
 const bookingSchema = new Schema(
     {
@@ -20,7 +19,7 @@ const bookingSchema = new Schema(
         hotels: [
             {
             type: Schema.Types.ObjectId,
-            ref: 'Hotels'
+            ref: 'Hotel'
             }
         ]
     }

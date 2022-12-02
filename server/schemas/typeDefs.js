@@ -19,6 +19,11 @@ const typeDefs = gql`
 
     }
 
+    type Destination {
+        _id: ID
+        name: String
+    }
+
     type Hotel {
         _id: ID
         name: String
@@ -34,26 +39,32 @@ const typeDefs = gql`
 
     }
 
-    type Destination {
+    type Booking {
         _id: ID
-        name: String
+        purchaseDate: String
+        hotels: [Hotel]
+    }
+
+
+    type Query {
+        me: User
+        user(username: String!): User
+        destination: [Destination]
+        comments(username: String): [Comment]
+        booking(_id: ID!): Booking
+    }
+
+    type Mutation {
+        login(email: String!, password: String!): Auth
+        addUser(username: String!, email: String!, password: String!): User
+        addComment(commentText: String!): Comment
+        addBooking(hotels: [ID]!): Booking
+
     }
 
     type Auth {
         token: ID!
         user: User
-    }
-
-    type Query {
-        me: User
-        destination: [Destination]
-        comments(username: String): [Comment]
-    }
-
-    type Mutation {
-        login(email: String!, password: String!): Auth
-        addUser(username: String!, email: String!, password: String!): Auth
-
     }
 `;
 

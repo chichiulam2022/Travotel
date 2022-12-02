@@ -1,14 +1,13 @@
-const { Users, Destination, Comment } = require('../models');
+const { User, Destination, Comment, Booking } = require('../models');
 const { AuthenticationError } = require('apollo-server-express');
-// const { isType } = require('graphql');
 const { signToken } = require('../utils/auth');
-// const { countDocuments } = require('../models/User');
+
 
 const resolvers = {
     Query: {
         me: async(parent, args, context) => {
           if (context.user) {
-            const userData = await Users.findOne({ _id: context.user._id })
+            const userData = await User.findOne({ _id: context.user._id })
             .select('-__v -password')
 
             return userData;
@@ -25,13 +24,50 @@ const resolvers = {
             return Comment.find(params).sort({ createdAt: -1 });
         },
 
+        user: async (parent, { username }) => {
+            return User.findOne({ username })
+            .select('-__v -password')
+
+        },
+
     },
     Mutation: {
         addUser: async (parent, args) => {
             const user = await User.create(args);
-            // const token = signToken(user);
+            const token = signToken(user);
 
-            return { token, user };           
+            // return { token, user };           
+            return { user };           
+
+        },
+
+        addComment: async (parent, args, context) => {
+            if (context.user) {
+                const comment = await Comment.create({ ...args, username: context.user.username });
+
+                await User.findByIdAndUpdate(
+                    { _id: context.user._id },
+                    { $push: { comments: comment._id } },
+                    { new: true }
+                );
+
+                return comment;
+            }
+
+            throw new AuthenticationError('You need to be logged in to be able to make comments!');
+        },
+
+        addBooking: async (parent, { hotels }, context) => {
+            console.log(context);
+            if (context.user) {
+              const booking = new Booking({ hotels });
+      
+              await User.findByIdAndUpdate(context.user._id, { $push: { bookings: booking } });
+      
+              return booking;
+            }
+      
+            throw new AuthenticationError('To book a Hotel you need to be logged in');
         },
 
         login: async (parent, { email, password }) => {
