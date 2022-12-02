@@ -10,7 +10,7 @@ import { faParking } from '@fortawesome/free-solid-svg-icons';
 import { faDumbbell } from '@fortawesome/free-solid-svg-icons';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { faPaw } from '@fortawesome/free-solid-svg-icons';
-import room2 from '../../assets/room2.jpg';
+// import room2 from '../../assets/room2.jpg';
 //import { useTranslation } from "react-i18next";
 //import Button from 'react-bootstrap/Button';
 //import Card from 'react-bootstrap/Card'
@@ -41,7 +41,7 @@ function StarRating() {
 }
 
 // room cards component
-function RoomCards(props) {
+function RoomCards() {
 
   return (
     <div className='m-3'>
@@ -65,7 +65,7 @@ function RoomCards(props) {
           <div className="col-md-5 text-center">
             <div className="container">
               <div className='row align-items-center'>
-                <img src={room2} className='img-fluid rounded-start' alt='Room view'></img>
+                <img src='' className='img-fluid rounded-start' alt='Room view'></img>
               </div>
             </div>
 

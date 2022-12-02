@@ -36,7 +36,7 @@ function SamplePrevArrow(props) {
     );
 }
 
-function RoomSlider() {
+function HotelSlider() {
 
     const { t } = useTranslation(["slider"]);
 
@@ -157,7 +157,7 @@ function RoomSlider() {
     );
 }
 
-export default RoomSlider;
+export default HotelSlider;
 
 
 
