@@ -16,7 +16,6 @@ const typeDefs = gql`
         commentText: String
         createdAt: String
         username: String
-
     }
 
     type Destination {
@@ -34,8 +33,10 @@ const typeDefs = gql`
         description: String
         rating: Int
         rooms: String
-        cheapestPrice: Float
+        nights: Int
+        price: Float
         featured: Boolean
+        destination: Destination
 
     }
 

@@ -42,10 +42,15 @@ const hotelSchema = new Schema({
     rooms: {
         type: [String],
     },
-    cheapestPrice: {
+    price: {
         type: Number,
         required: true
     },
+    nights: {
+        type: Number,
+        min: 0,
+        default: 0
+      },
     featured: {
         type: Boolean,
         default: false

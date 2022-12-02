@@ -20,7 +20,7 @@ db.once('open', async () => {
   await User.deleteMany();
 
   await User.create({
-    username: jonsnow,
+    username: 'jonsnow',
     firstName: 'Jon',
     lastName: 'Snow',
     email: 'jonsnow@test.com',
@@ -28,7 +28,7 @@ db.once('open', async () => {
   });
 
   await User.create({
-    username: noone,
+    username: 'noone',
     firstName: 'Arya',
     lastName: 'Stark',
     email: 'arya@noone.com',
