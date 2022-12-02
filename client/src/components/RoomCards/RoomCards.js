@@ -9,6 +9,7 @@ import { faPersonSwimming } from '@fortawesome/free-solid-svg-icons';
 import { faParking } from '@fortawesome/free-solid-svg-icons';
 import { faDumbbell } from '@fortawesome/free-solid-svg-icons';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { faPaw } from '@fortawesome/free-solid-svg-icons';
 import room2 from '../../assets/room2.jpg';
 //import { useTranslation } from "react-i18next";
 //import Button from 'react-bootstrap/Button';
@@ -68,6 +69,7 @@ function RoomCards(props) {
             </div>
           </div>
 
+          {/* body */}
           <div class="col-md-5">
             <div className='card-body'>
               <h4 className='card-title'>Grand Gateway</h4>
@@ -77,34 +79,37 @@ function RoomCards(props) {
               <span className="breakfast"><FontAwesomeIcon icon={faMugHot} /> Breakfast included </span>
               <span className="pool"><FontAwesomeIcon icon={faPersonSwimming} /> Pool </span>
               <span className="parking"><FontAwesomeIcon icon={faParking} /> Parking available </span>
-              <span className="gym"><FontAwesomeIcon icon={faDumbbell} /> Gym </span>
+              <span className="pet-friendly"><FontAwesomeIcon icon={faPaw} /> Pet friendly </span>
               <div>
-                <div className='reviews'>
-                  <a className='p-2' href="https://www.google.com/"> See more details </a>
+                <span className="gym"><FontAwesomeIcon icon={faDumbbell} /> Gym </span>
+                <div>
+                  <div className='reviews'>
+                    <a className='p-2' href="https://www.google.com/"> See more details </a>
+                  </div>
+                  <br></br>
                 </div>
-                <br></br>
-              </div>
-              <div className='reviews'>
-                <StarRating></StarRating>
-                <a className='p-2' href="https://www.google.com/"> See all reviews </a>
-              </div>
-              <div>
+                <div className='reviews'>
+                  <StarRating></StarRating>
+                  <a className='p-2' href="https://www.google.com/"> See all reviews </a>
+                </div>
+                <div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-md-2 border-start p-2">
-            <h6 className='text-body'> Reserve a room </h6>
-            <div className='price text-body'>
-              <div>CAD <span className='total-price'>$5,000</span></div>
-              <Button variant="primary" size="sm">Reserve</Button>
+
+            {/* reserve section */}
+            <div class="col-md-2 border-start p-2">
+              <h6 className='text-body'> Reserve a room </h6>
+              <div className='price text-body'>
+                <div>CAD <span className='total-price'>$5,000</span></div>
+                <Button variant="primary" size="sm">Reserve</Button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-
-    </div >
-  )
+      </div >
+      )
 }
 
-export default RoomCards;
+      export default RoomCards;
