@@ -110,9 +110,9 @@ nav.navbar .navbar-toggler-icon:after {
     margin-bottom: 0;
 }
 
-.hidden {
+/* .hidden {
     opacity: 0;
-}
+} */
 
 .navbar-active {
     opacity: 1;

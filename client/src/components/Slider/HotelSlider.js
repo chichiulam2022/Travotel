@@ -10,6 +10,7 @@ import sfrancisco from '../../assets/sfrancisco.jpg'
 import toronto from '../../assets/toronto.jpg'
 import mexico from '../../assets/mexico.jpg'
 import dubai from '../../assets/dubai.jpg'
+import { Link } from 'react-router-dom'
 
 // import HeaderSearch from '../HeaderSearch/HeaderSearch';
 
@@ -146,7 +147,7 @@ function HotelSlider() {
                                 />
                             </div>
                             <div className="card-bottom">
-                                <h5>{item.city}</h5>
+                                <Link to='/room' className='nav-link'><h5>{item.city}</h5></Link>
                                 <span className="category">{item.category}</span>
                             </div>
                         </div>

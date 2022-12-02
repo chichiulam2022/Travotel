@@ -1,8 +1,44 @@
+.room-card {
+  height: 60%;
+}
+
+.m-3 {
+  margin: 0 !important;
+}
+
+.card {
+  border: none;
+}
+
 button {
   background-color: transparent;
   border: none;
   outline: none;
   cursor: pointer;
+}
+
+.room-card,
+.body-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.room-card {
+  width: 100%;
+  margin-left: 12px;
+  margin-right: 12px;
+
+}
+
+.room-card-container {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  background-color: #8BC6EC;
+  background-image: linear-gradient(358.7deg, rgba(42, 136, 157, 1) 1.7%, rgba(122, 197, 214, 1) 51.1%, rgba(211, 232, 242, 1) 95.5%);
 }
 
 .on {
@@ -11,6 +47,7 @@ button {
 
 .off {
   color: #ccc;
+  margin: 0;
 }
 
 .wifi,
@@ -22,9 +59,9 @@ button {
   font-size: smaller;
 }
 
-.star {
-  font-size: larger;
-}
+/* .star {
+  font-size: 10px;
+} */
 
 .reviews,
 .currency {
@@ -35,6 +72,62 @@ button {
   font-size: larger
 }
 
-.container {
-  padding-left: 5%;
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-container img {
+  height: 300px;
+  width: 450px;
+}
+
+/* button */
+.reserve-btn {
+  background-color: #f44336;
+  color: white;
+  padding: 8px 10px;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  transition: 0.3s all ease;
+  margin-top: 10px;
+}
+
+.reserve-btn:hover {
+  transform: translateY(5px);
+  color: white;
+}
+
+/* reserve container */
+.reserve-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* icon container */
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 15px;
+}
+
+/* star rating */
+.reviews {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.star-rating {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.star {
+  font-size: 20px;
 }

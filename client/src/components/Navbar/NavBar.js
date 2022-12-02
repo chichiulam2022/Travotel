@@ -11,7 +11,7 @@ function NavBar() {
     //to check if scrollY is active
     const [scroll, setScroll] = useState(false);
     const handleScroll = () => {
-        if (window.scrollY >= 500) {
+        if (window.scrollY >= 10) {
             setScroll(true);
         } else {
             setScroll(false);
@@ -38,10 +38,13 @@ function NavBar() {
             style={{
                 backgroundColor: isDarkMode ? "rgb(72, 61, 139)" : "black",
             }}
+            // className={scroll ? "navbar-active" : "hidden"}
             className={scroll ? "navbar-active" : "hidden"}
         >
             <Container>
-                <Navbar.Brand className="logo" href="/">
+
+                <Navbar.Brand className="logo" href="/room">
+
                     <img
                         src={logo}
                         alt="logo"
@@ -104,7 +107,7 @@ function NavBar() {
                     </Nav>
                 </Navbar.Collapse>
             </Container>
-        </Navbar>
+        </Navbar >
     );
 }
 

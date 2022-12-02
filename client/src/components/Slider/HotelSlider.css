@@ -84,6 +84,10 @@ html {
     bottom: -50px;
 }
 
+.nav-link {
+    text-decoration: none;
+}
+
 @media only screen and (max-width: 650px) {
     .slider-blurb h4 {
         font-size: 1rem;
