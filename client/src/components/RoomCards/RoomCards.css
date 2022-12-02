@@ -26,10 +26,15 @@ button {
   font-size: larger;
 }
 
-.reviews {
+.reviews,
+.currency {
   font-size: small;
 }
 
 .total-price {
   font-size: larger
+}
+
+.container {
+  padding-left: 5%;
 }

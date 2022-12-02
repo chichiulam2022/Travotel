@@ -44,7 +44,7 @@ function StarRating() {
 function RoomCards(props) {
 
   return (
-    <div className='row m-2'>
+    <div className='m-3'>
 
       {/* <Card style={{ width: '40rem' }} lass="m-2">
         <Card.Img variant="fluid" className='rounded-start' src={weatherPng} />
@@ -57,16 +57,18 @@ function RoomCards(props) {
         </Card.Body>
       </Card> */}
 
-      <div className='card col-8 p-2'>
-        <div class="row g-0">
+      <div className='card col-md-10 '>
+
+        <div className="row align-items-center">
 
           {/* hotel image */}
-          <div class="col-md-5 text-center">
-            <div class="container text-center">
+          <div className="col-md-5 text-center">
+            <div className="container">
               <div className='row align-items-center'>
-                <img src={room2} className="img-fluid rounded-start" alt="Room view"></img>
+                <img src={room2} className='img-fluid rounded-start' alt='Room view'></img>
               </div>
             </div>
+
           </div>
 
           {/* body */}
@@ -78,38 +80,40 @@ function RoomCards(props) {
               <span className="wifi"><FontAwesomeIcon icon={faWifi} /> Wifi </span>
               <span className="breakfast"><FontAwesomeIcon icon={faMugHot} /> Breakfast included </span>
               <span className="pool"><FontAwesomeIcon icon={faPersonSwimming} /> Pool </span>
-              <span className="parking"><FontAwesomeIcon icon={faParking} /> Parking available </span>
               <span className="pet-friendly"><FontAwesomeIcon icon={faPaw} /> Pet friendly </span>
+              <span className="parking"><FontAwesomeIcon icon={faParking} /> Parking available </span>
+              <span className="gym"><FontAwesomeIcon icon={faDumbbell} /> Gym </span>
               <div>
-                <span className="gym"><FontAwesomeIcon icon={faDumbbell} /> Gym </span>
-                <div>
-                  <div className='reviews'>
-                    <a className='p-2' href="https://www.google.com/"> See more details </a>
-                  </div>
-                  <br></br>
-                </div>
                 <div className='reviews'>
-                  <StarRating></StarRating>
-                  <a className='p-2' href="https://www.google.com/"> See all reviews </a>
+                  <a className='p-2' href="https://www.google.com/"> See more details </a>
                 </div>
-                <div>
-                </div>
+                <br></br>
               </div>
-            </div>
-
-            {/* reserve section */}
-            <div class="col-md-2 border-start p-2">
-              <h6 className='text-body'> Reserve a room </h6>
-              <div className='price text-body'>
-                <div>CAD <span className='total-price'>$5,000</span></div>
-                <Button variant="primary" size="sm">Reserve</Button>
+              <div className='reviews'>
+                <StarRating></StarRating>
+                <a className='p-2' href="https://www.google.com/"> See more reviews </a>
+              </div>
+              <div>
               </div>
             </div>
           </div>
-        </div>
 
-      </div >
-      )
+          {/* reserve section */}
+          <div class="col-md-2 border-start align-self-center">
+            <h6 className='text-body'> Reserve a room </h6>
+            <div className='price text-body'>
+              <div className='currency'> CAD
+                <span className='total-price'> $5,000</span>
+              </div>
+              <Button variant="primary" size="sm">Reserve</Button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div >
+  )
 }
 
-      export default RoomCards;
+export default RoomCards;
