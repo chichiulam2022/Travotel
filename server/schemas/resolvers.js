@@ -19,6 +19,19 @@ const resolvers = {
         destination: async () => {
             return await Destination.find();
         },
+        booking: async (parent, { _id }, context) => {
+            if (context.user) {
+              const user = await User.findById(context.user._id).populate({
+                path: 'bookings.hotels',
+                populate: 'destination'
+              });
+      
+              return user.bookings.id(_id);
+            }
+      
+            throw new AuthenticationError('Not logged in');
+        },
+
         comments: async (parent, { username }) => {
             const params = username ? { username } : {};
             return Comment.find(params).sort({ createdAt: -1 });
@@ -29,6 +42,9 @@ const resolvers = {
             .select('-__v -password')
 
         },
+
+
+
 
     },
     Mutation: {
@@ -67,7 +83,7 @@ const resolvers = {
               return booking;
             }
       
-            throw new AuthenticationError('To book a Hotel you need to be logged in');
+            throw new AuthenticationError('To book a hotel you need to be logged in');
         },
 
         login: async (parent, { email, password }) => {
