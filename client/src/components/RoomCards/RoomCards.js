@@ -54,7 +54,7 @@ function RoomCards() {
       <>
         <div className='m-3 room-card' style={{ backgroundColor: isDarkMode ? 'lavender' : 'black' }}>
           <div className='card col-md-10 room-card-container'
-            style={{ backgroundColor: isDarkMode ? 'rgb(245, 242, 247)' : '#808080' }}>
+            style={{ backgroundColor: isDarkMode ? 'rgb(245, 242, 247)' : '#333366' }}>
             <div className="row align-items-center room-card-content">
 
               {/* hotel image */}
@@ -71,17 +71,20 @@ function RoomCards() {
 
               <div class="col-md-5 body-container">
                 <div className='card-body'>
-                  <h4 className='card-title'>Grand Gateway</h4>
-                  <h6 className='text-muted text-'>Downtown Toronto</h6>
-                  <h5>Located in Downtown Toronto, just next to the Eaton Centre and Yorkdale Shopping Centre.</h5>
+                  <h4 className='card-title' style={{ color: isDarkMode ? 'black' : 'white' }}>Grand Gateway</h4>
+                  <h6 style={{ color: isDarkMode ? 'black' : 'white' }}><i>Downtown Toronto</i></h6>
+                  <br />
+                  <h5 style={{ color: isDarkMode ? 'black' : 'white' }}>
+                    Located in Downtown Toronto, just next to the Eaton Centre and Yorkdale Shopping Centre.
+                  </h5>
 
                   <div className='icon-container'>
-                    <p className="wifi"><FontAwesomeIcon icon={faWifi} /> Wifi </p>
-                    <p className="breakfast"><FontAwesomeIcon icon={faMugHot} /> Breakfast included </p>
-                    <p className="pool"><FontAwesomeIcon icon={faPersonSwimming} /> Pool </p>
-                    <p className="pet-friendly"><FontAwesomeIcon icon={faPaw} /> Pet friendly </p>
-                    <p className="parking"><FontAwesomeIcon icon={faParking} /> Parking available </p>
-                    <p className="gym"><FontAwesomeIcon icon={faDumbbell} /> Gym </p>
+                    <p className="wifi"><FontAwesomeIcon icon={faWifi} />&nbsp;&nbsp;Wifi</p>
+                    <p className="breakfast"><FontAwesomeIcon icon={faMugHot} />&nbsp;&nbsp;Breakfast included </p>
+                    <p className="pool"><FontAwesomeIcon icon={faPersonSwimming} />&nbsp;&nbsp;Pool </p>
+                    <p className="pet-friendly"><FontAwesomeIcon icon={faPaw} />&nbsp;&nbsp;Pet friendly </p>
+                    <p className="parking"><FontAwesomeIcon icon={faParking} />&nbsp;&nbsp;Parking available </p>
+                    <p className="gym"><FontAwesomeIcon icon={faDumbbell} />&nbsp;&nbsp;Gym </p>
                   </div>
                   <div>
                     <div className='reviews'>
@@ -106,7 +109,7 @@ function RoomCards() {
               <div className="col-md-2 border-md-start align-self-center reserve-container">
                 <h6 className='text-body'> Reserve a room </h6>
                 <div className='price text-body'>
-                  <p className='currency'>CAD $5,000</p>
+                  <h6 className='currency'>CAD $5,000</h6>
                   <a href="/" className='reserve-btn'>Reserve</a>
                 </div>
               </div>

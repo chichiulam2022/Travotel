@@ -13,22 +13,30 @@ a {
 
 h4 {
   font-size: 1.2rem;
-  font-weight: 500;
+  font-weight: 800;
+}
+
+h5 {
+  font-size: 1.2rem;
+  font-weight: 800;
 }
 
 h6 {
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 800;
 }
 
 p {
-  font-size: 1.3rem;
-  font-weight: 600;
+  font-size: 0.9rem;
+  font-weight: 800;
 }
-
 
 .room-card {
   height: 100vh;
+}
+
+.room-card-content {
+  margin: 0;
 }
 
 .m-3 {
@@ -77,24 +85,18 @@ button {
   color: #ccc;
 }
 
-.wifi,
+/* .wifi,
 .pool,
 .breakfast,
 .parking,
 .pet-friendly,
 .gym {
   font-size: smaller;
-}
-
-.reviews,
-.currency {
-  font-size: small;
-}
-
-/* 
-.total-price {
-  font-size: larger
 } */
+
+.text-body h6 {
+  margin-right: 10px;
+}
 
 .img-container {
   display: flex;
@@ -130,6 +132,7 @@ button {
 .reserve-container {
   display: flex;
   flex-direction: column;
+
 }
 
 /* icon container */
@@ -137,6 +140,11 @@ button {
   display: flex;
   flex-direction: column;
   padding: 10px 15px;
+  justify-content: flex-end;
+}
+
+.icon-container p {
+  margin-bottom: 3px;
 }
 
 /* star rating */
