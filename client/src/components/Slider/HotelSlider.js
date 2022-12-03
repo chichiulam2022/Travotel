@@ -10,7 +10,6 @@ import sfrancisco from '../../assets/sfrancisco.jpg'
 import toronto from '../../assets/toronto.jpg'
 import mexico from '../../assets/mexico.jpg'
 import dubai from '../../assets/dubai.jpg'
-import { Link } from 'react-router-dom'
 
 // import HeaderSearch from '../HeaderSearch/HeaderSearch';
 
@@ -45,37 +44,44 @@ function HotelSlider() {
         {
             id: 1,
             city: 'London',
-            linkImg: london
+            linkImg: london,
+            link: '/london'
         },
         {
             id: 2,
             city: 'New York City',
-            linkImg: nyc
+            linkImg: nyc,
+            link: '/nyc'
         },
         {
             id: 3,
             city: 'São Paulo',
-            linkImg: sao_paulo
+            linkImg: sao_paulo,
+            link: '/sao_paulo'
         },
         {
             id: 4,
             city: 'San Francisco',
-            linkImg: sfrancisco
+            linkImg: sfrancisco,
+            link: '/dubai'
         },
         {
             id: 5,
             city: 'Toronto',
-            linkImg: toronto
+            linkImg: toronto,
+            link: '/toronto'
         },
         {
             id: 6,
             city: 'Mexico City',
-            linkImg: mexico
+            linkImg: mexico,
+            link: '/mexico'
         },
         {
             id: 7,
             city: 'Dubai',
-            linkImg: dubai
+            linkImg: dubai,
+            link: '/dubai'
         },
 
     ]
@@ -146,7 +152,7 @@ function HotelSlider() {
                                 />
                             </div>
                             <div className="card-bottom">
-                                <Link to='/room' className='nav-link'><h5>{item.city}</h5></Link>
+                                <a href={item.link} className='nav-link'><h5>{item.city}</h5></a>
                                 <span className="category">{item.category}</span>
                             </div>
                         </div>

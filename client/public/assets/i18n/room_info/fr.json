@@ -3,14 +3,19 @@
     "intro": "Toronto est la plus grande ville du Canada et le leader mondial en affaires, finance, technologie, divertissement et culture. Grâce à sa grande population d'immigrants du monde entier, Toronto est une des villes les plus multiculturelles au monde.",
     "hotel_name": "Grand Gateway",
     "location": "Centre-ville Toronto",
-    "description": "Situé au centre-ville Toronto, à côté d'Eaton Centre.",
+    "description1": "Cet hôtel se situe dans le centre-ville de Toronto, à côté de la salle omnisports Maple Leaf Gardens.",
+    "description2": "Situé à 300 mètres de la station de métro College, le Chelsea Hotel Toronto possède une salle de sport, 2 piscines intérieures et un restaurant sur place.",
+    "description3": "Cet hôtel du centre-ville de Toronto est situé à 5 minutes à pied de la station de métro Union. Les suites spacieuses sont dotées d'une cuisine entièrement équipée.",
+    "description4": "Niché sur 5 hectares de parc pittoresque à 16 minutes en voiture du centre-ville de Toronto, le Pan Pacific Toronto dispose d'une piscine extérieure ouverte en saison. ",
     "breakfast": "Déjeuner compris",
     "pool": "animaux de compagnie acceptés",
     "parking": "Stationnement disponible",
     "gym": "Gym",
     "price": "$5,000",
     "reserve": "Réserver",
-    "night": "per nuit"
+    "night": "per nuit",
+    "promotion-title": "Explorez davantage grâce à l'application TRAVÔTEL",
+    "promotion": "Les membres économisent 20 % ou plus sur des hôtels, en plus de profiter d'offres sur les forfaits et les vols. Assurez-vous d'ouvrir une session avant de réserver."
 }  
 
 

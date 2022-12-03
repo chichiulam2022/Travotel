@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react'
 import './RoomCards.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { MdLocationPin } from 'react-icons/md'
 import { Container, Row, Col, Image, Card, Button } from 'react-bootstrap';
 
 import {
@@ -11,7 +12,12 @@ import {
   faStar,
   faPaw
 } from '@fortawesome/free-solid-svg-icons';
+import room1 from '../../assets/room1.jpg';
 import room2 from '../../assets/room2.jpg';
+import room3 from '../../assets/room3.jpg';
+import room4 from '../../assets/room4.jpg';
+import qrcode from '../../assets/qrcode.png'
+import toronto from '../../assets/toronto2.jpg'
 import { ThemeContext } from '../../contexts/ThemeContext'
 import { useTranslation } from "react-i18next";
 
@@ -53,18 +59,33 @@ function RoomCards() {
   const roomData = [
     {
       hotel: 'Grand Gateway',
-      location: '111 College St., Toronto',
-      description: t('description'),
+      image: room1,
+      location: 'Downtown Toronto',
+      description: t('description1'),
       price: `CAD $300 ${t('night')}`
     },
     {
-      hotel: 'Grandy',
-      location: '111 College St., Toronto',
-      description: t('description'),
+      hotel: 'One King West Hotel and Residence',
+      image: room3,
+      location: 'Financial District Toronto',
+      description: t('description2'),
       price: `CAD $300 ${t('night')}`
-    }
+    },
+    {
+      hotel: 'Chelsea Hotel Toronto',
+      image: room2,
+      location: 'Downtown Toronto',
+      description: t('description3'),
+      price: `CAD $300 ${t('night')}`
+    },
+    {
+      hotel: 'Grand Gateway',
+      image: room4,
+      location: 'Downtown Toronto',
+      description: t('description4'),
+      price: `CAD $300 ${t('night')}`
+    },
   ]
-
 
 
   const { isDarkMode } = useContext(ThemeContext);
@@ -134,14 +155,12 @@ function RoomCards() {
   // )
 
   return (
-
     <main style={{ backgroundColor: isDarkMode ? 'lavender' : 'black', height: 'auto' }}>
-
       <Container>
         <Row className='px-4'>
           <Col sm={7}>
             <Image
-              src={room2}
+              src={toronto}
               fluid
               rounded
               className='mt-5'
@@ -161,24 +180,43 @@ function RoomCards() {
         </Row>
 
         <Row>
-          <Card className='mt-3 text-center bg-secondary text-white py-4'>
-            <Card.Body>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </Card.Body>
+          <Card className='mt-3 text-center text-white py-2'
+            style={{ backgroundColor: isDarkMode ? '#e67e00' : '#6200b3' }}>
+            <div style={{ display: 'flex', justifyContent: 'center', alignContent: 'center' }}>
+              <Image src={qrcode} style={{ height: '150px', width: '180px' }} />
+              <Card.Body>
+
+                <h5 style={{ fontWeight: '900', fontSize: '1.2rem', textDecoration: 'underline solid orange' }}>
+                  {t('promotion-title')}
+                </h5>
+                <br />
+                <h6 style={{ fontWeight: '300', fontSize: '1.2rem' }}>
+                  {t('promotion')}
+                </h6></Card.Body>
+            </div>
           </Card>
         </Row>
 
         <div className="row row-cols-1 row-cols-md-2 g-4 mt-3">
           {roomData.map((item) => (
             <div className="col">
-              <div className="card">
-                <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp" className="card-img-top"
-                  alt="Hollywood Sign on The Hill" />
+              <div className="card" style={{ backgroundColor: isDarkMode ? '#F0FFFF' : '#483D8B' }}>
+                <img src={item.image}
+                  className="card-img-top"
+                  style={{ height: '350px' }}
+                  alt="room" />
                 <div class="card-body">
-                  <h3 class="card-title">{item.hotel}</h3>
-                  <h5 className="card-title">{item.location}</h5>
-                  <p class="card-text">
-                    description
+                  <h5 class="card-title"
+                    style={{ fontWeight: '500', color: isDarkMode ? 'purple' : '#00FFFF' }}
+                  > {item.hotel}</h5>
+                  <br />
+                  <h5 className="card-title" style={{ color: isDarkMode ? 'black' : 'white' }}>
+                    <MdLocationPin />&nbsp;{item.location}
+                  </h5>
+                  <p class="card-text" style={{ color: isDarkMode ? 'black' : 'white' }}>
+                    {item.description}
                   </p>
-                  <div className='icon-container'>
+                  <div className='icon-container' style={{ color: isDarkMode ? 'black' : 'white' }}>
                     <p className="wifi"><FontAwesomeIcon icon={faWifi} />&nbsp;&nbsp;Wifi</p>
                     <p className="breakfast"><FontAwesomeIcon icon={faMugHot} />&nbsp;&nbsp;Breakfast included </p>
                     <p className="pool"><FontAwesomeIcon icon={faPersonSwimming} />&nbsp;&nbsp;Pool </p>
@@ -186,8 +224,9 @@ function RoomCards() {
                     <p className="parking"><FontAwesomeIcon icon={faParking} />&nbsp;&nbsp;Parking available </p>
                     <p className="gym"><FontAwesomeIcon icon={faDumbbell} />&nbsp;&nbsp;Gym </p>
                   </div>
-                  <h6 className='currency'>{item.price}</h6>
-                  <Button>Reserve</Button>
+                  <br />
+                  <h6 className='currency' style={{ color: isDarkMode ? 'black' : 'white' }}>{item.price}</h6>
+                  <Button className='reserve-btn'>{t('reserve')}</Button>
                 </div>
               </div>
             </div>))}
