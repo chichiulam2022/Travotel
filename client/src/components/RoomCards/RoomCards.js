@@ -169,7 +169,7 @@ function RoomCards() {
           </Col>
           <Col sm={5}>
             <h2
-              className='mt-3'
+              className='mt-5'
               style={{ color: isDarkMode ? 'black' : 'white' }}
             >
               {t('welcome')}</h2>
@@ -197,13 +197,13 @@ function RoomCards() {
           </Card>
         </Row>
 
-        <div className="row row-cols-1 row-cols-md-2 g-4 mt-3">
+        <div className="row row-cols-1 row-cols-md-3 g-4 mt-3">
           {roomData.map((item) => (
             <div className="col">
               <div className="card" style={{ backgroundColor: isDarkMode ? '#F0FFFF' : '#483D8B' }}>
                 <img src={item.image}
                   className="card-img-top"
-                  style={{ height: '350px' }}
+                  style={{ height: '200px' }}
                   alt="room" />
                 <div class="card-body">
                   <h5 class="card-title"
