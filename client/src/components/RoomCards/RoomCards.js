@@ -16,6 +16,8 @@ import room1 from '../../assets/room1.jpg';
 import room2 from '../../assets/room2.jpg';
 import room3 from '../../assets/room3.jpg';
 import room4 from '../../assets/room4.jpg';
+import room5 from '../../assets/room5.jpg';
+import room6 from '../../assets/room6.jpg';
 import qrcode from '../../assets/qrcode.png'
 import toronto from '../../assets/toronto2.jpg'
 import { ThemeContext } from '../../contexts/ThemeContext'
@@ -79,24 +81,24 @@ function RoomCards() {
       price: `CAD $300 ${t('night')}`
     },
     {
-      hotel: 'Grand Gateway',
+      hotel: 'Town Suites ',
       image: room4,
       location: 'Downtown Toronto',
       description: t('description4'),
       price: `CAD $300 ${t('night')}`
     },
     {
-      hotel: 'Grand Gateway',
-      image: room4,
+      hotel: 'Metro Hotel',
+      image: room5,
       location: 'Downtown Toronto',
-      description: t('description4'),
+      description: t('description5'),
       price: `CAD $300 ${t('night')}`
     },
     {
-      hotel: 'Grand Gateway',
-      image: room4,
+      hotel: 'North American Inn',
+      image: room6,
       location: 'Downtown Toronto',
-      description: t('description4'),
+      description: t('description6'),
       price: `CAD $300 ${t('night')}`
     },
   ]
@@ -182,14 +184,15 @@ function RoomCards() {
             />
           </Col>
           <Col sm={5}>
-            <h2
-              className='mt-5'
+            <h3
+              className='mt-4 mt-sm-5'
               style={{ color: isDarkMode ? 'black' : 'white' }}
             >
-              {t('welcome')}</h2>
-            <h5
+              {t('welcome')}</h3>
+            <br />
+            <h6
               style={{ color: isDarkMode ? 'black' : 'white' }}
-            >{t('intro')}</h5>
+            >{t('intro')}</h6>
           </Col>
         </Row>
 
@@ -197,9 +200,8 @@ function RoomCards() {
           <Card className='mt-3 text-center text-white py-2'
             style={{ backgroundColor: isDarkMode ? '#e67e00' : '#6200b3' }}>
             <div style={{ display: 'flex', justifyContent: 'center', alignContent: 'center' }}>
-              <Image src={qrcode} style={{ height: '150px', width: '180px' }} />
+              <Image src={qrcode} style={{ height: '150px', width: '180px' }} className='my-auto' />
               <Card.Body>
-
                 <h5 style={{ fontWeight: '900', fontSize: '1.2rem', textDecoration: 'underline solid orange' }}>
                   {t('promotion-title')}
                 </h5>
@@ -224,9 +226,9 @@ function RoomCards() {
                     style={{ fontWeight: '500', color: isDarkMode ? 'purple' : '#00FFFF' }}
                   > {item.hotel}</h5>
                   <br />
-                  <h5 className="card-title" style={{ color: isDarkMode ? 'black' : 'white' }}>
+                  <h6 className="card-title" style={{ color: isDarkMode ? 'black' : 'white' }}>
                     <MdLocationPin />&nbsp;{item.location}
-                  </h5>
+                  </h6>
                   <p class="card-text" style={{ color: isDarkMode ? 'black' : 'white' }}>
                     {item.description}
                   </p>
