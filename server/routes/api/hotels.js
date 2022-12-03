@@ -1,5 +1,5 @@
 import express from 'express'
-import Hotels from '../models/Hotels.js'
+import Hotels from '../../models/Hotels.js'
 
 const router = express.Router()
 

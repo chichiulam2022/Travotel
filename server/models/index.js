@@ -1,6 +1,11 @@
 //used for exporting models
-const Users = require('./Users');
-const Hotels = require('./Hotels');
-const Rooms = require('./Rooms');
+const User = require('./User');
+const Hotel = require('./Hotel');
+const Destination = require('./Destination');
+const Booking = require('./Booking');
+const Comment = require('./Comment');
+// const Rooms = require('./Rooms');
 
-module.exports = { Users, Hotels, Rooms };
+module.exports = { User, Hotel, Destination, Booking, Comment };
+
+//will need to export , Hotels, Rooms 
