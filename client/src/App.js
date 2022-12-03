@@ -1,15 +1,18 @@
 import Homepage from "./pages/Homepage";
 import { Routes, Route } from "react-router-dom";
-import RoomCards from "./components/RoomCards/RoomCards";
+import Rooms from "./pages/Rooms";
+import './App.css'
 
 
 
 function App() {
   return (
-    <Routes>
-      <Route index element={<Homepage />} />
-      <Route path='/rooms' element={<RoomCards />} />
-    </Routes >
+    <div className="App">
+      <Routes>
+        <Route index element={<Homepage />} />
+        <Route path="/toronto" element={<Rooms />} />
+      </Routes >
+    </div>
 
   )
 }
