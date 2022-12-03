@@ -85,6 +85,20 @@ function RoomCards() {
       description: t('description4'),
       price: `CAD $300 ${t('night')}`
     },
+    {
+      hotel: 'Grand Gateway',
+      image: room4,
+      location: 'Downtown Toronto',
+      description: t('description4'),
+      price: `CAD $300 ${t('night')}`
+    },
+    {
+      hotel: 'Grand Gateway',
+      image: room4,
+      location: 'Downtown Toronto',
+      description: t('description4'),
+      price: `CAD $300 ${t('night')}`
+    },
   ]
 
 
@@ -226,7 +240,9 @@ function RoomCards() {
                   </div>
                   <br />
                   <h6 className='currency' style={{ color: isDarkMode ? 'black' : 'white' }}>{item.price}</h6>
-                  <Button className='reserve-btn'>{t('reserve')}</Button>
+                  <Button className='reserve-btn'>{t('reserve')}</Button>&nbsp;&nbsp;
+                  {/* <Button className='reserve-btn'>{t('review')}</Button> */}
+                  <a href='/review' style={{ textDecoration: 'underline orange' }}>{t('review')}</a>
                 </div>
               </div>
             </div>))}
