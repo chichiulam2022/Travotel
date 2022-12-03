@@ -50,10 +50,6 @@ import { useTranslation } from "react-i18next";
 //   );
 // }
 
-//translation
-
-
-
 
 // room cards component
 function RoomCards() {
@@ -103,73 +99,8 @@ function RoomCards() {
     },
   ]
 
-
   const { isDarkMode } = useContext(ThemeContext);
-  // return (
-  //   <>
-  //     {/* first card */}
-  //     <>
-  //       <div className='m-3 room-card' style={{ backgroundColor: isDarkMode ? 'lavender' : 'black' }}>
-  //         <div className='card col-md-10 room-card-container'
-  //           style={{ backgroundColor: isDarkMode ? 'rgb(245, 242, 247)' : '#333366' }}>
-  //           <div className="row align-items-center room-card-content">
-
-  //             {/* hotel image */}
-  //             <div className="col-md-5 text-center ">
-  //               <div className="container">
-  //                 <div className='row align-items-center img-container'>
-  //                   <img src={room2} className='img-fluid rounded-start' alt='Room view'></img>
-  //                 </div>
-  //               </div>
-  //             </div>
-
-  //             {/* body */}
-  //             <div class="col-md-5 body-container">
-  //               <div className='card-body'>
-  //                 <h4 className='card-title' style={{ color: isDarkMode ? 'black' : 'white' }}>Grand Gateway</h4>
-  //                 <h6 style={{ color: isDarkMode ? 'black' : 'white' }}><i>Downtown Toronto</i></h6>
-  //                 <br />
-  //                 <h5 style={{ color: isDarkMode ? 'black' : 'white' }}>
-  //                   Located in Downtown Toronto, just next to the Eaton Centre and Yorkdale Shopping Centre.
-  //                 </h5>
-
-  //                 <div className='icon-container' style={{ color: isDarkMode ? 'black' : 'plum' }}>
-  //                   <p className="wifi"><FontAwesomeIcon icon={faWifi} />&nbsp;&nbsp;Wifi</p>
-  //                   <p className="breakfast"><FontAwesomeIcon icon={faMugHot} />&nbsp;&nbsp;Breakfast included </p>
-  //                   <p className="pool"><FontAwesomeIcon icon={faPersonSwimming} />&nbsp;&nbsp;Pool </p>
-  //                   <p className="pet-friendly"><FontAwesomeIcon icon={faPaw} />&nbsp;&nbsp;Pet friendly </p>
-  //                   <p className="parking"><FontAwesomeIcon icon={faParking} />&nbsp;&nbsp;Parking available </p>
-  //                   <p className="gym"><FontAwesomeIcon icon={faDumbbell} />&nbsp;&nbsp;Gym </p>
-  //                 </div>
-  //                 <div>
-  //                   <div className='reviews'>
-  //                     <a className='p-3' href="https://www.google.com/"> See more details </a>
-  //                     <StarRating />
-  //                     <a className='p-3' href="https://www.google.com/"> See more reviews </a>
-  //                   </div>
-  //                 </div>
-  //                 <div>
-  //                 </div>
-  //               </div>
-  //             </div>
-
-  //             {/* reserve section */}
-  //             <div className="col-md-2 border-md-start align-self-center reserve-container">
-  //               <div className='price text-body'>
-  //                 <h6 style={{ color: isDarkMode ? 'black' : 'white' }}>CAD $5,000</h6>
-  //                 <a href="/" className='reserve-btn'>Reserve Now</a>
-  //               </div>
-  //             </div>
-  //           </div>
-  //         </div>
-  //       </div>
-  //     </>
-
-  //    
-
-
-  // )
-
+  
   return (
     <main style={{ backgroundColor: isDarkMode ? 'lavender' : 'black', height: 'auto' }}>
       <Container>
