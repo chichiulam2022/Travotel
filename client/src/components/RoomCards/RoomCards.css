@@ -14,16 +14,17 @@ a {
 h4 {
   font-size: 1.2rem;
   font-weight: 800;
+  text-decoration: 2px underline orange;
 }
 
 h5 {
   font-size: 1.2rem;
-  font-weight: 800;
+  font-weight: 300;
 }
 
 h6 {
   font-size: 1rem;
-  font-weight: 800;
+  font-weight: lighter;
 }
 
 p {
@@ -32,7 +33,11 @@ p {
 }
 
 .room-card {
-  height: 100vh;
+  height: auto;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  margin: 0;
 }
 
 .room-card-content {
@@ -65,17 +70,22 @@ button {
 
 .room-card {
   width: 100%;
-  margin-left: 12px;
-  margin-right: 12px;
-
 }
 
-.room-card-container {
+/* .room-card-container {
   display: flex;
   justify-content: center;
   width: 80%;
   background-color: rgb(245, 242, 247);
-}
+} */
+
+/* .card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+} */
 
 .on {
   color: rgb(223, 152, 126);
@@ -83,6 +93,11 @@ button {
 
 .off {
   color: #ccc;
+}
+
+.row {
+  justify-content: center;
+  align-items: center;
 }
 
 /* .wifi,

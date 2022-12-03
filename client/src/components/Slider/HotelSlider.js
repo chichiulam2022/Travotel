@@ -14,7 +14,6 @@ import { Link } from 'react-router-dom'
 
 // import HeaderSearch from '../HeaderSearch/HeaderSearch';
 
-
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
     return (
