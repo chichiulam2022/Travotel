@@ -1,3 +1,58 @@
+a {
+  text-decoration: none;
+  color: orange;
+}
+
+h4,
+h5,
+h6,
+p,
+a,
+.reserve-btn {
+  font-family: 'Quicksand', sans-serif;
+}
+
+h4 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  text-decoration: 2px underline orange;
+}
+
+h5 {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: lighter;
+}
+
+p {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.room-card {
+  height: auto;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.room-card-content {
+  margin: 0;
+}
+
+.m-3 {
+  margin: 0 !important;
+}
+
+.card {
+  border: none;
+}
+
 button {
   background-color: transparent;
   border: none;
@@ -5,7 +60,35 @@ button {
   cursor: pointer;
 }
 
-.on {
+.room-card,
+.body-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.room-card {
+  width: 100%;
+}
+
+/* .room-card-container {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  background-color: rgb(245, 242, 247);
+} */
+
+/* .card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+} */
+
+/* .on {
   color: rgb(223, 152, 126);
 }
 
@@ -13,28 +96,93 @@ button {
   color: #ccc;
 }
 
-.wifi,
+.row {
+  justify-content: center;
+  align-items: center;
+} */
+
+/* .wifi,
 .pool,
 .breakfast,
 .parking,
 .pet-friendly,
 .gym {
   font-size: smaller;
+} */
+
+.text-body h6 {
+  margin-right: 10px;
 }
 
-.star {
-  font-size: larger;
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.reviews,
-.currency {
-  font-size: small;
+.img-container img {
+  height: 300px;
+  width: 450px;
 }
 
-.total-price {
-  font-size: larger
+/* button */
+.reserve-btn {
+  background-color: #f44336;
+  color: white;
+  padding: 8px 3px;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  transition: 0.3s all ease;
+  margin-top: 10px;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
 }
 
-.container {
-  padding-left: 5%;
+.reserve-btn:hover {
+  transform: translateY(-5px);
+  background-color: lavender;
+  color: #f44336;
+}
+
+/* reserve container */
+.reserve-container {
+  display: flex;
+  flex-direction: column;
+
+}
+
+/* icon container */
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 15px;
+  justify-content: flex-end;
+}
+
+.icon-container p {
+  margin-bottom: 3px;
+}
+
+/* star rating */
+.reviews {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.star-rating {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.star-rating button {
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+  width: 35px;
 }

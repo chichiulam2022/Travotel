@@ -11,7 +11,7 @@ function NavBar() {
     //to check if scrollY is active
     const [scroll, setScroll] = useState(false);
     const handleScroll = () => {
-        if (window.scrollY >= 500) {
+        if (window.scrollY >= 10) {
             setScroll(true);
         } else {
             setScroll(false);
@@ -41,6 +41,7 @@ function NavBar() {
             className={scroll ? "navbar-active" : "hidden"}
         >
             <Container>
+
                 <Navbar.Brand className="logo" href="/">
                     <img
                         src={logo}
@@ -54,8 +55,8 @@ function NavBar() {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto" >
                         <Nav.Link>{t("about-us")}</Nav.Link>
-
                         <Nav.Link>{t("login")}</Nav.Link>
+                        <Nav.Link>{t("register")}</Nav.Link>
 
                         <Form className="switchers">
                             <div
@@ -104,7 +105,7 @@ function NavBar() {
                     </Nav>
                 </Navbar.Collapse>
             </Container>
-        </Navbar>
+        </Navbar >
     );
 }
 
