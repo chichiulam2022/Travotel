@@ -3,17 +3,17 @@
     border-radius: 10px;
 }
 
-.review-form-btn {
+#review-form-btn {
     font-family: 'Quicksand', sans-serif;
-    opacity: 0.6;
     transition: 0.3s;
     background-color: brown;
     color: white;
     border: none;
     font-weight: 500;
+    width: 30%;
 }
 
-.review-form-btn:hover {
-    opacity: 1;
-
+#review-form-btn:hover {
+    background-color: white;
+    color: brown;
 }
