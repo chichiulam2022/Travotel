@@ -1,6 +1,12 @@
 import React from 'react'
 //import './Footer.css'
 import Card from 'react-bootstrap/Card';
+import Flip from 'react-reveal/Flip';
+import Rotate from 'react-reveal/Rotate';
+import Bounce from 'react-reveal/Bounce';
+import Jump from 'react-reveal/Jump';
+import Shake from 'react-reveal/Shake';
+import Wobble from 'react-reveal/Wobble';
 
 function AboutUs() {
   return (

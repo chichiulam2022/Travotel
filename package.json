@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/chichiulam2022/hotel_booking/issues"
   },
-  "homepage": "https://github.com/chichiulam2022/hotel_booking#readme"
+  "homepage": "https://github.com/chichiulam2022/hotel_booking#readme",
+  "dependencies": {
+    "react-reveal": "^1.2.2"
+  }
 }
