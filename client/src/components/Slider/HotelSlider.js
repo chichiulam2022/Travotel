@@ -144,7 +144,7 @@ function HotelSlider() {
             <div className="slider">
                 <Slider {...settings}>
                     {dataDigitalBestSeller.map(item => (
-                        <div className="card" style={{ border: "none" }}>
+                        <div className="hotel-slider-card" style={{ border: "none" }}>
                             <div className="card-top">
                                 <img
                                     src={item.linkImg}

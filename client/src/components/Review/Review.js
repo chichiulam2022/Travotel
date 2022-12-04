@@ -45,9 +45,9 @@ function Review() {
         <>
             <NavBar />
             <div className="container-fluid px-1 py-5 mx-auto" style={{ backgroundColor: isDarkMode ? 'white' : 'black' }} >
-                <div className="row justify-content-center"  >
+                <div className="row justify-content-center" >
                     <div className="col-xl-7 col-lg-8 col-md-10 col-12 text-center mb-5">
-                        <div className='card'>
+                        <div className='review-card'>
                             <div className='row justify-content-left d-flex'>
                                 <div className='col-md-4 d-flex flex-column'>
                                     <div className='rating-box'>
