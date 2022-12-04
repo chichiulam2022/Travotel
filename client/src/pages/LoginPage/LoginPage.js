@@ -1,42 +1,36 @@
 import React from "react";
 import "./LoginPage.css";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
-import Background from "../../assets/login.png";
+import { Form, Button } from 'react-bootstrap'
+import logo from '../../assets/logo.png'
+
 
 export default function LoginPage() {
   return (
-    <div className="main">
-      <div className="mainForm card w-25">
-        <h3 className="label text-center">LOGIN</h3>
+    <div className="login-color-overlay d-flex
+    justify-content-center align-items-center">
+      <Form className="rounded p-4 p-sm-3 mx-5 loginup-form rounded">
+        <Form.Group className="mb-5" controlId="formBasicEmail">
+          <img src={logo} alt='logo' />
+          <h5 className="loginup-form-intro mt-4">Welcome! Login In To Your <span className="loginup-brand-name">TRAVÔTEL</span> Account</h5>
+          <h5 className="loginup-form-intro">Bienvenue! Connectez-vous à votre compte <span className="loginup-brand-name">TRAVÔTEL</span></h5>
+          <br />
+          <Form.Label className="mt-2 email-txt">Email Address / Courriel</Form.Label>
+          <Form.Control type="email"
+            placeholder="Your Email / Votre courriel" />
+        </Form.Group>
 
-        <Form>
-          <Form.Group className="form mx-3 my-3 ">
-            <Form.Label className="label">USER NAME</Form.Label>
-            <Form.Control
-              className="input"
-              type="text"
-              placeholder="ENTER YOUR USER NAME HERE"
-            />
-          </Form.Group>
-          <Form.Group className="form mx-3 my-3 ">
-            <Form.Label className="label">PASSWORD</Form.Label>
-            <Form.Control
-              className="input"
-              type="password"
-              placeholder="ENTER YOUR PASSWORD HERE"
-            />
-          </Form.Group>
-          <Form.Group className="mx-3 my-3 ">
-            <Form.Check type="checkbox" label="Keep me logged in" />
-          </Form.Group>
-          <Button variant="primary" className="btn mx-3 my-3 ">
-            LOGIN
-          </Button>
-          <br></br>
-          {/* <Link to {"../SignupPage/SignupPage.js"}>Don't have an account yet? Sign up now!</Link> */}
-        </Form>
-      </div>
-    </div>
+        <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Label className="password-txt">Password / Mot de passe</Form.Label>
+          <Form.Control type="password"
+            placeholder="Your password / Votre mot de passe" />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formBasicCheckbox">
+          <Form.Check type="checkbox" label='Remember Me / Se souvenir de moi' />
+        </Form.Group>
+        <Button variant="primary" type="submit" className="loginup-btn">Submit / Soumettre
+        </Button>
+        {/* <h1>or sign up with</h1> */}
+      </Form>
+    </div >
   );
 }

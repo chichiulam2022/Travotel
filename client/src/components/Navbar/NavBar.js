@@ -57,7 +57,7 @@ function NavBar() {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto" >
                         <Nav.Link>{t("about-us")}</Nav.Link>
-                        <Nav.Link>{t("login")}</Nav.Link>
+                        <Nav.Link href="/login">{t("login")}</Nav.Link>
                         <Nav.Link href="/signup">{t("register")}</Nav.Link>
 
                         <Form className="switchers">

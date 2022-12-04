@@ -1,14 +1,12 @@
 import React from "react";
 import "./SignupPage.css";
 import { Form, Button } from 'react-bootstrap'
-
-
 import logo from '../../assets/logo.png'
 
 export default function SigninPage() {
   return (
 
-    <div className="color-overlay d-flex
+    <div className="signup-color-overlay d-flex
     justify-content-center align-items-center">
       <Form className="rounded p-4 p-sm-3 mx-5 signup-form rounded">
         <Form.Group className="mb-5" controlId="formBasicEmail">
