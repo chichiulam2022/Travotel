@@ -1,0 +1,59 @@
+.form-container {
+    min-height: 100vh;
+    position: relative;
+
+}
+
+.color-overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 100%;
+    width: 100%;
+    mix-blend-mode: normal;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/signup_img.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.signup-form {
+    backdrop-filter: contrast(40%);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.signup-form-intro {
+    font-weight: 800;
+    color: white;
+    font-size: 1rem;
+}
+
+.form-check-label {
+    color: lavender;
+    font-weight: 300;
+}
+
+.signup-brand-name {
+    color: rgb(252, 103, 49);
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 900;
+}
+
+.btn {
+    padding: 10px 15px;
+    width: 40%;
+    border: none;
+    color: lavender;
+    font-family: 'Quicksand', sans-serif;
+    background-color: orangered;
+    transition: all 0.3s;
+    width: 100%;
+}
+
+.btn:hover {
+    color: orangered;
+    background-color: lavender;
+}
+
+.email-txt,
+.password-txt {
+    color: white;
+}

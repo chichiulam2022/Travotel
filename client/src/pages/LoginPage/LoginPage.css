@@ -1,0 +1,47 @@
+h3{
+    font-weight: 1000;
+}
+
+.main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../../assets/login.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.mainForm{
+    background-color: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+}
+
+.input {
+    display: block;
+    height: 40px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 3px;
+}
+
+.input:hover{
+    outline: 2px solid #0001;
+    background-color: white;
+  }
+
+.btn{
+    width: 40%;
+    border-radius: 10px;
+    padding: 5px 10px 10px 5px;
+    background-color: rgba(255, 255, 255, 0);
+    color: #000000;
+    text-align: center;
+}
+
+.label{
+    color: white;
+}
