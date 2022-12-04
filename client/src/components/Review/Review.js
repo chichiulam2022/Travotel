@@ -21,21 +21,18 @@ function Review() {
 
     const customers = [
         {
-            name: "ipsum dolor sit amet",
-            content:
-                "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab officia numquam possimus illum officiis at sed quos doloremque molestias. Quae.",
+            name: "Good hotel with great views",
+            content: "Just returned from staying 3 nights at this hotel. Overall the hotel is very good, looked spotlessly clean throughout. Check in was seamless and the warm welcome cookie was a nice touch!",
             link: room1
         },
         {
-            name: "ipsum dolor sit amet",
-            content:
-                "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab officia numquam possimus illum officiis at sed quos doloremque molestias. Quae.",
+            name: "Great hotel with first class facilities",
+            content: "This hotel is centrally located in the tourist district. Clean, comfortable and convenient. Lot of ground parking and this time of the year the room rates are low.",
             link: room2
         },
         {
-            name: "ipsum dolor sit amet",
-            content:
-                "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab officia numquam possimus illum officiis at sed quos doloremque molestias. Quae.",
+            name: "Bon Hôtel",
+            content: "Très bon hôtel mais évitez l'option petit déjeuner qui est assez cher vu ce qui est proposé. La chambre est propre et la literie confortable. Même dans les étages supérieurs la vue n'est pas extraordinaire",
             link: room3
         }
     ];
