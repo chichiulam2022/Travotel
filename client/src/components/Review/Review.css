@@ -1,16 +1,3 @@
-/* body {
-    background-image: linear-gradient(#4A148C, #E53935);
-    background-repeat: no-repeat;
-    color: #000;
-    overflow-x: hidden
-} */
-
-
-
-/* .review-container {
-    height: auto;
-} */
-
 a {
     text-decoration: none !important;
     color: inherit
@@ -115,10 +102,6 @@ td {
     margin-bottom: 10px
 }
 
-.blue-text {
-    color: #0091EA
-}
-
 .content {
     font-size: 18px
 }
@@ -130,32 +113,24 @@ td {
     margin-right: 30px
 }
 
-.pic {
-    width: 80px;
-    height: 80px;
-    margin-right: 10px
+.review-photo {
+    height: 250px;
+    width: 350px;
+    margin: 0 auto 3%;
 }
 
-.vote {
-    cursor: pointer
-}
-
-
-
-/* .carousel-indicators {
-    background-color: black;
-    color: black;
-} */
-
-/* .carousel-indicators .active {
-    background-color: black;
-} */
-
-.carousel-indicators [data-bs-target] {
+.review .carousel-indicators [data-bs-target] {
     background-color: rgb(1, 28, 1);
 }
 
+
 .customers-carousel-container {
-    background-color: lavender;
+    background-color: rgb(243, 231, 223);
     ;
+}
+
+.customer-review-heading {
+    color: lavender;
+    font-weight: 400;
+    text-decoration: underline orange;
 }

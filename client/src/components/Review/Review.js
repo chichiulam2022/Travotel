@@ -6,6 +6,7 @@ import { faStar } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Carousel, Container, Image } from 'react-bootstrap'
 import NavBar from '../Navbar/NavBar';
+import ReviewForm from '../ReviewForm/ReviewForm';
 
 import sao_paulo from '../../assets/sao_paulo.jpg'
 import sfrancisco from '../../assets/sfrancisco.jpg'
@@ -44,16 +45,19 @@ function Review() {
     return (
         <>
             <NavBar />
-            <div className="container-fluid px-1 py-5 mx-auto" style={{ backgroundColor: isDarkMode ? 'white' : 'black' }} >
+            <div className="container-fluid px-1 py-5 mx-auto review" style={{ backgroundColor: isDarkMode ? 'white' : 'black' }} >
                 <div className="row justify-content-center" >
+
                     <div className="col-xl-7 col-lg-8 col-md-10 col-12 text-center mb-5">
                         <div className='review-card'>
                             <div className='row justify-content-left d-flex'>
                                 <div className='col-md-4 d-flex flex-column'>
-                                    <div className='rating-box'>
+                                    <h5>Average Ratings</h5>
+                                    <div className='rating-box mt-2'>
                                         <h1 className='pt-4'>4.0</h1>
                                         <p className=''>out of 5</p>
                                     </div>
+
                                     <div>
                                         <span className="star"><FontAwesomeIcon icon={faStar} /></span>
                                         <span className="star"><FontAwesomeIcon icon={faStar} /></span>
@@ -63,7 +67,7 @@ function Review() {
                                     </div>
                                 </div>
 
-                                <div class="col-md-8">
+                                <div class="col-md-8 mt-4">
                                     <div class="rating-bar0 justify-content-center">
                                         <table class="text-left mx-auto">
                                             <tr>
@@ -118,12 +122,13 @@ function Review() {
                         </div>
 
                         <Container className="customers-container">
-                            <h2 className="customers-container-heading">Happy Customers</h2>
+                            <h5 className="customer-review-heading">Our Happy Customers' Reviews.</h5>
+                            <p className="customers-container-intro">Your comments are very important to us. Feel free to share them below.</p>
                             <Carousel className="customers-carousel-container">
                                 {customers.map((data, i) => (
                                     <Carousel.Item className="customers-carousel-item">
                                         <Image
-                                            className="d-block customers-carousel-img mt-4"
+                                            className="d-block customers-carousel-img mt-4 review-photo"
                                             src={data.link}
                                             alt={data.name}
                                         />
@@ -139,6 +144,8 @@ function Review() {
                                 ))}
                             </Carousel>
                         </Container>
+
+                        <ReviewForm />
 
                     </div>
                 </div>
