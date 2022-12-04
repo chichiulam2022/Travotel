@@ -13,7 +13,7 @@ import { faPaw } from '@fortawesome/free-solid-svg-icons';
 import room2 from '../../assets/dubai.jpg';
 //import { useTranslation } from "react-i18next";
 //import Button from 'react-bootstrap/Button';
-//import Card from 'react-bootstrap/Card'
+import Card from 'react-bootstrap/Card'
 
 // function to select the stars rating
 function StarRating() {
@@ -46,8 +46,8 @@ function RoomCards(props) {
   return (
     <div className='m-3'>
 
-      {/* <Card style={{ width: '40rem' }} lass="m-2">
-        <Card.Img variant="fluid" className='rounded-start' src={weatherPng} />
+      <Card style={{ width: '40rem' }} lass="m-2">
+        {/* <Card.Img variant="fluid" className='rounded-start' src={weatherPng} /> */}
         <Card.Body>
           <Card.Title>Miyana Condos</Card.Title>
           <Card.Text>
@@ -55,7 +55,7 @@ function RoomCards(props) {
           </Card.Text>
           <Button variant="primary">Go somewhere</Button>
         </Card.Body>
-      </Card> */}
+      </Card>
 
       <div className='card col-md-10 '>
 
