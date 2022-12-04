@@ -26,7 +26,8 @@
     "react-simple-typewriter": "^5.0.1",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "jwt-decode": "^2.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
