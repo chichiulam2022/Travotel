@@ -6,7 +6,7 @@ import { faStar } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Carousel, Container, Image } from 'react-bootstrap'
 import NavBar from '../Navbar/NavBar';
-import ReviewForm from '../ReviewForm/ReviewForm';
+import ReviewForm from '../ReviewForm/ReviewForm'
 
 import sao_paulo from '../../assets/sao_paulo.jpg'
 import sfrancisco from '../../assets/sfrancisco.jpg'
@@ -45,7 +45,7 @@ function Review() {
     return (
         <>
             <NavBar />
-            <div className="container-fluid px-1 py-5 mx-auto review" style={{ backgroundColor: isDarkMode ? 'white' : 'black' }} >
+            <div className="container-fluid px-1 py-5 mx-auto review" style={{ backgroundColor: isDarkMode ? 'lavender' : 'black' }} >
                 <div className="row justify-content-center" >
 
                     <div className="col-xl-7 col-lg-8 col-md-10 col-12 text-center mb-5">
@@ -144,7 +144,6 @@ function Review() {
                                 ))}
                             </Carousel>
                         </Container>
-
                         <ReviewForm />
 
                     </div>

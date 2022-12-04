@@ -12,6 +12,11 @@ a,
   font-family: 'Quicksand', sans-serif;
 }
 
+.room-card-review-link {
+  color: rgb(255, 106, 0);
+  text-decoration: underline;
+}
+
 h4 {
   font-size: 1.2rem;
   font-weight: 800;
