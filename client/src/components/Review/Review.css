@@ -7,6 +7,29 @@ a:hover {
     color: #455A64
 }
 
+.review-card h5,
+p,
+td,
+q {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.customers-caption-title {
+    font-weight: bold;
+    color: black;
+}
+
+q {
+    font-weight: 600;
+    color: orangered;
+}
+
+.customers-container-intro {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
 .review-card {
     border-radius: 5px;
     background-color: #fff;
@@ -82,7 +105,7 @@ a:hover {
 }
 
 td {
-    padding-bottom: 10px
+    padding-bottom: 10px;
 }
 
 .star-active {
@@ -130,7 +153,6 @@ td {
 }
 
 .customer-review-heading {
-    color: lavender;
-    font-weight: 400;
+    font-weight: 600;
     text-decoration: underline orange;
 }

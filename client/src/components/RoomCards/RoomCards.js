@@ -9,7 +9,6 @@ import {
   faMugHot,
   faPersonSwimming,
   faParking, faDumbbell,
-  faStar,
   faPaw
 } from '@fortawesome/free-solid-svg-icons';
 import room1 from '../../assets/room1.jpg';

@@ -8,35 +8,35 @@ import { Carousel, Container, Image } from 'react-bootstrap'
 import NavBar from '../Navbar/NavBar';
 import ReviewForm from '../ReviewForm/ReviewForm'
 
-import sao_paulo from '../../assets/sao_paulo.jpg'
-import sfrancisco from '../../assets/sfrancisco.jpg'
-import toronto from '../../assets/toronto.jpg'
-import mexico from '../../assets/mexico.jpg'
-import dubai from '../../assets/dubai.jpg'
-
+import room1 from '../../assets/room1.jpg'
+import room2 from '../../assets/room2.jpg'
+import room3 from '../../assets/room3.jpg'
+import room4 from '../../assets/room4.jpg'
+import room5 from '../../assets/room5.jpg'
 
 
 function Review() {
     const { isDarkMode } = useContext(ThemeContext);
+    const { t } = useTranslation(["review"]);
 
     const customers = [
         {
-            name: "Taylor Swift",
+            name: "ipsum dolor sit amet",
             content:
                 "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab officia numquam possimus illum officiis at sed quos doloremque molestias. Quae.",
-            link: sao_paulo
+            link: room1
         },
         {
-            name: "Robert Downey Jr",
+            name: "ipsum dolor sit amet",
             content:
                 "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab officia numquam possimus illum officiis at sed quos doloremque molestias. Quae.",
-            link: toronto
+            link: room2
         },
         {
-            name: "Rachel Green",
+            name: "ipsum dolor sit amet",
             content:
                 "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab officia numquam possimus illum officiis at sed quos doloremque molestias. Quae.",
-            link: sfrancisco
+            link: room3
         }
     ];
 
@@ -47,15 +47,14 @@ function Review() {
             <NavBar />
             <div className="container-fluid px-1 py-5 mx-auto review" style={{ backgroundColor: isDarkMode ? 'lavender' : 'black' }} >
                 <div className="row justify-content-center" >
-
                     <div className="col-xl-7 col-lg-8 col-md-10 col-12 text-center mb-5">
                         <div className='review-card'>
                             <div className='row justify-content-left d-flex'>
                                 <div className='col-md-4 d-flex flex-column'>
-                                    <h5>Average Ratings</h5>
+                                    <h5>{t('average_rating')}</h5>
                                     <div className='rating-box mt-2'>
                                         <h1 className='pt-4'>4.0</h1>
-                                        <p className=''>out of 5</p>
+                                        <p className=''>{t('out_of')}</p>
                                     </div>
 
                                     <div>
@@ -71,7 +70,7 @@ function Review() {
                                     <div class="rating-bar0 justify-content-center">
                                         <table class="text-left mx-auto">
                                             <tr>
-                                                <td class="rating-label">Excellent</td>
+                                                <td class="rating-label">{t('excellent')}</td>
                                                 <td class="rating-bar">
                                                     <div class="bar-container">
                                                         <div class="bar-5"></div>
@@ -80,7 +79,7 @@ function Review() {
                                                 <td class="text-right">123</td>
                                             </tr>
                                             <tr>
-                                                <td class="rating-label">Good</td>
+                                                <td class="rating-label">{t('good')}</td>
                                                 <td class="rating-bar">
                                                     <div class="bar-container">
                                                         <div class="bar-4"></div>
@@ -89,7 +88,7 @@ function Review() {
                                                 <td class="text-right">23</td>
                                             </tr>
                                             <tr>
-                                                <td class="rating-label">Average</td>
+                                                <td class="rating-label">{t('average')}</td>
                                                 <td class="rating-bar">
                                                     <div class="bar-container">
                                                         <div class="bar-3"></div>
@@ -98,7 +97,7 @@ function Review() {
                                                 <td class="text-right">10</td>
                                             </tr>
                                             <tr>
-                                                <td class="rating-label">Poor</td>
+                                                <td class="rating-label">{t('poor')}</td>
                                                 <td class="rating-bar">
                                                     <div class="bar-container">
                                                         <div class="bar-2"></div>
@@ -107,7 +106,7 @@ function Review() {
                                                 <td class="text-right">3</td>
                                             </tr>
                                             <tr>
-                                                <td class="rating-label">Terrible</td>
+                                                <td class="rating-label">{t('terrible')}</td>
                                                 <td class="rating-bar">
                                                     <div class="bar-container">
                                                         <div class="bar-1"></div>
@@ -122,8 +121,13 @@ function Review() {
                         </div>
 
                         <Container className="customers-container">
-                            <h5 className="customer-review-heading">Our Happy Customers' Reviews.</h5>
-                            <p className="customers-container-intro">Your comments are very important to us. Feel free to share them below.</p>
+                            <h4 className="customer-review-heading"
+                                style={{ color: isDarkMode ? 'black' : 'white' }}
+                            >
+                                {t('review_title')}</h4>
+                            <p className="customers-container-intro"
+                                style={{ color: isDarkMode ? 'black' : 'white' }}>
+                                {t('review_intro')}</p>
                             <Carousel className="customers-carousel-container">
                                 {customers.map((data, i) => (
                                     <Carousel.Item className="customers-carousel-item">
