@@ -9,7 +9,6 @@ import {
   faMugHot,
   faPersonSwimming,
   faParking, faDumbbell,
-  faStar,
   faPaw
 } from '@fortawesome/free-solid-svg-icons';
 import room1 from '../../assets/room1.jpg';
@@ -100,7 +99,7 @@ function RoomCards() {
   ]
 
   const { isDarkMode } = useContext(ThemeContext);
-  
+
   return (
     <main style={{ backgroundColor: isDarkMode ? 'lavender' : 'black', height: 'auto' }}>
       <Container>
@@ -175,7 +174,7 @@ function RoomCards() {
                   <h6 className='currency' style={{ color: isDarkMode ? 'black' : 'white' }}>{item.price}</h6>
                   <Button className='reserve-btn'>{t('reserve')}</Button>&nbsp;&nbsp;
                   {/* <Button className='reserve-btn'>{t('review')}</Button> */}
-                  <a href='/review' style={{ textDecoration: 'underline orange' }}>{t('review')}</a>
+                  <a href='/review' className='room-card-review-link'>{t('review')}</a>
                 </div>
               </div>
             </div>))}

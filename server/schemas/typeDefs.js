@@ -37,7 +37,6 @@ const typeDefs = gql`
         price: Float
         featured: Boolean
         destination: Destination
-
     }
 
     type Booking {

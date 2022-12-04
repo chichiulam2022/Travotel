@@ -1,0 +1,19 @@
+.review-form {
+    border: 2px solid rgb(96, 96, 96);
+    border-radius: 10px;
+}
+
+.review-form-btn {
+    font-family: 'Quicksand', sans-serif;
+    opacity: 0.6;
+    transition: 0.3s;
+    background-color: brown;
+    color: white;
+    border: none;
+    font-weight: 500;
+}
+
+.review-form-btn:hover {
+    opacity: 1;
+
+}

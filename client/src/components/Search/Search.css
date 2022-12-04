@@ -108,6 +108,7 @@ button {
     padding-bottom: 0.7rem;
     padding-left: 1rem;
     padding-right: 1rem;
+    background-color: rgb(231, 105, 9);
 }
 
 .room-search-form {
