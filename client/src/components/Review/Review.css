@@ -21,7 +21,7 @@ q {
 
 q {
     font-weight: 600;
-    color: orangered;
+    color: rgb(72, 61, 139);
 }
 
 .customers-container-intro {
@@ -146,10 +146,8 @@ td {
     background-color: rgb(1, 28, 1);
 }
 
-
 .customers-carousel-container {
-    background-color: rgb(243, 231, 223);
-    ;
+    background-color: rgb(255, 255, 255);
 }
 
 .customer-review-heading {

@@ -9,15 +9,16 @@ import Flag from 'react-world-flags'
 
 function NavBar() {
     //to check if scrollY is active
-    const [scroll, setScroll] = useState(false);
-    const handleScroll = () => {
-        if (window.scrollY >= 10) {
-            setScroll(true);
-        } else {
-            setScroll(false);
-        }
-    };
-    window.addEventListener("scroll", handleScroll);
+    // const [scroll, setScroll] = useState(false);
+    // const handleScroll = () => {
+    //     if (window.scrollY >= 10) {
+    //         setScroll(true);
+    //     } else {
+    //         setScroll(false);
+    //     }
+    // };
+    // window.addEventListener("scroll", handleScroll);
+
     // language handle check
     const [lang, setLang] = useState("en");
     // translation
@@ -38,7 +39,8 @@ function NavBar() {
             style={{
                 backgroundColor: isDarkMode ? "rgb(72, 61, 139)" : "black",
             }}
-            className={scroll ? "navbar-active" : "hidden"}
+            // className={scroll ? "navbar-active" : "hidden"}
+            className="navbar-active"
         >
             <Container>
 
