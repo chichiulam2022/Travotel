@@ -8,7 +8,7 @@ import Auth from '../../utils/auth';
 import { ADD_USER } from '../../../src/utils/mutations';
 
 export default function SigninPage() {
-  const [formState, setFormState] = useState({ email: '', password: '' });
+  const [formState, setFormState] = useState({ username: '', email: '', password: '' });
   const [addUser] = useMutation(ADD_USER);
 
   const handleChange = (event) => {
@@ -23,6 +23,11 @@ export default function SigninPage() {
     event.preventDefault();
     const mutationResponse = await addUser({
       variables: {
+        username: "Sansa",
+        // password: "queen123",
+        // email: "sansa@winterfell.com",
+        // _id: "123"
+        // username: formState.username,
         email: formState.email,
         password: formState.password,
         // firstName: formState.firstName,
