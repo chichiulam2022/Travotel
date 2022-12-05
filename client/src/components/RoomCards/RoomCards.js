@@ -163,10 +163,10 @@ function RoomCards() {
                   </p>
                   <div className='icon-container' style={{ color: isDarkMode ? 'black' : 'white' }}>
                     <p className="wifi"><FontAwesomeIcon icon={faWifi} />&nbsp;&nbsp;Wifi</p>
-                    <p className="breakfast"><FontAwesomeIcon icon={faMugHot} />&nbsp;&nbsp;Breakfast included </p>
-                    <p className="pool"><FontAwesomeIcon icon={faPersonSwimming} />&nbsp;&nbsp;Pool </p>
-                    <p className="pet-friendly"><FontAwesomeIcon icon={faPaw} />&nbsp;&nbsp;Pet friendly </p>
-                    <p className="parking"><FontAwesomeIcon icon={faParking} />&nbsp;&nbsp;Parking available </p>
+                    <p className="breakfast"><FontAwesomeIcon icon={faMugHot} />&nbsp;&nbsp;{t('breakfast')} </p>
+                    <p className="pool"><FontAwesomeIcon icon={faPersonSwimming} />&nbsp;&nbsp;{t('pool')} </p>
+                    <p className="pet-friendly"><FontAwesomeIcon icon={faPaw} />&nbsp;&nbsp;{t('pet')} </p>
+                    <p className="parking"><FontAwesomeIcon icon={faParking} />&nbsp;&nbsp;{t('parking')} </p>
                     <p className="gym"><FontAwesomeIcon icon={faDumbbell} />&nbsp;&nbsp;Gym </p>
                   </div>
                   <br />

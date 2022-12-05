@@ -6,14 +6,11 @@ import './AboutUs.css'
 
 
 function AboutUs() {
-
-
     return (
         <div>
             <NavBar />
             <div className="about-us-color-overlay d-flex
         justify-content-center align-items-center">
-                {/* <div className='about-us-col'> */}
                 <div className='about-us-text-container'>
                     <h3 className='mb-3 pt-3 who-text' >
                         Who Are We?
@@ -51,17 +48,8 @@ function AboutUs() {
 
                     </div>
                 </div>
-                {/* <div className='about-us-text-container'>
-                        <h5>Who Are We?</h5>
-                        <img src={logo} alt='logo' className='about-us-logo' />
-                        <p className='pt-3'>Here at TRAVÔTEL we value our your time and as such provide the most important information and search result first and foremost before other options. We try our best to make your experience "comfortable, unforgettable and incredible" and we certainly hope you enjoy your stay.</p>
-                    </div> */}
-                {/* </div> */}
             </div>
         </div>
-
-
-
     )
 }
 
