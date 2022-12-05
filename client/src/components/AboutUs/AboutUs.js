@@ -11,10 +11,10 @@ import Wobble from 'react-reveal/Wobble';
 function AboutUs() {
   return (
     <div>
-        <p>HELLO</p>
+    
     <Card style={{ width: '18rem' }}>
       <Card.Body>
-        <Card.Title>Card Title</Card.Title>
+        <Card.Title>KEEVE</Card.Title>
         <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
         <Card.Text>
           KEEVE
@@ -70,6 +70,7 @@ function AboutUs() {
         <Card.Link href="#">Another Link</Card.Link>
       </Card.Body>
     </Card>
+    
 
     <Card style={{ width: '18rem' }}>
       <Card.Body>
@@ -82,7 +83,8 @@ function AboutUs() {
         <Card.Link href="#">Another Link</Card.Link>
       </Card.Body>
     </Card>
-    </div>
+        
+  </div>
   );
 }
 

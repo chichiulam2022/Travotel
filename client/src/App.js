@@ -1,3 +1,4 @@
+
 import Homepage from "./pages/Homepage";
 import { Routes, Route } from "react-router-dom";
 
@@ -16,10 +17,15 @@ function App() {
       <Route path="/slider" element={<RoomSlider />} />
       <Route path="/navbar" element={<NavBar />} />
       <Route path="/roomCard" element={<RoomCards />} />
-      <Route path="/aboutus" element={<AboutUs />} />
+      <Route path="/aboutus" element={<AboutUs />} /> 
+      
     </Routes >
 
   )
 }
 
 export default App;
+
+
+
+
