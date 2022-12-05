@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
+
+body {
+    line-height: 1.5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.footer-col h4 {
+    font-family: 'Aldrich', sans-serif;
+}
+
+.contact-col ul li {
+    color: rgb(247, 247, 247);
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer {
+    padding: 30px 30px;
+}
+
+.footer-col {
+    width: 25%;
+    padding: 30px 0px;
+}
+
+.footer-col h4 {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+    text-decoration: underline solid orange;
+}
+
+.footer-row p {
+    font-size: 0.8rem;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    color: #d7bcbc;
+    text-decoration: none;
+    font-weight: 300;
+    color: #ddd2d2;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 8px;
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    text-align: center;
+    padding: 0;
+    line-height: 40px;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+    color: orange;
+    transform: translateY(-6px);
+}
+
+.logo {
+    height: 90px;
+    width: 220px;
+    margin-right: 15px;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-row {
+    color: #ffffff;
+}
+
+
+/*responsive*/
+@media(max-width: 767px) {
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+        padding: 0;
+    }
+
+    a {
+        padding-bottom: 5px;
+    }
+
+    .footer-col h4 {
+        text-align: center;
+    }
+
+    .footer-col ul li {
+        display: block;
+        text-align: center;
+    }
+
+    .footer-row {
+        display: block;
+        text-align: center;
+    }
+
+    .social-links {
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+@media(max-width: 574px) {
+    .footer-col {
+        width: 100%;
+    }
+}

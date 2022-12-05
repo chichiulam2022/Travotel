@@ -1,4 +1,3 @@
-import FrontPage from "./components/FrontPage/FrontPage";
 import Homepage from "./pages/Homepage";
 import { Routes, Route } from "react-router-dom";
 import RoomSlider from "./components/Slider/RoomSlider";
@@ -13,6 +12,12 @@ const client = new ApolloClient({
   link: httpLink,
   cache: new InMemoryCache(),
 });
+import Rooms from "./pages/Rooms";
+import Review from "./components/Review/Review";
+import LoginPage from './pages/LoginPage/LoginPage'
+import SignupPage from './pages/SignupPage/SignupPage'
+import './App.css'
+
 
 
 function App() {
