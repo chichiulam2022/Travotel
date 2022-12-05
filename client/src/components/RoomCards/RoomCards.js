@@ -100,7 +100,7 @@ function RoomCards() {
   const { isDarkMode } = useContext(ThemeContext);
 
   return (
-    <main style={{ backgroundColor: isDarkMode ? 'lavender' : 'black', height: 'auto' }}>
+    <main style={{ backgroundColor: isDarkMode ? 'lavender' : 'black', height: 'auto', transform: 'translateY(60px)' }}>
       <Container>
         <Row className='px-4'>
           <Col sm={7}>
