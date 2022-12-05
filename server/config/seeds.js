@@ -6,11 +6,13 @@ db.once('open', async () => {
   await Destination.deleteMany();
 
   const destination = await Destination.insertMany([
-    { name: 'Canada' },
-    { name: 'Jamaica' },
-    { name: 'Mexico' },
-    { name: 'Hong Kong' },
-    { name: 'India' }
+    { name: 'London' },
+    { name: 'New York City' },
+    { name: 'Sao Paolo' },
+    { name: 'San Francisco' },
+    { name: 'Toronto' },
+    { name: 'Mexico City' },
+    { name: 'Dubai' }
   ]);
 
   console.log('destination seeded');
