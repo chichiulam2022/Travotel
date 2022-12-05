@@ -37,9 +37,9 @@ html {
     margin: 0 -10px;
 }
 
-.card {
+.hotel-slider-card {
     /* background-color: rgb(244, 250, 230); */
-    background-color: rgb(72, 61, 139);
+    background-color: rgb(220, 233, 245);
     border: none;
 }
 
@@ -82,6 +82,10 @@ html {
 
 .slick-dots {
     bottom: -50px;
+}
+
+.nav-link {
+    text-decoration: none;
 }
 
 @media only screen and (max-width: 650px) {

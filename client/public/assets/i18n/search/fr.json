@@ -5,8 +5,8 @@
     "Montreal": "Montréal",
     "Mexico City": "Mexico",
     "destination": "Destinations disponibles",
-    "travelers": "Nombre de voyageurs",
-    "check-in": "Date d'arrivée",
+    "travelers": "Nombre de personnes",
+    "number_nights": "Nombre de séjours",
     "check-out": "Date de départ",
     "search": "Rechercher"
 }

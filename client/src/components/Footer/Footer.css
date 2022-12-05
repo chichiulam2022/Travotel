@@ -14,8 +14,8 @@ body {
     font-family: 'Aldrich', sans-serif;
 }
 
-.contact-col li {
-    color: rgb(8, 3, 79);
+.contact-col ul li {
+    color: rgb(247, 247, 247);
 }
 
 .container {
@@ -135,7 +135,6 @@ ul {
         display: flex;
         justify-content: center;
     }
-
 
 }
 
