@@ -30,8 +30,9 @@
     width: 80%;
     height: auto;
     transform: translateY(10%);
-    backdrop-filter: hue-rotate(300deg);
-    /* backdrop-filter: sepia(40%); */
+    /* backdrop-filter: hue-rotate(300deg);
+    backdrop-filter: invert(80%); */
+    backdrop-filter: blur(10px);
 }
 
 .about-us-color-overlay {
