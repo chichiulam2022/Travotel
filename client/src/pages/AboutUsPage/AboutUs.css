@@ -1,0 +1,86 @@
+.about-us-row {
+    transform: translateY(50px);
+}
+
+.about-us-logo {
+    height: 100px;
+    width: 300px;
+    margin: auto;
+}
+
+.about-icon {
+    height: 60px;
+    width: 60px;
+}
+
+.about-us-col {
+    width: 90%;
+    border: 2px solid green;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-us-text-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+    height: auto;
+    transform: translateY(10%);
+    backdrop-filter: hue-rotate(300deg);
+    /* backdrop-filter: sepia(40%); */
+}
+
+.about-us-color-overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 100vh;
+    width: 100%;
+    mix-blend-mode: normal;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/about_us_img.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.team-members-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.team-members-info a {
+    font-weight: 600;
+    color: rgb(255, 111, 0);
+}
+
+.who-text {
+    font-weight: 800;
+    text-decoration: underline rgb(230, 92, 0);
+    color: rgb(255, 255, 255);
+}
+
+.team-members-title {
+    text-decoration: none;
+    font-weight: 800;
+    text-decoration: underline rgb(230, 92, 0);
+    color: rgb(255, 255, 255);
+}
+
+.info-text {
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    line-height: 1.4;
+}
+
+@media only screen and (max-width: 600px) {
+    .team-members-info a {
+        flex-direction: column;
+    }
+
+    .about-us-text-container {
+        width: 95%;
+    }
+}
