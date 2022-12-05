@@ -5,10 +5,7 @@ const typeDefs = gql`
     type User {
         _id: ID
         username: String
-        firstName: String
-        lastName: String
         email: String
-
     }
 
     type Comment {
@@ -49,6 +46,7 @@ const typeDefs = gql`
     type Query {
         me: User
         user(username: String!): User
+        users: [User]
         destination: [Destination]
         comments(username: String): [Comment]
         booking(_id: ID!): Booking
@@ -56,7 +54,7 @@ const typeDefs = gql`
 
     type Mutation {
         login(email: String!, password: String!): Auth
-        addUser(username: String!, email: String!, password: String!): User
+        addUser(username: String!, email: String!, password: String!): Auth
         addComment(commentText: String!): Comment
         addBooking(hotels: [ID]!): Booking
 
