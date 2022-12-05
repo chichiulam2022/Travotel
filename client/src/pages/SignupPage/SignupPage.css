@@ -1,47 +1,59 @@
-h3{
-    font-weight: 1000;
+.form-container {
+    min-height: 100vh;
+    position: relative;
+
 }
 
-.main{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url("../../assets/login.png");
+.signup-color-overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 100%;
+    width: 100%;
+    mix-blend-mode: normal;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/signup_img.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.mainForm{
-    background-color: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(15px);
-    border-radius: 10px;
-    border: 2px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+.signup-form {
+    backdrop-filter: contrast(40%);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
-.input {
-    display: block;
-    height: 40px;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.05);
-    border-radius: 3px;
+.signup-form-intro {
+    font-weight: 800;
+    color: white;
+    font-size: 1rem;
 }
 
-.input:hover{
-    outline: 2px solid #0001;
-    background-color: white;
-  }
+.form-check-label {
+    color: lavender;
+    font-weight: 300;
+}
 
-.btn{
+.signup-brand-name {
+    color: rgb(252, 103, 49);
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 900;
+}
+
+.btn {
+    padding: 10px 15px;
     width: 40%;
-    border-radius: 10px;
-    padding: 5px 10px 10px 5px;
-    background-color: rgba(255, 255, 255, 0);
-    color: #000000;
-    text-align: center;
+    border: none;
+    color: lavender;
+    font-family: 'Quicksand', sans-serif;
+    background-color: orangered;
+    transition: all 0.3s;
+    width: 100%;
 }
 
-.label{
+.btn:hover {
+    color: orangered;
+    background-color: lavender;
+}
+
+.email-txt,
+.password-txt {
     color: white;
 }

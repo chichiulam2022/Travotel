@@ -1,120 +1,94 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./LoginPage.css";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
-import Background from "../../assets/login.png";
-import Validation from "./Validation";
+import { Form, Button } from "react-bootstrap";
+import logo from "../../assets/logo.png";
 
 export default function LoginPage() {
-const [values, setValues] = useState({
-  name:'',
-  password:''
-})
+  const [values, setValues] = useState({
+    name: "",
+    password: "",
+  });
 
-const [errors,setError] = useState({})
+  const [errors, setError] = useState({});
 
-function handleChange (e){
-  setValues({...values, [e.target.name]:e.target.name})
-}
-
-function handleSubmit(){
-  e.preventDefault();
-  setError(Validation(values));
-}
-
-useEffect(()=>{
-  if(Object.keys(errors.length ===0)&& (values.name !=="" && values.password !=="")) {
-    alert("Form Submitted")
+  function handleChange(e) {
+    setValues({ ...values, [e.target.name]: e.target.name });
   }
-}, [errors])
+
+  function handleSubmit() {
+    e.preventDefault();
+    setError(Validation(values));
+  }
+
+  useEffect(() => {
+    if (
+      Object.keys(errors.length === 0) &&
+      values.name !== "" &&
+      values.password !== ""
+    ) {
+      alert("Form Submitted");
+    }
+  }, [errors]);
 
   return (
-    <div className="main">
-      <div className="mainForm card w-25">
-        <h3 className="label text-center">LOGIN</h3>
-
-        <Form onSubmit={handleSubmit}>
-          <Form.Group className="form mx-3 my-3 ">
-            <Form.Label className="label">USER NAME</Form.Label>
-            <Form.Control
-              className="input"
-              type="text"
-              name = "name"
-              placeholder="ENTER YOUR USER NAME HERE"
-              value={values.name}
-              onChange={handleChange}
-            />
-            {errors.name && <p style={{color:red}}>{errors.name}</p>}
-          </Form.Group>
-          <Form.Group className="form mx-3 my-3 ">
-            <Form.Label className="label">PASSWORD</Form.Label>
-            <Form.Control
-              className="input"
-              type="password"
-              name="password"
-              value={values.password}
-              placeholder="ENTER YOUR PASSWORD HERE"
-              onChange={handleChange} 
-            />
-            {errors.password && <p style={{color:red}}>{errors.password}</p>}
-          </Form.Group>
-          <Form.Group className="mx-3 my-3 ">
-            <Form.Check type="checkbox" label="Keep me logged in" />
-          </Form.Group>
-          <Button variant="primary" className="btn mx-3 my-3 " type="submit">
-            LOGIN
-          </Button>
-          <br></br>
-          {/* <Link to {"../SignupPage/SignupPage.js"}>Don't have an account yet? Sign up now!</Link> */}
-        </Form>
-      </div>
-    </div>
-  );
-}
-
-
-import React, { useState } from "react";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
-import "./Login.css";
-import e from "express";
-
-export default function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  function validateForm() {
-    return email.length > 0 && password.length > 0;
-  }
-  function handleSubmit(event) {
-    event.preventDefault();
-  }
-
-  return (
-    <div className="Login">
-      <Form onSubmit={handleSubmit}>
-        <Form.Group size="lg" controlId="email">
-          <Form.Label>Email</Form.Label>
+    <div
+      className="login-color-overlay d-flex
+    justify-content-center align-items-center"
+    >
+      <Form
+        className="rounded p-4 p-sm-3 mx-5 loginup-form rounded"
+        onSubmit={handleSubmit}
+      >
+        <Form.Group className="mb-5" controlId="formBasicEmail">
+          <img src={logo} alt="logo" />
+          <h5 className="loginup-form-intro mt-4">
+            Welcome! Login In To Your{" "}
+            <span className="loginup-brand-name">TRAVÔTEL</span> Account
+          </h5>
+          <h5 className="loginup-form-intro">
+            Bienvenue! Connectez-vous à votre compte{" "}
+            <span className="loginup-brand-name">TRAVÔTEL</span>
+          </h5>
+          <br />
+          <Form.Label className="mt-2 email-txt">
+            Email Address / Courriel
+          </Form.Label>
           <Form.Control
-
-            autoFocus
             type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            name="name"
+            placeholder="Your Email / Votre courriel"
+            value={values.name}
+            onChange={handleChange}
           />
+          {errors.name && <p style={{ color: red }}>{errors.name}</p>}
         </Form.Group>
 
-        <Form.Group size="lg" controlId="password">
-          <Form.Label>Password</Form.Label>
+        <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Label
+            className="password-txt"
+            type="password"
+            name="password"
+            value={values.password}
+            onChange={handleChange}
+          >
+            {errors.password && <p style={{ color: red }}>{errors.password}</p>}
+            Password / Mot de passe
+          </Form.Label>
           <Form.Control
             type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Your password / Votre mot de passe"
           />
-
         </Form.Group>
-        <Button block size="lg" type="submit" disabled={!validateForm()}>
-          Login
+        <Form.Group className="mb-3" controlId="formBasicCheckbox">
+          <Form.Check
+            type="checkbox"
+            label="Remember Me / Se souvenir de moi"
+          />
+        </Form.Group>
+        <Button variant="primary" type="submit" className="loginup-btn">
+          Submit / Soumettre
         </Button>
+        {/* <h1>or sign up with</h1> */}
       </Form>
     </div>
   );

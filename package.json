@@ -1,0 +1,31 @@
+{
+  "name": "hotel_booking",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "seed": "cd server && npm run seed",
+    "build": "cd client && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chichiulam2022/hotel_booking.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chichiulam2022/hotel_booking/issues"
+  },
+  "devDependencies": {
+    "concurrently": "^5.1.0"
+  },
+  "homepage": "https://github.com/chichiulam2022/hotel_booking#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "react-bootstrap": "^2.6.0"
+  }
+}
