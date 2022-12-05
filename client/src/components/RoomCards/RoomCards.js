@@ -3,7 +3,6 @@ import './RoomCards.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { MdLocationPin } from 'react-icons/md'
 import { Container, Row, Col, Image, Card, Button } from 'react-bootstrap';
-
 import {
   faWifi,
   faMugHot,
