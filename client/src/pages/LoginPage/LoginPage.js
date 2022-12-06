@@ -9,19 +9,25 @@ export default function LoginPage() {
     <div className="login-color-overlay d-flex
     justify-content-center align-items-center">
       <Form className="rounded p-4 p-sm-3 mx-5 loginup-form rounded">
-        <Form.Group className="mb-5" controlId="formBasicEmail">
+        <Form.Group className="mb-3" controlId="formBasicEmail">
           <img src={logo} alt='logo' />
           <h5 className="loginup-form-intro mt-4">Welcome! Login In To Your <span className="loginup-brand-name">TRAVÔTEL</span> Account</h5>
           <h5 className="loginup-form-intro">Bienvenue! Connectez-vous à votre compte <span className="loginup-brand-name">TRAVÔTEL</span></h5>
           <br />
           <Form.Label className="mt-2 email-txt">Email Address / Courriel</Form.Label>
-          <Form.Control type="email"
+          <Form.Control type="email" required
             placeholder="Your Email / Votre courriel" />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Label className="password-txt">Username / Nom d'utilisateur</Form.Label>
+          <Form.Control type="username" required
+            placeholder="Your Username / Votre nom d'utilisateur" />
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label className="password-txt">Password / Mot de passe</Form.Label>
-          <Form.Control type="password"
+          <Form.Control type="password" required
             placeholder="Your password / Votre mot de passe" />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicCheckbox">

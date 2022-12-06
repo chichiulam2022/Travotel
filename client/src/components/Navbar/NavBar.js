@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import { Navbar, Nav, Container, Form } from "react-bootstrap";
 import { MdDarkMode, MdOutlineLightMode } from "react-icons/md";
 import { ThemeContext } from "../../contexts/ThemeContext";
+import { Link } from 'react-router-dom'
 import "./NavBar.css";
 import { useTranslation } from "react-i18next";
 import logo from "../../assets/logo.png";
@@ -56,9 +57,9 @@ function NavBar() {
                 </Navbar.Toggle>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto" >
-                        <Nav.Link>{t("about-us")}</Nav.Link>
-                        <Nav.Link href="/login">{t("login")}</Nav.Link>
-                        <Nav.Link href="/signup">{t("register")}</Nav.Link>
+                        <Nav.Link as={Link} to="/about_us">{t("about-us")}</Nav.Link>
+                        <Nav.Link as={Link} to="/login">{t("login")}</Nav.Link>
+                        <Nav.Link as={Link} to="/signup">{t("register")}</Nav.Link>
 
                         <Form className="switchers">
                             <div
