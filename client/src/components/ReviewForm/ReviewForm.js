@@ -4,6 +4,7 @@ import { Form, FloatingLabel, Button } from 'react-bootstrap'
 // import { faStar } from '@fortawesome/free-solid-svg-icons'
 import { useTranslation } from "react-i18next";
 import './ReviewForm.css'
+import Auth from '../../utils/auth'
 
 
 function ReviewForm() {
@@ -17,22 +18,28 @@ function ReviewForm() {
 
 
     return (
-        <Form className='review-form' >
-            <FloatingLabel
-                controlId="floatingTextarea"
-                label={t('comment')}
-                className="mb-3 mx-3 mt-4"
-            >
-                <Form.Control as="textarea" style={{ height: '10%' }} />
-            </FloatingLabel>
+        <>
+            {Auth.loggedIn() ? (
+                <Form className='review-form' >
+                    <FloatingLabel
+                        controlId="floatingTextarea"
+                        label={t('comment')}
+                        className="mb-3 mx-3 mt-4"
+                    >
+                        <Form.Control as="textarea" style={{ height: '10%' }} />
+                    </FloatingLabel>
 
-            <Form.Group className="mb-3 mx-3" controlId="formBasicPassword">
-                <Form.Control type="text" placeholder={t('username')} />
-            </Form.Group>
-            <Button variant="primary" type="submit" className='mb-4' id='review-form-btn'>
-                {t('submit')}
-            </Button>
-        </Form>
+                    <Form.Group className="mb-3 mx-3" controlId="formBasicPassword">
+                        <Form.Control type="text" placeholder={t('username')} />
+                    </Form.Group>
+                    <Button variant="primary" type="submit" className='mb-4' id='review-form-btn'>
+                        {t('submit')}
+                    </Button>
+                </Form>
+            ) : ''
+            }
+        </>
+
 
 
     )
