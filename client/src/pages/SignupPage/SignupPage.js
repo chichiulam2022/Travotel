@@ -8,11 +8,16 @@ import Auth from '../../utils/auth';
 import { ADD_USER } from '../../../src/utils/mutations';
 
 export default function SigninPage(props) {
-  const [formState, setFormState] = useState({ username: '', email: '', password: '' });
+  const [formState, setFormState] = useState({
+    username: '',
+    email: '',
+    password: ''
+  });
   const [addUser, { error }] = useMutation(ADD_USER);
 
   const handleChange = event => {
     const { name, value } = event.target;
+
     setFormState({
       ...formState,
       [name]: value,
@@ -42,13 +47,13 @@ export default function SigninPage(props) {
 
 
     try {
-      //execute addUser mutation and pass in variable from form
       const { data } = await addUser({
-        variables: { ...formState }
-      })
-      console.log(data)
+        variables: { ...formState },
+      });
+
+      Auth.login(data.addUser.token);
     } catch (e) {
-      console.error(e)
+      console.error(e);
     }
 
   };

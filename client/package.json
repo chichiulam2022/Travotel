@@ -2,7 +2,7 @@
   "name": "booking",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3001",
+ 
   "dependencies": {
     "@apollo/client": "^3.7.1",
     "@emotion/react": "^11.10.5",
