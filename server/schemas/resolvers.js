@@ -5,25 +5,25 @@ const { signToken } = require('../utils/auth');
 
 const resolvers = {
     Query: {
-        me: async(parent, args, context) => {
-          if (context.user) {
-            const userData = await User.findOne({ _id: context.user._id })
-            .select('-__v -password')
+        me: async (parent, args, context) => {
+            if (context.user) {
+                const userData = await User.findOne({ _id: context.user._id })
+                    .select('-__v -password')
 
-            return userData;
-          }
+                return userData;
+            }
 
-          throw new AuthenticationError('Not logged in!')
+            throw new AuthenticationError('Not logged in!')
 
         },
         user: async (parent, { username }) => {
             return User.findOne({ username })
-            .select('-__v -password')
+                .select('-__v -password')
 
         },
         users: async () => {
             return User.find()
-            .select('-__v -password')
+                .select('-__v -password')
 
         },
         destination: async () => {
@@ -31,14 +31,14 @@ const resolvers = {
         },
         booking: async (parent, { _id }, context) => {
             if (context.user) {
-              const user = await User.findById(context.user._id).populate({
-                path: 'bookings.hotels',
-                populate: 'destination'
-              });
-      
-              return user.bookings.id(_id);
+                const user = await User.findById(context.user._id).populate({
+                    path: 'bookings.hotels',
+                    populate: 'destination'
+                });
+
+                return user.bookings.id(_id);
             }
-      
+
             throw new AuthenticationError('Not logged in');
         },
 
@@ -46,26 +46,20 @@ const resolvers = {
             const params = username ? { username } : {};
             return Comment.find(params).sort({ createdAt: -1 });
         },
-
-
-
-
-
-
     },
     Mutation: {
         addUser: async (parent, args) => {
             const user = await User.create(args);
             const token = signToken(user);
 
-            return { token, user };           
+            return { token, user };
             // return { user };           
 
         },
         login: async (parent, { email, password }) => {
             const user = await User.findOne({ email });
 
-            if(!user) {
+            if (!user) {
                 throw new AuthenticationError('Incorrect Credentials');
             }
 
@@ -74,7 +68,7 @@ const resolvers = {
             if (!correctPw) {
                 throw new AuthenticationError('Incorrect credentials');
             }
-            
+
             const token = signToken(user);
             return { token, user };
 
@@ -99,13 +93,13 @@ const resolvers = {
         addBooking: async (parent, { hotels }, context) => {
             console.log(context);
             if (context.user) {
-              const booking = new Booking({ hotels });
-      
-              await User.findByIdAndUpdate(context.user._id, { $push: { bookings: booking } });
-      
-              return booking;
+                const booking = new Booking({ hotels });
+
+                await User.findByIdAndUpdate(context.user._id, { $push: { bookings: booking } });
+
+                return booking;
             }
-      
+
             throw new AuthenticationError('To book a hotel you need to be logged in');
         },
 
@@ -113,6 +107,6 @@ const resolvers = {
     }
 
 
-}    
+}
 
 module.exports = resolvers;

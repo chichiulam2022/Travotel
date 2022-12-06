@@ -59,13 +59,20 @@ export default function SigninPage(props) {
     justify-content-center align-items-center">
       <Form className="rounded p-4 p-sm-3 mx-5 signup-form rounded" onSubmit={handleFormSubmit}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
+
           <img src={logo} alt='logo' />
+
           <h5 className="signup-form-intro mt-4">Sign Up To Your <span className="signup-brand-name">TRAVÔTEL</span> Account</h5>
           <h5 className="signup-form-intro">Inscrivez-vous à votre compte <span className="signup-brand-name">TRAVÔTEL</span></h5>
           <br />
+          {error &&
+            <div>
+              <p style={{ color: 'red', fontWeight: '900' }}>Sorry, sign up failed / Désolé, échec d'enregistrement</p>
+            </div>}
           <Form.Label className="mt-2 email-txt">Email Address / Courriel</Form.Label>
           {/* <Form.Control type="email" required id='email' value={formState.email}
             placeholder="Your Email / Votre courriel" onChange={handleChange} /> */}
+
           <input
             placeholder='Email / Courriel'
             name='email'

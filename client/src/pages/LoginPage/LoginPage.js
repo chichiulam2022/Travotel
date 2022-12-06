@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import "./LoginPage.css";
 import { Form, Button } from 'react-bootstrap'
-import logo from '../../assets/logo.png'
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../../../src/utils/mutations';
 import Auth from '../../utils/auth';
+import "./LoginPage.css";
+import logo from '../../assets/logo.png'
 
 
 export default function LoginPage(props) {
@@ -42,6 +42,10 @@ export default function LoginPage(props) {
           <h5 className="loginup-form-intro mt-4">Welcome! Login In To Your <span className="loginup-brand-name">TRAVÔTEL</span> Account</h5>
           <h5 className="loginup-form-intro">Bienvenue! Connectez-vous à votre compte <span className="loginup-brand-name">TRAVÔTEL</span></h5>
           <br />
+          {error &&
+            <div>
+              <p style={{ color: 'red', fontWeight: '900' }}>Sorry, login failed / Désolé, échec de connexion</p>
+            </div>}
           <Form.Label className="mt-2 email-txt">Email Address / Courriel</Form.Label>
           {/* <Form.Control type="email required"
             placeholder="Your Email / Votre courriel" onChange={handleChange}/> */}
