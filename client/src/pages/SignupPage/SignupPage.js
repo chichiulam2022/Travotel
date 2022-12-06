@@ -40,7 +40,6 @@ export default function SigninPage(props) {
 
 
   return (
-
     <div className="signup-color-overlay d-flex
     justify-content-center align-items-center">
       <Form className="rounded p-4 p-sm-3 mx-5 signup-form rounded" onSubmit={handleFormSubmit}>
@@ -50,21 +49,34 @@ export default function SigninPage(props) {
           <h5 className="signup-form-intro">Inscrivez-vous à votre compte <span className="signup-brand-name">TRAVÔTEL</span></h5>
           <br />
           <Form.Label className="mt-2 email-txt">Email Address / Courriel</Form.Label>
-          <Form.Control type="email"
+
+          <Form.Control type="email required"
             placeholder="Your Email / Votre courriel" onChange={handleChange}/>
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Label className="password-txt">Username / Nom d'utilisateur</Form.Label>
+          <Form.Control type="username" required
+            placeholder="Your Username / Votre nom d'utilisateur" />
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label className="password-txt">Password / Mot de passe</Form.Label>
-          <Form.Control type="password"
+          <Form.Control type="password required"
             placeholder="Your password / Votre mot de passe" onChange={handleChange}/>
         </Form.Group>
+
+        <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Label className="password-txt">Confirm Password / Confirmez le mot de passe</Form.Label>
+          <Form.Control type="password" required
+            placeholder="Your Password / Votre mot de passe" />
+        </Form.Group>
+
         <Form.Group className="mb-3" controlId="formBasicCheckbox">
           <Form.Check type="checkbox" label='Remember Me / Se souvenir de moi' />
         </Form.Group>
         <Button variant="primary" type="submit" className="signup-btn">Submit / Soumettre
         </Button>
-        {/* <h1>or sign up with</h1> */}
       </Form>
     </div >
 

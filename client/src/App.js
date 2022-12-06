@@ -5,6 +5,7 @@ import Rooms from "./pages/Rooms";
 import Review from "./components/Review/Review";
 import LoginPage from './pages/LoginPage/LoginPage'
 import SignupPage from './pages/SignupPage/SignupPage'
+import AboutUs from "./pages/AboutUsPage/AboutUs";
 import './App.css'
 
 const httpLink = createHttpLink({
@@ -26,6 +27,7 @@ function App() {
         <Route path="/review" element={<Review />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
+        <Route path="/about_us" element={<AboutUs />} />
       </Routes >
     </ApolloProvider>
 
