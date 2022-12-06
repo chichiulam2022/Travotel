@@ -3,6 +3,7 @@ import './Search.css'
 import { ThemeContext } from '../../contexts/ThemeContext'
 import { useTranslation } from "react-i18next";
 import PhotoAlbumCompo from '../PhotoAlbum/PhotoAlbumCompo';
+import { Link } from 'react-router-dom'
 
 
 function Search() {
@@ -69,8 +70,9 @@ function Search() {
                                 <input type="date" />
                             </div>
                         </div>
-                        <button>{t('search')}</button>
-
+                        <Link to='/toronto' onClick={() => { window.location.href = "/toronto" }}>
+                            <button>{t('search')}</button>
+                        </Link>
                     </form>
                 </div>
             </div >

@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useContext } from 'react'
 import './RoomCards.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { MdLocationPin } from 'react-icons/md'

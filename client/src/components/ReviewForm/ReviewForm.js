@@ -1,18 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Form, FloatingLabel, Button } from 'react-bootstrap'
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faStar } from '@fortawesome/free-solid-svg-icons'
 import { useTranslation } from "react-i18next";
 import './ReviewForm.css'
 import Auth from '../../utils/auth'
 
 
 function ReviewForm() {
-    const [formState, setFormState] = useState({
-        thoughtText: '',
-        thoughtAuthor: ''
-    })
-
     const { t } = useTranslation(["review"]);
 
 

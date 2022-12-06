@@ -29,7 +29,7 @@ const hotelSchema = new Schema({
     required: true,
   },
   photos: {
-    type: [String],
+    type: String,
   },
   description: {
     type: String,
@@ -39,7 +39,7 @@ const hotelSchema = new Schema({
     type: Number,
   },
   rooms: {
-    type: [String],
+    type: String,
   },
   price: {
     type: Number,
