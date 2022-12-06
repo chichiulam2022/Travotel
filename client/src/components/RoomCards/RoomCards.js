@@ -22,33 +22,6 @@ import { ThemeContext } from '../../contexts/ThemeContext'
 import { useTranslation } from "react-i18next";
 
 
-
-// function to select the stars rating
-// function StarRating() {
-//   const [rating, setRating] = useState(0);
-//   const [hover, setHover] = useState(0);
-//   return (
-//     <div className="star-rating">
-//       {[...Array(5)].map((star, index) => {
-//         index += 1;
-//         return (
-//           <button
-//             type="button"
-//             key={index}
-//             className={index <= (hover || rating) ? "on" : "off"}
-//             onClick={() => setRating(index)}
-//             onMouseEnter={() => setHover(index)}
-//             onMouseLeave={() => setHover(rating)}
-//           >
-//             <span className="star"><FontAwesomeIcon icon={faStar} /></span>
-//           </button>
-//         );
-//       })}
-//     </div>
-//   );
-// }
-
-
 // room cards component
 function RoomCards() {
   const { t } = useTranslation(["room_info"]);
@@ -150,15 +123,15 @@ function RoomCards() {
                   className="card-img-top"
                   style={{ height: '200px' }}
                   alt="room" />
-                <div class="card-body">
-                  <h5 class="card-title"
+                <div className="card-body">
+                  <h5 className="card-title"
                     style={{ fontWeight: '500', color: isDarkMode ? 'purple' : '#00FFFF' }}
                   > {item.hotel}</h5>
                   <br />
                   <h6 className="card-title" style={{ color: isDarkMode ? 'black' : 'white' }}>
                     <MdLocationPin />&nbsp;{item.location}
                   </h6>
-                  <p class="card-text" style={{ color: isDarkMode ? 'black' : 'white' }}>
+                  <p className="card-text" style={{ color: isDarkMode ? 'black' : 'white' }}>
                     {item.description}
                   </p>
                   <div className='icon-container' style={{ color: isDarkMode ? 'black' : 'white' }}>
@@ -172,7 +145,6 @@ function RoomCards() {
                   <br />
                   <h6 className='currency' style={{ color: isDarkMode ? 'black' : 'white' }}>{item.price}</h6>
                   <Button className='reserve-btn'>{t('reserve')}</Button>&nbsp;&nbsp;
-                  {/* <Button className='reserve-btn'>{t('review')}</Button> */}
                   <a href='/review' className='room-card-review-link'>{t('review')}</a>
                 </div>
               </div>

@@ -63,53 +63,53 @@ function Review() {
                                     </div>
                                 </div>
 
-                                <div class="col-md-8 mt-4">
-                                    <div class="rating-bar0 justify-content-center">
+                                <div className="col-md-8 mt-4">
+                                    <div className="rating-bar0 justify-content-center">
                                         <table class="text-left mx-auto">
                                             <tr>
-                                                <td class="rating-label">{t('excellent')}</td>
-                                                <td class="rating-bar">
-                                                    <div class="bar-container">
-                                                        <div class="bar-5"></div>
+                                                <td className="rating-label">{t('excellent')}</td>
+                                                <td className="rating-bar">
+                                                    <div className="bar-container">
+                                                        <div className="bar-5"></div>
                                                     </div>
                                                 </td>
-                                                <td class="text-right">123</td>
+                                                <td className="text-right">123</td>
                                             </tr>
                                             <tr>
-                                                <td class="rating-label">{t('good')}</td>
-                                                <td class="rating-bar">
-                                                    <div class="bar-container">
-                                                        <div class="bar-4"></div>
+                                                <td className="rating-label">{t('good')}</td>
+                                                <td className="rating-bar">
+                                                    <div className="bar-container">
+                                                        <div className="bar-4"></div>
                                                     </div>
                                                 </td>
-                                                <td class="text-right">23</td>
+                                                <td className="text-right">23</td>
                                             </tr>
                                             <tr>
-                                                <td class="rating-label">{t('average')}</td>
-                                                <td class="rating-bar">
-                                                    <div class="bar-container">
-                                                        <div class="bar-3"></div>
+                                                <td className="rating-label">{t('average')}</td>
+                                                <td className="rating-bar">
+                                                    <div className="bar-container">
+                                                        <div className="bar-3"></div>
                                                     </div>
                                                 </td>
-                                                <td class="text-right">10</td>
+                                                <td className="text-right">10</td>
                                             </tr>
                                             <tr>
-                                                <td class="rating-label">{t('poor')}</td>
-                                                <td class="rating-bar">
-                                                    <div class="bar-container">
-                                                        <div class="bar-2"></div>
+                                                <td className="rating-label">{t('poor')}</td>
+                                                <td className="rating-bar">
+                                                    <div className="bar-container">
+                                                        <div className="bar-2"></div>
                                                     </div>
                                                 </td>
-                                                <td class="text-right">3</td>
+                                                <td className="text-right">3</td>
                                             </tr>
                                             <tr>
-                                                <td class="rating-label">{t('terrible')}</td>
-                                                <td class="rating-bar">
-                                                    <div class="bar-container">
-                                                        <div class="bar-1"></div>
+                                                <td className="rating-label">{t('terrible')}</td>
+                                                <td className="rating-bar">
+                                                    <div className="bar-container">
+                                                        <div className="bar-1"></div>
                                                     </div>
                                                 </td>
-                                                <td class="text-right">0</td>
+                                                <td className="text-right">0</td>
                                             </tr>
                                         </table>
                                     </div>

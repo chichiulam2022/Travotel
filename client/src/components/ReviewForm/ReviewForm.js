@@ -18,13 +18,6 @@ function ReviewForm() {
 
     return (
         <Form className='review-form' >
-            {/* <div className='mt-4'>
-                <span className="star"><FontAwesomeIcon icon={faStar} /></span>
-                <span className="star"><FontAwesomeIcon icon={faStar} /></span>
-                <span className="star"><FontAwesomeIcon icon={faStar} /></span>
-                <span className="star"><FontAwesomeIcon icon={faStar} /></span>
-                <span className="star"><FontAwesomeIcon icon={faStar} /></span>
-            </div> */}
             <FloatingLabel
                 controlId="floatingTextarea"
                 label={t('comment')}
