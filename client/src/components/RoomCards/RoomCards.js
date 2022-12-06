@@ -20,6 +20,7 @@ import qrcode from '../../assets/qrcode.png'
 import toronto from '../../assets/toronto2.jpg'
 import { ThemeContext } from '../../contexts/ThemeContext'
 import { useTranslation } from "react-i18next";
+import 'animate.css';
 
 
 // room cards component
@@ -81,19 +82,20 @@ function RoomCards() {
               src={toronto}
               fluid
               rounded
-              className='mt-5'
+              className='mt-5 animate__animated animate__fadeInLeft animate__slower'
               style={{ height: '400px', width: '900px' }}
             />
           </Col>
           <Col sm={5}>
             <h3
-              className='mt-4 mt-sm-5'
+              className='mt-4 mt-sm-5 animate__animated animate__fadeInRight animate__slower'
               style={{ color: isDarkMode ? 'black' : 'white' }}
             >
               {t('welcome')}</h3>
             <br />
             <h6
               style={{ color: isDarkMode ? 'black' : 'white' }}
+              className='animate__animated animate__fadeInUp animate__slower'
             >{t('intro')}</h6>
           </Col>
         </Row>
@@ -101,7 +103,8 @@ function RoomCards() {
         <Row>
           <Card className='mt-3 text-center text-white py-2'
             style={{ backgroundColor: isDarkMode ? '#e67e00' : '#6200b3' }}>
-            <div style={{ display: 'flex', justifyContent: 'center', alignContent: 'center' }}>
+            <div style={{ display: 'flex', justifyContent: 'center', alignContent: 'center' }}
+              className='animate__animated animate__fadeIn animate__slower animate__delay-1s'>
               <Image src={qrcode} style={{ height: '150px', width: '180px' }} className='my-auto' />
               <Card.Body>
                 <h5 style={{ fontWeight: '900', fontSize: '1.2rem', textDecoration: 'underline solid orange' }}>
@@ -118,7 +121,7 @@ function RoomCards() {
         <div className="row row-cols-1 row-cols-md-3 g-4 mt-3">
           {roomData.map((item) => (
             <div className="col">
-              <div className="card" style={{ backgroundColor: isDarkMode ? '#F0FFFF' : '#483D8B' }}>
+              <div className="card animate__animated animate__fadeInUp animate__delay-1s" style={{ backgroundColor: isDarkMode ? '#F0FFFF' : '#483D8B' }}>
                 <img src={item.image}
                   className="card-img-top"
                   style={{ height: '200px' }}

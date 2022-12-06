@@ -5,6 +5,7 @@ import { LOGIN_USER } from '../../../src/utils/mutations';
 import Auth from '../../utils/auth';
 import "./LoginPage.css";
 import logo from '../../assets/logo.png'
+import 'animate.css'
 
 
 export default function LoginPage(props) {
@@ -36,7 +37,7 @@ export default function LoginPage(props) {
     <div className="login-color-overlay d-flex
     justify-content-center align-items-center">
 
-      <Form className="rounded p-4 p-sm-3 mx-5 loginup-form rounded" onSubmit={handleFormSubmit}>
+      <Form className="rounded p-4 p-sm-3 mx-5 loginup-form rounded animate__animated animate__fadeInLeft animate__delay-1s" onSubmit={handleFormSubmit}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <img src={logo} alt='logo' />
           <h5 className="loginup-form-intro mt-4">Welcome! Login In To Your <span className="loginup-brand-name">TRAVÔTEL</span> Account</h5>

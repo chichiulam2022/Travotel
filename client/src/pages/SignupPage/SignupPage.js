@@ -6,6 +6,7 @@ import logo from '../../assets/logo.png'
 import { useMutation } from '@apollo/client';
 import Auth from '../../utils/auth';
 import { ADD_USER } from '../../../src/utils/mutations';
+import 'animate.css'
 
 export default function SigninPage(props) {
   const [formState, setFormState] = useState({
@@ -62,7 +63,7 @@ export default function SigninPage(props) {
   return (
     <div className="signup-color-overlay d-flex
     justify-content-center align-items-center">
-      <Form className="rounded p-4 p-sm-3 mx-5 signup-form rounded" onSubmit={handleFormSubmit}>
+      <Form className="rounded p-4 p-sm-3 mx-5 signup-form rounded animate__animated animate__fadeIn animate__delay-1s" onSubmit={handleFormSubmit}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
 
           <img src={logo} alt='logo' />
