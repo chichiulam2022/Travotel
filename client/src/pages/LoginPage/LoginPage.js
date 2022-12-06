@@ -60,25 +60,9 @@ export default function LoginPage(props) {
           />
         </Form.Group>
 
-        {/* <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label className="password-txt">Username / Nom d'utilisateur</Form.Label>
-          <Form.Control type="username" required
-            placeholder="Your Username / Votre nom d'utilisateur" />
-          <input
-            placeholder="Username / Nom d'utilisateur"
-            name="username"
-            type="username"
-            id="username"
-            value={formState.username}
-            onChange={handleChange}
-          />
-        </Form.Group> */}
-
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label className="password-txt">Password / Mot de passe</Form.Label>
 
-          {/* <Form.Control type="password required"
-            placeholder="Your password / Votre mot de passe" onChange={handleChange} /> */}
           <input
             placeholder="Password / Mot de passe"
             name="password"
@@ -93,7 +77,6 @@ export default function LoginPage(props) {
         </Form.Group>
         <Button variant="primary" type="submit" className="loginup-btn">Submit / Soumettre
         </Button>
-        {/* <h1>or sign up with</h1> */}
       </Form>
     </div >
   );
