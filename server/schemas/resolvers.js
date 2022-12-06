@@ -16,6 +16,16 @@ const resolvers = {
           throw new AuthenticationError('Not logged in!')
 
         },
+        user: async (parent, { username }) => {
+            return User.findOne({ username })
+            .select('-__v -password')
+
+        },
+        users: async () => {
+            return User.find()
+            .select('-__v -password')
+
+        },
         destination: async () => {
             return await Destination.find();
         },
@@ -37,11 +47,7 @@ const resolvers = {
             return Comment.find(params).sort({ createdAt: -1 });
         },
 
-        user: async (parent, { username }) => {
-            return User.findOne({ username })
-            .select('-__v -password')
 
-        },
 
 
 
@@ -52,8 +58,25 @@ const resolvers = {
             const user = await User.create(args);
             const token = signToken(user);
 
-            // return { token, user };           
-            return { user };           
+            return { token, user };           
+            // return { user };           
+
+        },
+        login: async (parent, { email, password }) => {
+            const user = await User.findOne({ email });
+
+            if(!user) {
+                throw new AuthenticationError('Incorrect Credentials');
+            }
+
+            const correctPw = await user.isCorrectPassword(password);
+
+            if (!correctPw) {
+                throw new AuthenticationError('Incorrect credentials');
+            }
+            
+            const token = signToken(user);
+            return { token, user };
 
         },
 
@@ -86,23 +109,7 @@ const resolvers = {
             throw new AuthenticationError('To book a hotel you need to be logged in');
         },
 
-        login: async (parent, { email, password }) => {
-            const user = await User.findOne({ email });
 
-            if(!user) {
-                throw new AuthenticationError('Incorrect Credentials');
-            }
-
-            const correctPw = await user.isCorrectPassword(password);
-
-            if (!correctPw) {
-                throw new AuthenticationError('Incorrect credentials');
-            }
-            
-            const token = signToken(user);
-            return { token, user };
-
-        }
     }
 
 
