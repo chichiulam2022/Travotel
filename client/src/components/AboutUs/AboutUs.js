@@ -31,7 +31,7 @@ function AboutUs() {
         <Card.Text>
           CHI CHIU
         </Card.Text>
-        <Card.Link href="#">GitHub</Card.Link>
+        <Card.Link href="https://github.com/chichiulam2022">GitHub</Card.Link>
         <Card.Link href="#">Another Link</Card.Link>
       </Card.Body>
     </Card>
@@ -43,7 +43,7 @@ function AboutUs() {
         <Card.Text>
           ALEX
         </Card.Text>
-        <Card.Link href="#">GitHub</Card.Link>
+        < Card.Link href="#">GitHub</Card.Link>
       </Card.Body>
     </Card>
 
@@ -79,7 +79,7 @@ function AboutUs() {
         <Card.Text>
           NABEEL
         </Card.Text>
-        <Card.Link href="#">Card Link</Card.Link>
+        <Card.Link href="https://github.com/nab-man">Card Link</Card.Link>
         <Card.Link href="#">Another Link</Card.Link>
       </Card.Body>
     </Card>
