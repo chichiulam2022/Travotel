@@ -55,10 +55,10 @@ export default function LoginPage(props) {
           />
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="formBasicPassword">
+        {/* <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label className="password-txt">Username / Nom d'utilisateur</Form.Label>
-          {/* <Form.Control type="username" required
-            placeholder="Your Username / Votre nom d'utilisateur" /> */}
+          <Form.Control type="username" required
+            placeholder="Your Username / Votre nom d'utilisateur" />
           <input
             placeholder="Username / Nom d'utilisateur"
             name="username"
@@ -67,7 +67,7 @@ export default function LoginPage(props) {
             value={formState.username}
             onChange={handleChange}
           />
-        </Form.Group>
+        </Form.Group> */}
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label className="password-txt">Password / Mot de passe</Form.Label>
