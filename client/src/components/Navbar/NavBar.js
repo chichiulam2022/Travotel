@@ -8,6 +8,7 @@ import { useTranslation } from "react-i18next";
 import logo from "../../assets/logo.png";
 import Flag from 'react-world-flags'
 import Auth from '../../utils/auth'
+import 'animate.css';
 
 function NavBar() {
     // language handle check
@@ -36,7 +37,7 @@ function NavBar() {
             style={{
                 backgroundColor: isDarkMode ? "rgb(72, 61, 139)" : "black",
             }}
-            className="navbar-active"
+            className="navbar-active animate__animated animate__fadeIn animate__slower animate__delay-2s"
         >
             <Container>
                 <Navbar.Brand className="logo" href="/">

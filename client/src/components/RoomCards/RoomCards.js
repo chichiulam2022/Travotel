@@ -121,7 +121,7 @@ function RoomCards() {
         <div className="row row-cols-1 row-cols-md-3 g-4 mt-3">
           {roomData.map((item) => (
             <div className="col">
-              <div className="card animate__animated animate__fadeInUp animate__delay-1s" style={{ backgroundColor: isDarkMode ? '#F0FFFF' : '#483D8B' }}>
+              <div className="card" style={{ backgroundColor: isDarkMode ? '#F0FFFF' : '#483D8B' }}>
                 <img src={item.image}
                   className="card-img-top"
                   style={{ height: '200px' }}

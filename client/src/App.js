@@ -1,3 +1,4 @@
+import { Suspense, useState, useEffect } from 'react'
 import Homepage from "./pages/Homepage";
 import { Routes, Route } from "react-router-dom";
 import {
@@ -16,6 +17,8 @@ import AboutUs from "./pages/AboutUsPage/AboutUs";
 import './App.css'
 // import { BrowserRouter } from 'react-router-dom'
 import { ThemeProvider } from './contexts/ThemeContext'
+import React from "react";
+import LoadingPage from './components/LoadingPage/LoadingPage';
 // import PageContent from './PageContent';
 
 const httpLink = createHttpLink({
@@ -43,21 +46,42 @@ const client = new ApolloClient({
 });
 
 
-function App() {
-  return (
-    <ApolloProvider client={client}>
-      <ThemeProvider>
-        <Routes>
-          <Route index element={<Homepage />} />
-          <Route path="/toronto" element={<Rooms />} />
-          <Route path="/review" element={<Review />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/signup" element={<SignupPage />} />
-          <Route path="/about_us" element={<AboutUs />} />
-        </Routes >
-      </ThemeProvider>
-    </ApolloProvider >
 
+function App() {
+  const [loading, setLoading] = useState(false)
+
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 4000);
+  }, []);
+
+  return (
+    <>
+      {
+        loading ? (
+          <LoadingPage />
+        ) : (
+          <Suspense fallback={<p>Loading...</p>}>
+            <ApolloProvider client={client}>
+              <ThemeProvider>
+                <Routes>
+                  <Route index element={<Homepage />} />
+                  <Route path="/toronto" element={<Rooms />} />
+                  <Route path="/review" element={<Review />} />
+                  <Route path="/login" element={<LoginPage />} />
+                  <Route path="/signup" element={<SignupPage />} />
+                  <Route path="/about_us" element={<AboutUs />} />
+                </Routes >
+              </ThemeProvider>
+            </ApolloProvider >
+          </Suspense>
+        )
+      }
+
+
+    </>
   )
 }
 
