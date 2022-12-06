@@ -24,16 +24,17 @@ const typeDefs = gql`
         _id: ID
         name: String
         type: String
+        destination: Destination
         city: String
         address: String
+        distance: String
         photos: String
         description: String
-        rating: Int
+        likes: Int
         rooms: String
-        nights: Int
         price: Float
+        nights: Int        
         featured: Boolean
-        destination: Destination
     }
 
     type Booking {

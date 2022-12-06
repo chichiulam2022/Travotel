@@ -18,7 +18,6 @@ db.once('open', async () => {
   console.log('destination seeded');
 
   
-  
   await User.deleteMany();
 
   await User.create({
