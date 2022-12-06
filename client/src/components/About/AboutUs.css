@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Aldrich&display=swap");
+
+body {
+  line-height: 1.5;
+  background-image: linear-gradient(90deg, black, #666699);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+p {
+  color: white;
+  text-align: center;
+}
+
+.TeamImage {
+  margin-left: 400px;
+}
+
+.destI {
+  margin-left: 40px;
+}
+
+.compareI {
+  margin-left: 90px;
+}
+
+.searchI {
+  margin-left: 30px;
+}
+
+.regI {
+  margin-left: 300px;
+}
+
+.registration {
+  text-align: left;
+}
+
+.supI {
+  margin-left: 300px;
+}

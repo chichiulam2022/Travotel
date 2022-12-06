@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import { Navbar, Nav, Container, Form } from "react-bootstrap";
 import { MdDarkMode, MdOutlineLightMode } from "react-icons/md";
 import { ThemeContext } from "../../contexts/ThemeContext";
+import { Link } from 'react-router-dom'
 import "./NavBar.css";
 import { useTranslation } from "react-i18next";
 import logo from "../../assets/logo.png";
@@ -9,15 +10,16 @@ import Flag from 'react-world-flags'
 
 function NavBar() {
     //to check if scrollY is active
-    const [scroll, setScroll] = useState(false);
-    const handleScroll = () => {
-        if (window.scrollY >= 10) {
-            setScroll(true);
-        } else {
-            setScroll(false);
-        }
-    };
-    window.addEventListener("scroll", handleScroll);
+    // const [scroll, setScroll] = useState(false);
+    // const handleScroll = () => {
+    //     if (window.scrollY >= 10) {
+    //         setScroll(true);
+    //     } else {
+    //         setScroll(false);
+    //     }
+    // };
+    // window.addEventListener("scroll", handleScroll);
+
     // language handle check
     const [lang, setLang] = useState("en");
     // translation
@@ -38,7 +40,8 @@ function NavBar() {
             style={{
                 backgroundColor: isDarkMode ? "rgb(72, 61, 139)" : "black",
             }}
-            className={scroll ? "navbar-active" : "hidden"}
+            // className={scroll ? "navbar-active" : "hidden"}
+            className="navbar-active"
         >
             <Container>
 
@@ -54,9 +57,9 @@ function NavBar() {
                 </Navbar.Toggle>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto" >
-                        <Nav.Link>{t("about-us")}</Nav.Link>
-                        <Nav.Link>{t("login")}</Nav.Link>
-                        <Nav.Link>{t("register")}</Nav.Link>
+                        <Nav.Link as={Link} to="/about_us">{t("about-us")}</Nav.Link>
+                        <Nav.Link as={Link} to="/login">{t("login")}</Nav.Link>
+                        <Nav.Link as={Link} to="/signup">{t("register")}</Nav.Link>
 
                         <Form className="switchers">
                             <div

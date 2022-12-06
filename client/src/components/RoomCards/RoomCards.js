@@ -3,13 +3,11 @@ import './RoomCards.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { MdLocationPin } from 'react-icons/md'
 import { Container, Row, Col, Image, Card, Button } from 'react-bootstrap';
-
 import {
   faWifi,
   faMugHot,
   faPersonSwimming,
   faParking, faDumbbell,
-  faStar,
   faPaw
 } from '@fortawesome/free-solid-svg-icons';
 import room1 from '../../assets/room1.jpg';
@@ -100,9 +98,9 @@ function RoomCards() {
   ]
 
   const { isDarkMode } = useContext(ThemeContext);
-  
+
   return (
-    <main style={{ backgroundColor: isDarkMode ? 'lavender' : 'black', height: 'auto' }}>
+    <main style={{ backgroundColor: isDarkMode ? 'lavender' : 'black', height: 'auto', transform: 'translateY(60px)' }}>
       <Container>
         <Row className='px-4'>
           <Col sm={7}>
@@ -165,17 +163,17 @@ function RoomCards() {
                   </p>
                   <div className='icon-container' style={{ color: isDarkMode ? 'black' : 'white' }}>
                     <p className="wifi"><FontAwesomeIcon icon={faWifi} />&nbsp;&nbsp;Wifi</p>
-                    <p className="breakfast"><FontAwesomeIcon icon={faMugHot} />&nbsp;&nbsp;Breakfast included </p>
-                    <p className="pool"><FontAwesomeIcon icon={faPersonSwimming} />&nbsp;&nbsp;Pool </p>
-                    <p className="pet-friendly"><FontAwesomeIcon icon={faPaw} />&nbsp;&nbsp;Pet friendly </p>
-                    <p className="parking"><FontAwesomeIcon icon={faParking} />&nbsp;&nbsp;Parking available </p>
+                    <p className="breakfast"><FontAwesomeIcon icon={faMugHot} />&nbsp;&nbsp;{t('breakfast')} </p>
+                    <p className="pool"><FontAwesomeIcon icon={faPersonSwimming} />&nbsp;&nbsp;{t('pool')} </p>
+                    <p className="pet-friendly"><FontAwesomeIcon icon={faPaw} />&nbsp;&nbsp;{t('pet')} </p>
+                    <p className="parking"><FontAwesomeIcon icon={faParking} />&nbsp;&nbsp;{t('parking')} </p>
                     <p className="gym"><FontAwesomeIcon icon={faDumbbell} />&nbsp;&nbsp;Gym </p>
                   </div>
                   <br />
                   <h6 className='currency' style={{ color: isDarkMode ? 'black' : 'white' }}>{item.price}</h6>
                   <Button className='reserve-btn'>{t('reserve')}</Button>&nbsp;&nbsp;
                   {/* <Button className='reserve-btn'>{t('review')}</Button> */}
-                  <a href='/review' style={{ textDecoration: 'underline orange' }}>{t('review')}</a>
+                  <a href='/review' className='room-card-review-link'>{t('review')}</a>
                 </div>
               </div>
             </div>))}

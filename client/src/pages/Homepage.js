@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import FrontPage from '../components/FrontPage/FrontPage';
 import Footer from '../components/Footer/Footer';
 import Search from '../components/Search/Search';
-
+import AboutUs from '../components/About/AboutUs'
 function Homepage() {
 
     return (
@@ -14,6 +14,7 @@ function Homepage() {
             <Navbar />
             <HotelSlider />
             <Search />
+            <AboutUs />
             <Footer />
         </div>
     )
