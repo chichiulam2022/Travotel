@@ -62,7 +62,7 @@ function Search() {
                             </div>
                             <div className='date-container'>
                                 <label>{t('number_nights')}</label>
-                                <input type="input" value='night' />
+                                <input type="input" />
                             </div>
                             <div className='date-container'>
                                 <label>{t('check-out')}</label>
