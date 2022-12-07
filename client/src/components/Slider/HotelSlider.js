@@ -143,17 +143,18 @@ function HotelSlider() {
             </div>
             <div className="slider">
                 <Slider {...settings}>
-                    {dataDigitalBestSeller.map(item => (
+                    {dataDigitalBestSeller.map((item) => (
                         <div className="hotel-slider-card" style={{ border: "none" }}>
                             <div className="card-top">
                                 <img
+                                    key={item.toString()}
                                     src={item.linkImg}
                                     alt={item.city}
                                 />
                             </div>
                             <div className="card-bottom">
-                                <a href={item.link} className='nav-link'><h5>{item.city}</h5></a>
-                                <span className="category">{item.category}</span>
+                                <a href={item.link} key={item.toString()} className='nav-link'><h5 key={item.toString()}>{item.city}</h5></a>
+                                <span className="category" key={item.toString()}>{item.category}</span>
                             </div>
                         </div>
                     ))}

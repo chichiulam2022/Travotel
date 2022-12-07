@@ -21,13 +21,15 @@ nav.navbar {
     padding: 0;
 }
 
-.nav-link {
-    font-weight: 900;
+#nav-link-about,
+#nav-link-login,
+#nav-link-register {
     color: rgb(254, 84, 5) !important;
-    padding: 15px 15px 10px 10px;
+    padding: 9px 15px 10px 10px;
     margin-left: 10px;
     margin-right: 3px;
-    font-size: 1em;
+    font-size: 1.1rem;
+    font-weight: 600;
 }
 
 .nav-link:hover {

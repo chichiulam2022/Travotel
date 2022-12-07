@@ -3,7 +3,7 @@ import NavBar from '../../components/Navbar/NavBar'
 import about_icon from '../../assets/about_icon_1.png'
 import logo from '../../assets/logo.png'
 import './AboutUs.css'
-
+import 'animate.css';
 
 function AboutUs() {
     return (
@@ -11,7 +11,7 @@ function AboutUs() {
             <NavBar />
             <div className="about-us-color-overlay d-flex
         justify-content-center align-items-center">
-                <div className='about-us-text-container'>
+                <div className='about-us-text-container animate__animated animate__fadeIn animate__slower'>
                     <h3 className='mb-3 pt-3 who-text' >
                         Who Are We?
                     </h3>

@@ -18,7 +18,9 @@ root.render(
   <ThemeProvider>
     <BrowserRouter>
       <PageContent>
-        <App />
+        <React.StrictMode>
+          <App />
+        </React.StrictMode>
       </PageContent>
     </BrowserRouter>
   </ThemeProvider>
