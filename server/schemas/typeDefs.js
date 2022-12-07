@@ -51,10 +51,10 @@ const typeDefs = gql`
         users: [User]
         destination: [Destination]
         comments(username: String): [Comment]
-        hotel(_id: ID!): [Hotel]
+        hotel(_id: ID!): Hotel
         hotels(destination: ID, name: String): [Hotel] 
         booking(_id: ID!): Booking
-        checkout(products: [ID]!): Checkout
+        checkout(hotels: [ID]!): Checkout
     }
 
     type Mutation {

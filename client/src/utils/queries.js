@@ -106,3 +106,11 @@ query comments($username: String) {
     }
   }
 `;
+
+export const QUERY_CHECKOUT = gql `
+    query getCheckout ($hotels: [ID]!) {
+        checkout(hotels: $hotels) {
+        session
+        }
+    }
+`;
