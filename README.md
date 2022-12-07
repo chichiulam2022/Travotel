@@ -1,4 +1,4 @@
-# <div align="center"> 🏷️**Group Project 3- TRAVOTEL** </div>
+# <div align="center"> 🏷️**Group Project 3- TRAVÔTEL** </div>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://choosealicense.com/licenses/mit/)
 
