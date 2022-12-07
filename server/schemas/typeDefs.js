@@ -6,6 +6,8 @@ const typeDefs = gql`
         _id: ID
         username: String
         email: String
+        bookings: [Booking]
+        comments: [Comment]
     }
 
     type Comment {

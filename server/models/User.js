@@ -1,5 +1,6 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
+const Booking = require('./Booking');
 
 
 const userSchema = new Schema(
@@ -35,6 +36,7 @@ const userSchema = new Schema(
           ref: 'Comment'
         }
       ],
+      bookings: [Booking.schema]
     },
     // set this to use virtual below
     {
