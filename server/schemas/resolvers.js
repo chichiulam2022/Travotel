@@ -1,7 +1,7 @@
-const { User, Destination, Comment, Booking } = require('../models');
+const { User, Destination, Comment, Booking, Hotel } = require('../models');
 const { AuthenticationError } = require('apollo-server-express');
 const { signToken } = require('../utils/auth');
-
+// const stripe = require('stripe')('');
 
 const resolvers = {
     Query: {
@@ -29,6 +29,29 @@ const resolvers = {
         destination: async () => {
             return await Destination.find();
         },
+
+        hotel: async (parent, { _id }) => {
+            // return await Hotel.findById(_id).populate('destination');
+            return await Hotel.find();
+        },
+
+        // hotels: async (parent, { destination, name }) => {
+        //     const params = {};
+      
+        //     if (destination) {
+        //       params.destination = destination;
+        //     }
+      
+        //     if (name) {
+        //       params.name = {
+        //         $regex: name
+        //       };
+        //     }
+      
+        //     return await Hotel.find(params).populate('destination');
+        // },
+      
+
         booking: async (parent, { _id }, context) => {
             if (context.user) {
               const user = await User.findById(context.user._id).populate({
@@ -46,13 +69,8 @@ const resolvers = {
             const params = username ? { username } : {};
             return Comment.find(params).sort({ createdAt: -1 });
         },
-
-
-
-
-
-
     },
+
     Mutation: {
         addUser: async (parent, args) => {
             const user = await User.create(args);
@@ -80,6 +98,7 @@ const resolvers = {
 
         },
 
+
         addComment: async (parent, args, context) => {
             if (context.user) {
                 const comment = await Comment.create({ ...args, username: context.user.username });
@@ -94,6 +113,12 @@ const resolvers = {
             }
 
             throw new AuthenticationError('You need to be logged in to be able to make comments!');
+        },
+
+        updateHotel: async (parent, { _id, nights }) => {
+            const decrement = Math.abs(nights * -1);
+      
+            return await Hotel.findByIdAndUpdate(_id, { $inc: { nights: decrement } }, { new: true });
         },
 
         addBooking: async (parent, { hotels }, context) => {

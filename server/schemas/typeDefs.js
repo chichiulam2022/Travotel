@@ -50,6 +50,7 @@ const typeDefs = gql`
         users: [User]
         destination: [Destination]
         comments(username: String): [Comment]
+        hotel: [Hotel]
         booking(_id: ID!): Booking
     }
 
@@ -58,7 +59,7 @@ const typeDefs = gql`
         addUser(username: String!, email: String!, password: String!): Auth
         addComment(commentText: String!): Comment
         addBooking(hotels: [ID]!): Booking
-
+        updateHotel(_id: ID!, nights: Int!): Hotel
     }
 
     type Auth {
