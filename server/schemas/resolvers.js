@@ -31,25 +31,25 @@ const resolvers = {
         },
 
         hotel: async (parent, { _id }) => {
-            // return await Hotel.findById(_id).populate('destination');
-            return await Hotel.find();
+            return await Hotel.findById(_id).populate('destination');
+            // return await Hotel.find();
         },
 
-        // hotels: async (parent, { destination, name }) => {
-        //     const params = {};
+        hotels: async (parent, { destination, name }) => {
+            const params = {};
       
-        //     if (destination) {
-        //       params.destination = destination;
-        //     }
+            if (destination) {
+              params.destination = destination;
+            }
       
-        //     if (name) {
-        //       params.name = {
-        //         $regex: name
-        //       };
-        //     }
+            if (name) {
+              params.name = {
+                $regex: name
+              };
+            }
       
-        //     return await Hotel.find(params).populate('destination');
-        // },
+            return await Hotel.find(params).populate('destination');
+        },
       
 
         booking: async (parent, { _id }, context) => {

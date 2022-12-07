@@ -43,14 +43,14 @@ const typeDefs = gql`
         hotels: [Hotel]
     }
 
-
     type Query {
         me: User
         user(username: String!): User
         users: [User]
         destination: [Destination]
         comments(username: String): [Comment]
-        hotel: [Hotel]
+        hotel(_id: ID!): [Hotel]
+        hotels(destination: ID, name: String): [Hotel] 
         booking(_id: ID!): Booking
     }
 
