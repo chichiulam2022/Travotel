@@ -2,25 +2,23 @@ import { gql } from '@apollo/client';
 
 export const QUERY_HOTELS = gql`
     query getHotels($destination: ID) {
-        {
-            hotel(_id: $id) {
+        hotels(destination: $destination) {
+            _id
+            name
+            type
+            destination {
               _id
-              address
-              city
-              description
-              destination {
-                _id
-              }
-              distance
-              featured
-              likes
-              name
-              nights
-              photos
-              price
-              rooms
-              type
             }
+            city
+            address
+            distance
+            photos
+            description
+            likes
+            rooms
+            price
+            nights
+            featured
         }
     }
 `;
