@@ -30,3 +30,40 @@ export const LOGIN_USER = gql`
     }
   }
 `;
+
+export const ADD_COMMENT = gql`
+  mutation Mutation($commentText: String!) {
+    addComment(commentText: $commentText) {
+      _id
+      commentText
+      createdAt
+      username
+    }
+  }
+`;
+
+export const ADD_BOOKING = gql`
+mutation Mutation($hotels: [ID]!) {
+  addBooking(hotels: $hotels) {
+    purchaseDate
+    hotels {
+      _id
+      name
+      type
+      destination {
+        name
+      }
+      city
+      address
+      distance
+      photos
+      description
+      likes
+      rooms
+      price
+      nights
+      featured
+    }
+  }
+}
+`;
