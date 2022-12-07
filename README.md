@@ -47,7 +47,7 @@ Project 3 (final Project): The app is a `hotel bookings` app with variety of fea
 
 Some images representations:
 
-> <img src='./client/src/assets/TRAVÔTEL_fullpage.jpg' height=50% width=auto>
+> <img src='./client/src/assets/TRAVÔTEL_fullpage.jpg' height=30% width=auto>
 
 > <img src='./client/src/assets/TRAVÔTEL_signup.png' height=50% width=auto >
 
