@@ -9,11 +9,12 @@ import {
 } from '@apollo/client';
 
 import { setContext } from '@apollo/client/link/context'
-import Rooms from "./pages/Rooms";
+import Toronto from "./pages/TorontoPage";
 import Review from "./components/Review/Review";
 import LoginPage from './pages/LoginPage/LoginPage'
 import SignupPage from './pages/SignupPage/SignupPage'
 import AboutUs from "./pages/AboutUsPage/AboutUs";
+import MexicoPage from './pages/MexicoPage'
 import './App.css'
 // import { BrowserRouter } from 'react-router-dom'
 import { ThemeProvider } from './contexts/ThemeContext'
@@ -68,11 +69,13 @@ function App() {
               <ThemeProvider>
                 <Routes>
                   <Route index element={<Homepage />} />
-                  <Route path="/toronto" element={<Rooms />} />
+                  <Route path="/toronto" element={<Toronto />} />
+                  <Route path="/mexico" element={<MexicoPage />} />
                   <Route path="/review" element={<Review />} />
                   <Route path="/login" element={<LoginPage />} />
                   <Route path="/signup" element={<SignupPage />} />
                   <Route path="/about_us" element={<AboutUs />} />
+
                 </Routes >
               </ThemeProvider>
             </ApolloProvider >

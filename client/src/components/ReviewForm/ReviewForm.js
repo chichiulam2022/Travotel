@@ -3,6 +3,7 @@ import { Form, FloatingLabel, Button } from 'react-bootstrap'
 import { useTranslation } from "react-i18next";
 import './ReviewForm.css'
 import Auth from '../../utils/auth'
+import ReviewList from '../ReviewList/ReviewList';
 
 
 function ReviewForm() {
@@ -14,6 +15,7 @@ function ReviewForm() {
         <>
             {Auth.loggedIn() ? (
                 <Form className='review-form' >
+                    <ReviewList />
                     <FloatingLabel
                         controlId="floatingTextarea"
                         label={t('comment')}
@@ -21,10 +23,6 @@ function ReviewForm() {
                     >
                         <Form.Control as="textarea" style={{ height: '10%' }} />
                     </FloatingLabel>
-
-                    <Form.Group className="mb-3 mx-3" controlId="formBasicPassword">
-                        <Form.Control type="text" placeholder={t('username')} />
-                    </Form.Group>
                     <Button variant="primary" type="submit" className='mb-4' id='review-form-btn'>
                         {t('submit')}
                     </Button>

@@ -24,7 +24,9 @@ function FrontPage() {
                         fontWeight: '500',
                         textAlign: 'center',
                         fontSize: '2.6rem'
-                    }}>{t('brand')}</p>{t("intro")} &nbsp;
+                    }}>{t('brand')}
+                        <br />
+                    </p>{t("intro")} &nbsp;
                     <span className='typewriter-text'>
                         <Typewriter
                             words={[t('comfortable'), t('unforgettable'), t('incredible')]}
