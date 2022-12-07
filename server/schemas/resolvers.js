@@ -73,20 +73,20 @@ const resolvers = {
         //Stripe checkout method
         checkout: async (parent, args, context) => {
             const url = new URL(context.headers.referer).origin;
-            const order = new Order({ products: args.products });
+            const order = new Order({ hotels: args.hotels });
             const line_items = [];
-            const { products } = await order.populate('products');
+            const { hotels } = await order.populate('hotels');
 
-            for (let i = 0; i < products.length; i++) {
-                const product = await stripe.products.create({
-                    name: products[i].name,
-                    description: products[i].description,
-                    // images: [`${url}/images/${products[i].image}`] Need to configure if we want to add images 
+            for (let i = 0; i < hotels.length; i++) {
+                const hotel = await stripe.hotels.create({
+                    name: hotels[i].name,
+                    description: hotels[i].description,
+                    // images: [`${url}/images/${hotels[i].image}`] Need to configure if we want to add images 
                 });
 
                 const price = await stripe.prices.create({
-                    product: product.id,
-                    unit_amount: products[i].price * 100,
+                    hotel: hotel.id,
+                    unit_amount: hotels[i].price * 100,
                     currency: 'usd',
                 });
 
@@ -135,7 +135,6 @@ const resolvers = {
 
         },
 
-
         addComment: async (parent, args, context) => {
             if (context.user) {
                 const comment = await Comment.create({ ...args, username: context.user.username });
@@ -170,11 +169,7 @@ const resolvers = {
 
             throw new AuthenticationError('To book a hotel you need to be logged in');
         },
-
-
     }
-
-
 }
 
 module.exports = resolvers;
