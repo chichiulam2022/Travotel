@@ -1,29 +1,29 @@
 const { User, Destination, Comment, Booking, Hotel } = require('../models');
 const { AuthenticationError } = require('apollo-server-express');
 const { signToken } = require('../utils/auth');
-// const stripe = require('stripe')('');
+const stripe = require('stripe')('sk_test_IKYCHOAmUhC7IPTdaoVtO58D');
 
 const resolvers = {
     Query: {
-        me: async(parent, args, context) => {
-          if (context.user) {
-            const userData = await User.findOne({ _id: context.user._id })
-            .select('-__v -password')
+        me: async (parent, args, context) => {
+            if (context.user) {
+                const userData = await User.findOne({ _id: context.user._id })
+                    .select('-__v -password')
 
-            return userData;
-          }
+                return userData;
+            }
 
-          throw new AuthenticationError('Not logged in!')
+            throw new AuthenticationError('Not logged in!')
 
         },
         user: async (parent, { username }) => {
             return User.findOne({ username })
-            .select('-__v -password')
+                .select('-__v -password')
 
         },
         users: async () => {
             return User.find()
-            .select('-__v -password')
+                .select('-__v -password')
 
         },
         destination: async () => {
@@ -37,31 +37,31 @@ const resolvers = {
 
         hotels: async (parent, { destination, name }) => {
             const params = {};
-      
+
             if (destination) {
-              params.destination = destination;
+                params.destination = destination;
             }
-      
+
             if (name) {
-              params.name = {
-                $regex: name
-              };
+                params.name = {
+                    $regex: name
+                };
             }
-      
+
             return await Hotel.find(params).populate('destination');
         },
-      
+
 
         booking: async (parent, { _id }, context) => {
             if (context.user) {
-              const user = await User.findById(context.user._id).populate({
-                path: 'bookings.hotels',
-                populate: 'destination'
-              });
-      
-              return user.bookings.id(_id);
+                const user = await User.findById(context.user._id).populate({
+                    path: 'bookings.hotels',
+                    populate: 'destination'
+                });
+
+                return user.bookings.id(_id);
             }
-      
+
             throw new AuthenticationError('Not logged in');
         },
 
@@ -69,6 +69,43 @@ const resolvers = {
             const params = username ? { username } : {};
             return Comment.find(params).sort({ createdAt: -1 });
         },
+
+        //Stripe checkout method
+        checkout: async (parent, args, context) => {
+            const url = new URL(context.headers.referer).origin;
+            const order = new Order({ products: args.products });
+            const line_items = [];
+            const { products } = await order.populate('products');
+
+            for (let i = 0; i < products.length; i++) {
+                const product = await stripe.products.create({
+                    name: products[i].name,
+                    description: products[i].description,
+                    // images: [`${url}/images/${products[i].image}`] Need to configure if we want to add images 
+                });
+
+                const price = await stripe.prices.create({
+                    product: product.id,
+                    unit_amount: products[i].price * 100,
+                    currency: 'usd',
+                });
+
+                line_items.push({
+                    price: price.id,
+                    quantity: 1
+                });
+            }
+
+            const session = await stripe.checkout.sessions.create({
+                payment_method_types: ['card'],
+                line_items,
+                mode: 'payment',
+                success_url: `${url}/success?session_id={CHECKOUT_SESSION_ID}`,
+                cancel_url: `${url}/`
+            });
+
+            return { session: session.id };
+        }
     },
 
     Mutation: {
@@ -76,14 +113,14 @@ const resolvers = {
             const user = await User.create(args);
             const token = signToken(user);
 
-            return { token, user };           
+            return { token, user };
             // return { user };           
 
         },
         login: async (parent, { email, password }) => {
             const user = await User.findOne({ email });
 
-            if(!user) {
+            if (!user) {
                 throw new AuthenticationError('Incorrect Credentials');
             }
 
@@ -92,7 +129,7 @@ const resolvers = {
             if (!correctPw) {
                 throw new AuthenticationError('Incorrect credentials');
             }
-            
+
             const token = signToken(user);
             return { token, user };
 
@@ -117,20 +154,20 @@ const resolvers = {
 
         updateHotel: async (parent, { _id, nights }) => {
             const decrement = Math.abs(nights * -1);
-      
+
             return await Hotel.findByIdAndUpdate(_id, { $inc: { nights: decrement } }, { new: true });
         },
 
         addBooking: async (parent, { hotels }, context) => {
             console.log(context);
             if (context.user) {
-              const booking = new Booking({ hotels });
-      
-              await User.findByIdAndUpdate(context.user._id, { $push: { bookings: booking } });
-      
-              return booking;
+                const booking = new Booking({ hotels });
+
+                await User.findByIdAndUpdate(context.user._id, { $push: { bookings: booking } });
+
+                return booking;
             }
-      
+
             throw new AuthenticationError('To book a hotel you need to be logged in');
         },
 
@@ -138,6 +175,6 @@ const resolvers = {
     }
 
 
-}    
+}
 
 module.exports = resolvers;
