@@ -21,10 +21,6 @@ function ReviewForm() {
                     >
                         <Form.Control as="textarea" style={{ height: '10%' }} />
                     </FloatingLabel>
-
-                    <Form.Group className="mb-3 mx-3" controlId="formBasicPassword">
-                        <Form.Control type="text" placeholder={t('username')} />
-                    </Form.Group>
                     <Button variant="primary" type="submit" className='mb-4' id='review-form-btn'>
                         {t('submit')}
                     </Button>

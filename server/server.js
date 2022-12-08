@@ -1,5 +1,6 @@
 const path = require('path');
 const { authMiddleware } = require('./utils/auth');
+const stripe = require('stripe');
 
 
 const express = require('express');

@@ -147,7 +147,9 @@ function RoomCards() {
                   </div>
                   <br />
                   <h6 className='currency' style={{ color: isDarkMode ? 'black' : 'white' }}>{item.price}</h6>
-                  <Button className='reserve-btn'>{t('reserve')}</Button>&nbsp;&nbsp;
+                  <a href='/checkout'>
+                    <Button className='reserve-btn'>{t('reserve')}</Button>&nbsp;&nbsp;
+                  </a>
                   <a href='/review' className='room-card-review-link'>{t('review')}</a>
                 </div>
               </div>
