@@ -135,7 +135,6 @@ const resolvers = {
 
         },
 
-
         addComment: async (parent, args, context) => {
             if (context.user) {
                 const comment = await Comment.create({ ...args, username: context.user.username });
@@ -170,11 +169,7 @@ const resolvers = {
 
             throw new AuthenticationError('To book a hotel you need to be logged in');
         },
-
-
     }
-
-
 }
 
 module.exports = resolvers;
