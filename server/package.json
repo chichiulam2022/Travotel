@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server/index.js",
     "watch": "nodemon server.js",
-    "seed": "node config/seeds.js"
+    "seed": "node config/seeds.js",
+    "build": "cd client && npm run build"
   },
   "keywords": [],
   "author": "",
