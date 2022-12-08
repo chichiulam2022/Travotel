@@ -1,5 +1,13 @@
 import { gql } from '@apollo/client';
 
+export const QUERY_CHECKOUT = gql`
+  query getCheckout($products: [ID]!) {
+    checkout(products: $products) {
+      session
+    }
+  }
+`;
+
 export const QUERY_HOTELS = gql`
     query getHotels($destination: ID) {
         hotels(destination: $destination) {
@@ -23,7 +31,7 @@ export const QUERY_HOTELS = gql`
     }
 `;
 
-export const  QUERY_ALL_HOTELS = gql`
+export const QUERY_ALL_HOTELS = gql`
     {
         hotels {
         _id
@@ -47,7 +55,7 @@ export const  QUERY_ALL_HOTELS = gql`
     }
 `;
 
-export const QUERY_DESTINATION = gql `
+export const QUERY_DESTINATION = gql`
     {
         destination {
             _id
@@ -56,7 +64,7 @@ export const QUERY_DESTINATION = gql `
     }
 `;
 
-export const QUERY_USER = gql `
+export const QUERY_USER = gql`
     query User($username: String!) {
         ser(username: $username) {
             _id
@@ -96,7 +104,7 @@ export const QUERY_USER = gql `
     }
 `;
 
-export const QUERY_COMMENTS = gql `
+export const QUERY_COMMENTS = gql`
 query comments($username: String) {
     comments(username: $username) {
       _id

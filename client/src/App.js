@@ -21,6 +21,8 @@ import React from "react";
 import LoadingPage from './components/LoadingPage/LoadingPage';
 // import PageContent from './PageContent';
 
+import Checkout from './components/Cart/Cart'
+
 const httpLink = createHttpLink({
   uri: 'http://localhost:3001/graphql',
 });
@@ -73,6 +75,7 @@ function App() {
                   <Route path="/login" element={<LoginPage />} />
                   <Route path="/signup" element={<SignupPage />} />
                   <Route path="/about_us" element={<AboutUs />} />
+                  <Route path="/checkout" elements={<Checkout />} />
                 </Routes >
               </ThemeProvider>
             </ApolloProvider >
