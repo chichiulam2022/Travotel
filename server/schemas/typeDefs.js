@@ -54,7 +54,6 @@ const typeDefs = gql`
         hotel(_id: ID!): [Hotel]
         hotels(destination: ID, name: String): [Hotel] 
         booking(_id: ID!): Booking
-        checkout(products: [ID]!): Checkout
     }
 
     type Mutation {

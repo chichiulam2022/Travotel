@@ -1,7 +1,7 @@
 const { User, Destination, Comment, Booking, Hotel } = require('../models');
 const { AuthenticationError } = require('apollo-server-express');
 const { signToken } = require('../utils/auth');
-const stripe = require('stripe')('sk_test_IKYCHOAmUhC7IPTdaoVtO58D');
+const stripe = require('stripe')('sk_test_51MCb1XKRAhleIbzdOf0kTOjh6uNWBT3M0zqeeNPrPrpGWKqIGDZK34bjYdVdwYUyuloqahfnQrMh1LV0KT2dGcyF009A1Ydkx2');
 
 const resolvers = {
     Query: {
@@ -73,20 +73,19 @@ const resolvers = {
         //Stripe checkout method
         checkout: async (parent, args, context) => {
             const url = new URL(context.headers.referer).origin;
-            const order = new Order({ products: args.products });
+            const order = new Order({ bookings: args.bookings });
             const line_items = [];
-            const { products } = await order.populate('products');
+            const { bookings } = await order.populate('bookings');
 
-            for (let i = 0; i < products.length; i++) {
-                const product = await stripe.products.create({
-                    name: products[i].name,
-                    description: products[i].description,
-                    // images: [`${url}/images/${products[i].image}`] Need to configure if we want to add images 
+            for (let i = 0; i < bookings.length; i++) {
+                const booking = await stripe.bookings.create({
+                    name: bookings[i].name,
+                    description: bookings[i].description,
                 });
 
                 const price = await stripe.prices.create({
-                    product: product.id,
-                    unit_amount: products[i].price * 100,
+                    booking: booking.id,
+                    unit_amount: bookings[i].price * 100,
                     currency: 'usd',
                 });
 
@@ -100,8 +99,8 @@ const resolvers = {
                 payment_method_types: ['card'],
                 line_items,
                 mode: 'payment',
-                success_url: `${url}/success?session_id={CHECKOUT_SESSION_ID}`,
-                cancel_url: `${url}/`
+                success_url: 'https://example.com/success?session_id={CHECKOUT_SESSION_ID}',
+                cancel_url: 'https://example.com/cancel'
             });
 
             return { session: session.id };

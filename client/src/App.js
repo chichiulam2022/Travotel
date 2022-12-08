@@ -75,10 +75,11 @@ function App() {
                   <Route path="/login" element={<LoginPage />} />
                   <Route path="/signup" element={<SignupPage />} />
                   <Route path="/about_us" element={<AboutUs />} />
-                  <Route path="/checkout" elements={<Checkout />} />
+                  {/* <Route path="/checkout" elements={<Checkout />} /> */}
                 </Routes >
               </ThemeProvider>
             </ApolloProvider >
+            <Checkout></Checkout>
           </Suspense>
         )
       }

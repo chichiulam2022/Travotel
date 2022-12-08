@@ -5,7 +5,7 @@ import { loadStripe } from '@stripe/stripe-js'
 import { Elements, CardElement, useStripe, useElements, } from "@stripe/react-stripe-js";
 import Room1 from '../../assets/room1.jpg'
 
-const stripePromise = loadStripe('pk_test_wk6O7Cc5k3McBIG2Hut2irGs');
+const stripePromise = loadStripe('pk_test_51MCb1XKRAhleIbzdJco52ym7uy43kZDcUFzBwkL78xffK3crTgEQMsP2vwPCS1rmz3DfFWoQRkpf92bGg2CW7Azj00GhGyi92T');
 
 
 const CheckoutForm = () => {
