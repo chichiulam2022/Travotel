@@ -33,22 +33,19 @@ const CheckoutForm = () => {
 
   return (
     <body>
-      <div className="checkout-page">
-        <form onSubmit={handleSubmit} className="checkout-form card card-body pt-4 ps-4 pe-4" id="checkout-card">
-          <img src={Room1} alt='Sample room of selected hotel' className="img-fluid mt-2 mb-5 ps-2 pe-2" />
+      <form onSubmit={handleSubmit} className="checkout-form card card-body pt-5 ps-4 pe-4" id="checkout-card">
+        <img src={Room1} alt='Sample room of selected hotel' className="img-fluid mt-2 mb-5 ps-2 pe-2" />
 
-          <div className="row mb-4">
-            <div className="col my-2 ps-4"> 5 days, 4 nights at Toronto Grand Gateway</div>
-            <div className="amount col text-center my-2 fw-bold">Total $1,200.00</div>
-          </div>
+        <div className="row mb-4">
+          <div className="col my-2 ps-4"> 5 days, 4 nights at Toronto Grand Gateway</div>
+          <div className="amount col text-center my-2 fw-bold">Total $1,200.00</div>
+        </div>
 
-          <div className="form-group ">
-            <CardElement className="form-comtrol mt-2 mb-5 pt-4"></CardElement>
-          </div>
-
-          <button disabled={!stripe} className="btn btn-danger p-2 mb-5" id="pay-btn"> Reserve Now </button>
-        </form>
-      </div>
+        <div className="form-group ">
+          <CardElement className="form-comtrol mt-2 mb-5 pt-4"></CardElement>
+        </div>
+        <button disabled={!stripe} className="btn btn-danger p-2 mb-5" id="pay-btn"> Reserve Now </button>
+      </form>
     </body>
   );
 };
