@@ -73,19 +73,20 @@ const resolvers = {
         //Stripe checkout method
         checkout: async (parent, args, context) => {
             const url = new URL(context.headers.referer).origin;
-            const order = new Order({ bookings: args.bookings });
+            const order = new Order({ hotels: args.hotels });
             const line_items = [];
-            const { bookings } = await order.populate('bookings');
+            const { hotels } = await order.populate('hotels');
 
-            for (let i = 0; i < bookings.length; i++) {
-                const booking = await stripe.bookings.create({
-                    name: bookings[i].name,
-                    description: bookings[i].description,
+            for (let i = 0; i < hotels.length; i++) {
+                const hotel = await stripe.hotels.create({
+                    name: hotels[i].name,
+                    description: hotels[i].description,
+                    // images: [`${url}/images/${hotels[i].image}`] Need to configure if we want to add images 
                 });
 
                 const price = await stripe.prices.create({
-                    booking: booking.id,
-                    unit_amount: bookings[i].price * 100,
+                    hotel: hotel.id,
+                    unit_amount: hotels[i].price * 100,
                     currency: 'usd',
                 });
 
@@ -99,8 +100,8 @@ const resolvers = {
                 payment_method_types: ['card'],
                 line_items,
                 mode: 'payment',
-                success_url: 'https://example.com/success?session_id={CHECKOUT_SESSION_ID}',
-                cancel_url: 'https://example.com/cancel'
+                success_url: `${url}/success?session_id={CHECKOUT_SESSION_ID}`,
+                cancel_url: `${url}/`
             });
 
             return { session: session.id };
