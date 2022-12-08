@@ -58,7 +58,7 @@ export const QUERY_DESTINATION = gql `
 
 export const QUERY_USER = gql `
     query User($username: String!) {
-        ser(username: $username) {
+        user(username: $username) {
             _id
             username
             email
@@ -90,7 +90,7 @@ export const QUERY_USER = gql `
                 featured
               }
               purchaseDate
-            }
+            
           }
         }
     }

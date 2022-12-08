@@ -4,11 +4,24 @@ import { useTranslation } from "react-i18next";
 import './ReviewForm.css'
 import Auth from '../../utils/auth'
 
+import { useParams  } from 'react-router-dom';
+import { useQuery } from '@apollo/client';
+// import { QUERY_COMMENTS } from '../utils/queries';
+import { QUERY_COMMENTS } from '../../utils/queries';
 
-function ReviewForm() {
+const ReviewForm = props => {
     const { t } = useTranslation(["review"]);
 
-
+    const { id: commentId } = useParams();
+    const { loading, data } = useQuery(QUERY_COMMENTS, {
+      variables: { id: commentId }
+    });
+  
+    const comment = data?.comment || {};
+  
+    if (loading) {
+      return <div>Loading...</div>
+    }
 
     return (
         <>
@@ -23,7 +36,18 @@ function ReviewForm() {
                     </FloatingLabel>
 
                     <Form.Group className="mb-3 mx-3" controlId="formBasicPassword">
-                        <Form.Control type="text" placeholder={t('username')} />
+                        {/* <Form.Control type="text" placeholder={t('username')} /> */}
+                        <div>
+                            <p className="card-header">
+                            <span style={{ fontWeight: 700 }} className="text-light">
+                                {comment.username}
+                            </span>{' '}
+                            comment on {comment.createdAt}
+                            </p>
+                            <div className="card-body">
+                            <p>{comment.commentText}</p>
+                            </div>
+                        </div>
                     </Form.Group>
                     <Button variant="primary" type="submit" className='mb-4' id='review-form-btn'>
                         {t('submit')}
