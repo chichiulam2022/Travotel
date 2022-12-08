@@ -96,6 +96,21 @@ export const QUERY_USER = gql `
     }
 `;
 
+export const QUERY_ME = gql `
+    {
+        me {
+        _id
+        username
+        email
+        comments {
+            _id
+            commentText
+            createdAt
+        }
+        }
+    }
+`;
+
 export const QUERY_COMMENTS = gql `
 query comments($username: String) {
     comments(username: $username) {
