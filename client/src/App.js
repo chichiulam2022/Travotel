@@ -20,6 +20,7 @@ import { ThemeProvider } from './contexts/ThemeContext'
 import React from "react";
 import LoadingPage from './components/LoadingPage/LoadingPage';
 // import PageContent from './PageContent';
+import Checkout from './components/Cart/Cart'
 
 import Checkout from './components/Cart/Cart'
 
@@ -75,7 +76,8 @@ function App() {
                   <Route path="/login" element={<LoginPage />} />
                   <Route path="/signup" element={<SignupPage />} />
                   <Route path="/about_us" element={<AboutUs />} />
-                  {/* <Route path="/checkout" elements={<Checkout />} /> */}
+                  <Route path="/checkout" element={<Checkout />} />
+
                 </Routes >
               </ThemeProvider>
             </ApolloProvider >

@@ -1,8 +1,6 @@
 body {
-  background-image: url("../../assets/toronto2.jpg");
-  background-size: cover;
+  height: 100vh;
 }
-
 
 #checkout-card {
   color: white;
