@@ -2,19 +2,28 @@
   "name": "booking_app_project",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "type": "module",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server/index.js"
+    "start": "nodemon server/index.js",
+    "watch": "nodemon server.js",
+    "seed": "node config/seeds.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "apollo-server-express": "^3.11.1",
+    "bcrypt": "^5.0.0",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
-    "mongoose": "^6.7.3",
-    "nodemon": "^2.0.20"
+    "graphql": "^16.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.7",
+    "nodemon": "^2.0.20",
+    "stripe": "^11.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
   }
 }

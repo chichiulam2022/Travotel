@@ -4,7 +4,7 @@ import photos from './PhotoAlbum';
 
 function PhotoAlbumCompo() {
     return (
-        <PhotoAlbum layout='columns' photos={photos} />
+        <PhotoAlbum layout='rows' photos={photos} />
     )
 }
 

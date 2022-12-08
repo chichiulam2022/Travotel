@@ -5,8 +5,8 @@
     "Montreal": "Montreal",
     "Mexico City": "Mexico City",
     "destination": "Available Destinations",
-    "travelers": "Number of Travelers",
-    "check-in": "Check-In",
+    "travelers": "Number of Guests",
+    "number_nights": "Number of Nights",
     "check-out": "Check-Out",
     "search": "Search"
 }

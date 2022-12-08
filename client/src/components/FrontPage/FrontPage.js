@@ -18,14 +18,14 @@ function FrontPage() {
                         fontFamily: 'Orbitron'
                     }}
                 >
-                    <h2 style={{
+                    <p style={{
                         color: 'rgb(255, 111, 0)',
                         fontFamily: 'Fredericka the Great, cursive',
                         fontWeight: '500',
                         textAlign: 'center',
-                        fontSize: '2.2rem'
-                    }}>{t('brand')}</h2>{t("intro")} &nbsp;
-                    <h1 className='typewriter-text'>
+                        fontSize: '2.6rem'
+                    }}>{t('brand')}</p>{t("intro")} &nbsp;
+                    <span className='typewriter-text'>
                         <Typewriter
                             words={[t('comfortable'), t('unforgettable'), t('incredible')]}
                             loop={false}
@@ -35,7 +35,7 @@ function FrontPage() {
                             deleteSpeed={140}
                             delaySpeed={1200}
                         />
-                    </h1>
+                    </span>
                 </h2>
             </div>
         </div >

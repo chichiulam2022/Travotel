@@ -14,13 +14,17 @@ import 'slick-carousel/slick/slick-theme.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+
   <ThemeProvider>
     <BrowserRouter>
       <PageContent>
-        <App />
+        <React.StrictMode>
+          <App />
+        </React.StrictMode>
       </PageContent>
     </BrowserRouter>
   </ThemeProvider>
+
 );
 
 // If you want to start measuring performance in your app, pass a function

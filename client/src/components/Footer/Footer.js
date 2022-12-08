@@ -16,10 +16,10 @@ function Footer() {
     const { isDarkMode } = useContext(ThemeContext);
 
     return (
-        <footer class="footer" style={{ backgroundColor: isDarkMode ? '#ba5106' : '#666699' }}>
-            <div class="container">
-                <div class="row">
-                    <div class="footer-col">
+        <footer className="footer" style={{ backgroundColor: isDarkMode ? '#ba5106' : '#666699' }}>
+            <div className="container">
+                <div className="row">
+                    <div className="footer-col">
                         <h4>{t('company')}</h4>
                         <ul>
                             <li><a href="/">{t('about_us')}</a></li>
@@ -28,7 +28,7 @@ function Footer() {
                             <li><a href="/">{t('career')}</a></li>
                         </ul>
                     </div>
-                    <div class="footer-col">
+                    <div className="footer-col">
                         <h4>{t('need_help')}</h4>
                         <ul>
                             <li><a href="/">{t('FAQ')}</a></li>
@@ -36,7 +36,7 @@ function Footer() {
                             <li><a href="/">{t('payment_options')}</a></li>
                         </ul>
                     </div>
-                    <div class="footer-col contact-col">
+                    <div className="footer-col contact-col">
                         <h4>{t('contact-us')}</h4>
                         <ul>
                             <li><RiRoadMapFill style={{ width: '20px', height: '25px' }} /> 123 Yonge St, Toronto(ON) Canada, A1B 1C2</li>
@@ -46,9 +46,9 @@ function Footer() {
                     </div>
 
 
-                    <div class="footer-col">
+                    <div className="footer-col">
                         <h4>{t('follow-us')}</h4>
-                        <div class="social-links">
+                        <div className="social-links">
                             <a href="/"><BsFacebook style={{ width: '45px', height: '25px' }} /></a>
                             <a href="/"><BsInstagram style={{ width: '45px', height: '25px' }} /></a>
                             <a href="/"><BsTwitter style={{ width: '45px', height: '25px' }} /></a>
@@ -56,7 +56,7 @@ function Footer() {
                             <a href="/"><BsLinkedin style={{ width: '45px', height: '25px' }} /></a>
                         </div>
                     </div>
-                    <div class="footer-row">
+                    <div className="footer-row">
                         <img src={logo} alt='logo' className='logo' />
                         <p>{t('all-rights')} | Copyright &copy; {year} TRAVÔTEL
                         </p>
