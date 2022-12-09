@@ -58,16 +58,13 @@ Some images representatio
 
 ## _Links📎_
 
+Click for Github repo and deployed links: 
 
-<details>
+https://github.com/chichiulam2022/hotel_booking
+<br/>
+https://bilingualhotelbooking.herokuapp.com
 
-<summary>Click for Github repo and deployed Links</summary>
 
-- <https://github.com/chichiulam2022/hotel_booking>
-
-- deployed link
-
-</details>
 
 ## _Credits💳_
 
