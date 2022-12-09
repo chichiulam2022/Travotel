@@ -22,7 +22,7 @@ Project 3 (final Project): The app is a `hotel bookings` app with variety of fea
 ## _Table of Contents📖_
 
 - [Installation](#Installation)💾
-- [Usage](#Usage)🖥️
+- [Usage](#Usage)🖥
 - [Links](#Links)📎
 - [Credits](#Credits)💳
 - [Licence](#License)🪪
@@ -41,7 +41,7 @@ Project 3 (final Project): The app is a `hotel bookings` app with variety of fea
 
 ---
 
-## _Usage🖥️_
+## _Usage🖥_
 
 - Once the installation step are done, the browser page should automatically load up locally. If not, type `http://localhost:3000/` in browser to load and view the app. or simple use the deployed link mentioned in the links section below.
 
