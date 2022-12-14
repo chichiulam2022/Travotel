@@ -6,7 +6,7 @@
 
 ## <div align="center"> _Description_ 📝</div>
 
-Project 3 (final Project): The app is a `hotel bookings` app with variety of features and technologies used for front and back-end both. Below are the details on the same.
+PThe app is a hotel bookings app with variety of features and technologies used for front and back-end both. Below are the details on the same.
 
 ---
 
