@@ -60,7 +60,7 @@ Click for Github repo and deployed links:
 
 https://github.com/chichiulam2022/hotel_booking
 <br/>
-https://bilingualhotelbooking.herokuapp.com
+https://travotel.herokuapp.com/
 
 
 
