@@ -97,7 +97,3 @@ If you would like to as me anything (ama) about the project, please contact me o
 ## _Contribution➕_
 
 Please do not hesitate to fork this repo. And, there-after, create a new branch and commit, push that branch and create a pull request.☻
-
-## _Tests🧪_
-
----
